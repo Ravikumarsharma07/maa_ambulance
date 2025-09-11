@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Inter } from 'next/font/google';
+import Script from "next/script";
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -99,6 +100,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
   <meta name="google-site-verification" content="fgH1ZKa6AS26wxaHoGk2O2e0bYvJ8m16Ia9shN2i3SY" />
+  <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FTGK5SNL61"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FTGK5SNL61');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
