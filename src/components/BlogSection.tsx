@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Calendar, ArrowRight, Clock } from 'lucide-react';
 import Image from 'next/image';
+import SubHeading from './smallComponents/SubHeading';
 
 const BlogSection = () => {
   const blogPosts = [
@@ -42,10 +43,8 @@ const BlogSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Health & Emergency Tips
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <SubHeading title="Health & Emergency Tips" />
+          <p className="md:text-lg text-gray-600">
             Stay informed with our latest articles on emergency medical care, 
             ambulance services, and health tips to keep you and your family safe.
           </p>

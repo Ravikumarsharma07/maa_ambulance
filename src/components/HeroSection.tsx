@@ -1,91 +1,70 @@
-import { Phone, Clock, Shield, Zap } from 'lucide-react';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-interface HeroSectionProps {
-  title: string;
-  subtitle: string;
-  cityName?: string;
-}
-
-const HeroSection = ({ title, subtitle, cityName }: HeroSectionProps) => {
+const HeroSection = () => {
+  const [isAnimating, setIsAnimating] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(true);
+    }, 10);
+    return () => clearTimeout(timer);
+  });
   return (
-    <section className="relative bg-gradient-to-br from-red-50 to-white py-20 lg:py-20">
-      <div className="absolute inset-0 bg-red-600/5"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
-            <h1 className="text-2xl md:text-3xl  lg:text-4xl font-sans font-bold text-gray-900 mb-6 leading-tight">
-              {title}
-            </h1>
-            <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
-              {subtitle}.
-            </p>
-            
-            {cityName && (
-              <p className="text-lg text-gray-700 mb-8">
-                Available 24x7 in {cityName} with trained medical staff and modern equipment. 
-                Fast response to all hospitals in the city.
-              </p>
-            )}
+    <section className="relative -z-10 py-12 lg:py-24 mt-24 lg:mt-32 overflow-hidden">
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <a
-                href="tel:+919876543210"
-                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-lg font-semibold flex-center transition-colors shadow-lg"
-              >
-                <Phone className="w-6 h-6 mr-2" />
-                Call Now: +91-98765-43210
-              </a>
-              <a
-                href="#services"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center transition-colors"
-              >
-                <Shield className="w-6 h-6 mr-2" />
-                Our Services
-              </a>
-            </div>
+      {/* trianle top designs */}
+      <div
+        className={`flex-center h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[500px] md:w-[500px] bg-gray-100/20 rounded-[1.2rem] md:rounded-[2.2rem] rotate-[30deg] absolute -top-[75%] -left-[3%] sm:left-[1%] md:-top-[60%] md:left-[5%] z-30 transition-all duration-1000 ${
+          isAnimating ? "translate-0" : "translate-[-200px]"
+        }`}
+        >
+        <div className="h-[80%] w-[80%] bg-gray-200/20 rounded-[1rem] md:rounded-[1.8rem] rotate"></div>
+      </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">24x7 Available</h3>
-                <p className="text-gray-600">Round the clock service</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Zap className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Fast Response</h3>
-                <p className="text-gray-600">Reach within minutes</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Fully Equipped</h3>
-                <p className="text-gray-600">Modern medical equipment</p>
-              </div>
-            </div>
+        {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/80 via-red-600/60 to-red-700/80">
+        <Image
+          src="/ambulance.png"
+          alt="Ambulance background"
+          fill
+          priority
+          className="w-full h-[400px] object-cover -z-10"
+        />
+      </div>
+
+      <div className="max-w-7xl relative z-10 flex-between lg:gap-12">
+        {/* Left Content */}
+        <div className="text-center lg:text-left">
+          <h1 className="text-nowrap font-sans ml-2 md:ml-5 text-[1.5rem] sm:text-[2.2rem] md:text-[2.5rem] leading-[30px] sm:leading-[35px] md:leading-[40px] lg:leading-[75px] lg:text-[5rem] xl:text-[5.2rem] scale-y-[1.1] text-center text-shadow-md text-shadow-black font-bold text-white mb-2 md:mb-6">
+            Jyoti Ambulance
+            <span className="text-[#ffc400] block text-[1.7rem] sm:text-[2.7rem] md:text-[3rem] lg:text-[5.4rem] tracking-wide font-extrabold">
+              Services
+            </span>
+          </h1>
+          <p className="text-[9px] sm:text-[14px] md:text-[18px] lg:text-2xl font-semibold rounded-tr-full rounded-br-full w-max text-black bg-cyan-200 px-2 md:px-8 py-2">
+            24x7 Emergency Medical Transport Across India.
+          </p>
+        </div>
+
+        {/* Right Content */}
+        <div className="relative">
+          <div className="absolute -top-5 -left-5 w-[39vw] h-[35vw] blur-3xl bg-gradient-to-br from-red-200/70 to-blue-300/70 rounded-[1.2rem] md:rounded-[2.5rem] shadow-2xl border-[1px] md:border-[7px]  border-[#e9e9e9]"></div>
+          <div className="flex-center w-[39vw] h-[35vw] rounded-[1rem] md:rounded-[4rem] p-1 lg:p-4 border-[1px] md:border-[2px] mr-12 lg:mr-10 border-[#eeeeee]">
+            <Image
+              src="/ambulance-4.png"
+              alt="Modern ambulance"
+              width={400}
+              height={400}
+              priority
+              className="scale-[1.6] md:scale-[1.5] object-cover "
+            />
           </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-red-100 to-blue-100 rounded-2xl p-8">
-              <Image
-                src="/ambulance.png"
-                alt="Modern ambulance with medical equipment"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-xl w-full h-auto"
-                priority
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-2xl border-l-4 border-red-600">
-              <p className="text-3xl font-bold text-red-600">24/7</p>
-              <p className="text-sm text-gray-600">Emergency Ready</p>
-            </div>
-          </div>
+          {/* <div className="absolute -bottom-8 right-0 md:-bottom-6 md:-right-6 bg-[#ffc400] p-2 md:p-4 rounded-lg shadow-2xl border-l-2 md:border-l-4 border-black">
+            <p className="text-[12px] sm:text-[15px] md:text-3xl font-semibold lg:font-bold text-black">24/7</p>
+            <p className="text-[8px] sm:text-[10px] text-gray-600">Emergency Ready</p>
+          </div> */}
         </div>
       </div>
     </section>

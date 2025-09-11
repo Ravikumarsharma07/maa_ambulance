@@ -1,64 +1,43 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import SubHeading from "./smallComponents/SubHeading";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: 'How quickly can an ambulance reach me?',
-      answer: 'Our average response time is 8-15 minutes in major cities. We have strategically located ambulances across all service areas to ensure the fastest possible response during emergencies.'
+      question: "What types of ambulance services do you offer?",
+      answer:
+        "We provide a comprehensive range of ambulance services to handle any medical situation. This includes:<ul><li><b>ICU & Ventilator Ambulances:</b> For critically ill patients who require intensive care during transit.</li><li><b>Advanced & Basic Life Support (ALS/BLS):</b> For both serious emergencies and stable patient transport.</li></ul>",
     },
     {
-      question: 'What types of ambulances do you provide?',
-      answer: 'We offer Basic Life Support (BLS) ambulances, Advanced Life Support (ALS) ambulances with ICU facilities, Air ambulances for long-distance transport, and specialized patient transport vehicles.'
+      question: "Are your ambulance services in Delhi available 24/7?",
+      answer:
+        "Absolutely. Our ambulance services are available <b>24 hours a day, 7 days a week, 365 days a year</b>, including all holidays. Our emergency dispatch center is always ready to ensure immediate help is just a call away.",
     },
     {
-      question: 'Are your ambulances available 24/7?',
-      answer: 'Yes, our ambulance services are available 24 hours a day, 7 days a week, 365 days a year. Our dispatch center operates round the clock to handle emergency calls.'
+      question: "Is there a certified medical team in the ambulance?",
+      answer:
+        "Yes, patient care is our highest priority. Every ambulance is staffed with <b>certified and experienced paramedics</b> and medical personnel. They are trained in emergency procedures to provide the best possible care and support during transport.",
     },
     {
-      question: 'What medical equipment is available in your ambulances?',
-      answer: 'Our ambulances are equipped with oxygen cylinders, cardiac monitors, defibrillators, ventilators, stretchers, emergency medications, IV fluids, and other life-support equipment as per standards.'
+      question: "How quickly can an ambulance reach me in Delhi or Gurugram?",
+      answer:
+        "We are committed to the fastest possible response. Our average arrival time in Delhi and Gurugram is typically between <b>10 to 20 minutes</b>. Our ambulances are strategically positioned across the region to minimize travel time during a critical emergency.",
     },
-    {
-      question: 'How much does ambulance service cost?',
-      answer: 'Ambulance service costs vary based on distance, type of ambulance, and medical requirements. We provide transparent pricing with no hidden charges. Call us for a detailed quote.'
-    },
-    {
-      question: 'Do you accept insurance for ambulance services?',
-      answer: 'Yes, we accept most health insurance policies and provide all necessary documentation for insurance claims. We also offer cashless services with tie-up insurance providers.'
-    },
-    {
-      question: 'Can family members travel in the ambulance?',
-      answer: 'Yes, one or two family members can accompany the patient in the ambulance, depending on the patient\'s condition and space availability. Our staff will guide you accordingly.'
-    },
-    {
-      question: 'Do you provide inter-city ambulance services?',
-      answer: 'Yes, we provide inter-city and inter-state ambulance services with trained medical staff for long-distance patient transport. Air ambulance options are also available for critical cases.'
-    },
-    {
-      question: 'How do I book an ambulance?',
-      answer: 'You can book an ambulance by calling our emergency number +91-98765-43210. Our dispatch team will collect necessary details and assign the nearest available ambulance to your location.'
-    },
-    {
-      question: 'Are your paramedics trained and certified?',
-      answer: 'All our paramedics and medical staff are certified and regularly trained in emergency medical procedures, CPR, and advanced life support techniques. We maintain high standards for all personnel.'
-    }
   ];
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-gray-600">
-            Common questions about our ambulance services, pricing, and emergency procedures. 
-            Can't find your answer? Call us anytime.
+          <SubHeading title="Frequently Asked Questions" />
+          <p className="md:text-lg text-gray-600">
+            Common questions about our ambulance services, transport, and
+            emergency procedures. Can't find your answer? Call us anytime.
           </p>
         </div>
 
@@ -67,9 +46,9 @@ const FAQSection = () => {
             <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                className="w-full px-4 py-4 md:px-8 md:py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-8">
+                <h3 className="md:text-lg font-semibold text-gray-900 pr-2 md:pr-8">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
@@ -78,13 +57,14 @@ const FAQSection = () => {
                   <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0" />
                 )}
               </button>
-              
+
               {openIndex === index && (
                 <div className="px-8 pb-6">
                   <div className="border-t pt-4">
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p
+                      className="text-gray-700 leading-relaxed max-sm:text-sm"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    ></p>
                   </div>
                 </div>
               )}
@@ -98,14 +78,14 @@ const FAQSection = () => {
               Still Have Questions?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our customer support team is available 24/7 to help you with any questions 
-              about our ambulance services or emergency procedures.
+              Our customer support team is available 24/7 to help you with any
+              questions about our ambulance services or emergency procedures.
             </p>
             <a
-              href="tel:+919876543210"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold inline-flex items-center transition-colors"
+              href="tel:+91-9990228876"
+              className="bg-red-600 hover:bg-red-700 text-white px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold inline-flex items-center transition-colors"
             >
-              Call Now: +91-98765-43210
+              Call Now: +91-9990228876
             </a>
           </div>
         </div>

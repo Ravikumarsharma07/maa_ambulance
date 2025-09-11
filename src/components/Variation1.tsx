@@ -1,6 +1,17 @@
-import React from 'react';
-import { Phone, Star, Shield, Clock, MapPin, ArrowRight, Users, Award, Heart } from 'lucide-react';
-import Image from 'next/image';
+import React from "react";
+import {
+  Phone,
+  Star,
+  Shield,
+  Clock,
+  MapPin,
+  ArrowRight,
+  Users,
+  Award,
+  Heart,
+  PhoneCall,
+} from "lucide-react";
+import Image from "next/image";
 
 // Variation 1: Social Proof & Trust-Focused
 const HeroVariation1 = () => {
@@ -9,8 +20,8 @@ const HeroVariation1 = () => {
       {/* Background with Ambulance */}
       <div className="absolute inset-0">
         <Image
-        height={1080}
-        width={1920} 
+          height={1080}
+          width={1920}
           src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Professional Ambulance Service"
           className="w-full h-full object-cover opacity-30"
@@ -19,23 +30,25 @@ const HeroVariation1 = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="w-full fixed top-0 z-20 flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 bg-white/10 backdrop-blur-md border-b border-white/20">
+      <nav className="w-full fixed top-0 z-20 flex max-sm:flex-wrap items-center justify-between px-4 sm:px-6 lg:px-8 py-4 bg-white/10 backdrop-blur-md border-b border-white/20">
         <div className="flex items-center space-x-3">
           <div className="bg-red-600 p-2 rounded-full">
             <Heart className="h-6 w-6 text-white" />
           </div>
-          <span className="text-xl font-bold text-white">Jyoti Ambulance Services</span>
+          <span className="text-lg md:text-xl font-bold text-white">
+            Jyoti Ambulance Services
+          </span>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 w-full">
           <div className="hidden md:flex items-center space-x-2 text-white">
             <Award className="h-4 w-4 text-yellow-400" />
             <span className="text-sm font-medium">ISO Certified</span>
           </div>
-          <a 
+          <a
             href="tel:+919876543210"
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg flex-center font-bold transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
-            📞 +91-98765-43210
+            <PhoneCall /> +91-98765-43210
           </a>
         </div>
       </nav>
@@ -44,19 +57,21 @@ const HeroVariation1 = () => {
       <div className="relative z-10 flex items-center min-h-[calc(100vh-80px)] py-5 pt-24">
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
             {/* Left Column - Main Content */}
             <div className="text-center lg:text-left">
-              
               {/* Trust Indicators */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
                 <div className="bg-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-full px-4 py-2 flex items-center">
                   <Users className="h-4 w-4 text-green-400 mr-2" />
-                  <span className="text-white font-medium text-sm">50,000+ Lives Saved</span>
+                  <span className="text-white font-medium text-sm">
+                    50,000+ Lives Saved
+                  </span>
                 </div>
                 <div className="bg-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-2 flex items-center">
                   <Shield className="h-4 w-4 text-blue-400 mr-2" />
-                  <span className="text-white font-medium text-sm">Government Approved</span>
+                  <span className="text-white font-medium text-sm">
+                    Government Approved
+                  </span>
                 </div>
               </div>
 
@@ -85,12 +100,14 @@ const HeroVariation1 = () => {
 
               {/* Description */}
               <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto lg:mx-0">
-                Join 50,000+ families who trust us with their medical emergencies. Professional paramedics, advanced life support, and nationwide coverage.
+                Join 50,000+ families who trust us with their medical
+                emergencies. Professional paramedics, advanced life support, and
+                nationwide coverage.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <a 
+                <a
                   href="tel:+918899999999"
                   className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center transition-all duration-200 transform hover:scale-105 shadow-2xl"
                 >
@@ -107,26 +124,39 @@ const HeroVariation1 = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 <div className="flex items-center space-x-1 mb-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="h-4 w-4 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
-                <p className="text-white text-sm italic">They saved my father&apos;s life. Reached in 90 seconds!</p>
-                <p className="text-gray-300 text-xs mt-1">- Priya Sharma, Mumbai</p>
+                <p className="text-white text-sm italic">
+                  They saved my father&apos;s life. Reached in 90 seconds!
+                </p>
+                <p className="text-gray-300 text-xs mt-1">
+                  - Priya Sharma, Mumbai
+                </p>
               </div>
             </div>
 
             {/* Right Column - Features */}
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Jyoti Ambulance?</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Why Choose Jyoti Ambulance?
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="bg-green-600 p-2 rounded-full">
                       <Clock className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white font-medium">Fastest Response</div>
-                      <div className="text-gray-300 text-sm">Average 2-minute arrival time</div>
+                      <div className="text-white font-medium">
+                        Fastest Response
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Average 2-minute arrival time
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -134,8 +164,12 @@ const HeroVariation1 = () => {
                       <Shield className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white font-medium">Certified Paramedics</div>
-                      <div className="text-gray-300 text-sm">Trained medical professionals</div>
+                      <div className="text-white font-medium">
+                        Certified Paramedics
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Trained medical professionals
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -143,8 +177,12 @@ const HeroVariation1 = () => {
                       <MapPin className="h-4 w-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white font-medium">Pan-India Coverage</div>
-                      <div className="text-gray-300 text-sm">Available in 500+ cities</div>
+                      <div className="text-white font-medium">
+                        Pan-India Coverage
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Available in 500+ cities
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -156,7 +194,7 @@ const HeroVariation1 = () => {
 
       {/* Floating Emergency Button */}
       <div className="fixed bottom-6 right-6 z-30">
-        <a 
+        <a
           href="tel:+918899999999"
           className="bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 animate-bounce"
         >
