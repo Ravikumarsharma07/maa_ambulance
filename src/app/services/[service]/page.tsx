@@ -42,7 +42,7 @@ export async function generateMetadata({
       siteName: "Jyoti Ambulance Services",
       images: [
         {
-          url: `${siteUrl}${service.imageURL}`, // Use dynamic image
+          url: `${siteUrl}/${service.imageURL}`, // Use dynamic image
           width: 1200,
           height: 630,
           alt: service.name,
@@ -54,7 +54,7 @@ export async function generateMetadata({
       site: "@jyotiambulance", // Replace with your Twitter handle
       title: `${service.name} in Delhi | Jyoti Ambulance Services`,
       description: service.description,
-      images: [`${siteUrl}${service.imageURL}`],
+      images: [`${siteUrl}/${service.imageURL}`],
     },
   };
 }
@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: {params: Promise<{service:
     serviceType: service.name,
     name: service.name,
     description: service.description,
-    image: `${siteUrl}${service.imageURL}`,
+    image: `${siteUrl}/${service.imageURL}`,
     provider: {
       "@type": "EmergencyService",
       name: "Jyoti Ambulance Services",
@@ -100,6 +100,15 @@ export default async function ServicePage({ params }: {params: Promise<{service:
     areaServed: {
       "@type": "City",
       name: "Delhi",
+    },
+    serviceArea: {
+      "@type": "Place",
+      name: "Delhi",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Delhi",
+        addressCountry: "IN",
+      },
     },
   };
 

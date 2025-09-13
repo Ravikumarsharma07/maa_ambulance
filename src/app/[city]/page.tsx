@@ -53,7 +53,7 @@ export async function generateMetadata({
       siteName: "Jyoti Ambulance Services",
       images: [
         {
-          url: "/ambulance.png",
+          url: "/ambulance-4.png",
           width: 1200,
           height: 630,
           alt: `Ambulance Service in ${cityData.name}`,
@@ -65,7 +65,7 @@ export async function generateMetadata({
       site: "@jyotiambulance",
       title: `24x7 Ambulance Service in ${cityData.name} - Jyoti Ambulance Services`,
       description: `Fast, reliable ambulance services in ${cityData.name}. ICU ambulance, air ambulance, emergency medical transport.`,
-      images: ["/images/ambulance-city.jpg"],
+      images: ["/ambulance-1.jpg"],
     },
   };
 }

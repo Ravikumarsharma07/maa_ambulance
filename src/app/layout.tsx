@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Jyoti Ambulance Services | 24x7 Ambulance Services",
     description:
       "Reliable ambulance booking in all over India. ICU, ventilator, and air ambulance available 24/7.",
-    url: "https://www.jyotiambulance.in/delhi-ncr",
+    url: "https://jyotiambulance.in/",
     type: "website",
     images: [
       {
-        url: "https://www.jyotiambulance.in/jyoti-ambulance-logo-2.png",
+        url: "https://jyotiambulance.in/jyoti-ambulance-logo-2.png",
         width: 1200,
         height: 630,
         alt: "Jyoti Ambulance Services Delhi",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.jyotiambulance.in/delhi-ncr",
+    canonical: "https://jyotiambulance.in/ambulance-service-in-delhi-ncr",
   },
 };
 
@@ -56,8 +56,8 @@ export default function RootLayout({
     slogan: "Your Trusted 24/7 Ambulance Partner in India",
     description:
       "Jyoti Ambulance provides immediate 24/7 emergency medical transport services across Delhi, Gurgaon, Noida, Bihar, Uttar Pradesh, Uttarakhand, and NCR. ICU, Ventilator, Cardiac, and Air Ambulance transfers with trained paramedics.",
-    image: "https://www.jyotiambulance.in/jyoti-ambulance-logo-2.png",
-    url: "https://www.jyotiambulance.in/",
+    image: "https://jyotiambulance.in/jyoti-ambulance-logo-2.png",
+    url: "https://jyotiambulance.in/",
     telephone: "+91-9654232540",
     priceRange: "₹₹ - ₹₹₹₹",
     address: {
