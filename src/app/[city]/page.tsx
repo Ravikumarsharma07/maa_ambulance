@@ -19,21 +19,25 @@ import WhyChooseUs from "@/components/City_specific/WhyChooseUs";
 import ServicesOffered from "@/components/City_specific/ServicesOffered";
 import HospitalsWeServe from "@/components/City_specific/HospitalsWeServe";
 
-const findCity = (cities: City[], paramCity: string)=>{
-  for(let i = 0; i < cities.length; i++){
-    const city = cities[i].places.find((place) => place.name.toLowerCase() === paramCity.toLowerCase())
-    if(city){
-      return city
+const findCity = (cities: City[], paramCity: string) => {
+  for (let i = 0; i < cities.length; i++) {
+    const city = cities[i].places.find(
+      (place) => place.name.toLowerCase() === paramCity.toLowerCase()
+    );
+    if (city) {
+      return city;
     }
   }
-}
+};
 
 // Define a constant for your site's base URL
 const SITE_URL = "https://jyotiambulance.in";
 
 export async function generateMetadata({
   params,
-}: { params: Promise<{city: string}>}): Promise<Metadata> {
+}: {
+  params: Promise<{ city: string }>;
+}): Promise<Metadata> {
   const citySlug = (await params).city;
   const cityData = findCity(cities, citySlug.split("-").splice(3).join(" ")); // A more robust lookup by the slug itself
 
@@ -41,13 +45,18 @@ export async function generateMetadata({
   if (!cityData) {
     return {
       title: "Ambulance Service Not Found | Jyoti Ambulance",
-      description: "We provide 24/7 ambulance services across major cities. Please check our locations page to find service in your area.",
+      description:
+        "We provide 24/7 ambulance services across major cities. Please check our locations page to find service in your area.",
     };
   }
 
   // --- Core Metadata from our Optimized Data Structure ---
-  const title = cityData.metaTitle || `Ambulance Service in ${cityData.name} | Jyoti Ambulance`;
-  const description = cityData.metaDescription || `24/7 private and ICU ambulance service in ${cityData.name}. Call now for immediate assistance.`;
+  const title =
+    cityData.metaTitle ||
+    `Ambulance Service in ${cityData.name} | Jyoti Ambulance`;
+  const description =
+    cityData.metaDescription ||
+    `24/7 private and ICU ambulance service in ${cityData.name}. Call now for immediate assistance.`;
   const canonicalUrl = `${SITE_URL}/${cityData.slug}`;
   const imageUrl = `https://jyotiambulance.in/jyoti-ambulance-logo-2.png`;
 
@@ -100,20 +109,20 @@ export async function generateMetadata({
       "application/ld+json": JSON.stringify({
         "@context": "https://schema.org",
         "@type": "EmergencyService",
-        "name": `Jyoti Ambulance Service in ${cityData.name}`,
-        "description": description,
-        "url": canonicalUrl,
-        "telephone": "+91-98765-43210", // Your main contact number
-        "image": imageUrl,
-        "areaServed": {
+        name: `Jyoti Ambulance Service in ${cityData.name}`,
+        description: description,
+        url: canonicalUrl,
+        telephone: "+91-98765-43210", // Your main contact number
+        image: imageUrl,
+        areaServed: {
           "@type": "City",
-          "name": cityData.name,
+          name: cityData.name,
         },
-        "provider": {
-            "@type": "Organization",
-            "name": "Jyoti Ambulance Services",
-            "url": SITE_URL,
-        }
+        provider: {
+          "@type": "Organization",
+          name: "Jyoti Ambulance Services",
+          url: SITE_URL,
+        },
       }),
     },
   };
@@ -125,18 +134,20 @@ export function generateStaticParams() {
   for (let i = 0; i < cities.length; i++) {
     cities[i].places.forEach((place) => {
       staticPaths.push({ city: place.slug });
-    })
+    });
   }
-  return staticPaths
+  return staticPaths;
 }
 
-export default async function CityPage({ params }: { params: Promise<{ city: string }> }) {
-  const paramCity = await params
-  const city = paramCity.city.split("-").splice(3).join(" ")
+export default async function CityPage({
+  params,
+}: {
+  params: Promise<{ city: string }>;
+}) {
+  const paramCity = await params;
+  const city = paramCity.city.split("-").splice(3).join(" ");
   const cityData = findCity(cities, city);
-  if (!cityData) return (
-    notFound()
-  )
+  if (!cityData) return notFound();
 
   // JSON-LD Schema for city-specific page
   const jsonLd = {
@@ -216,22 +227,26 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               Ambulance Services in {cityData.name}
             </h1>
             <p className="md:text-xl text-gray-800">
-              {cityData.metaDescription ? cityData.metaDescription : "Your trusted partner for 24/7 emergency medical transport."}
+              {cityData.metaDescription
+                ? cityData.metaDescription
+                : "Your trusted partner for 24/7 emergency medical transport."}
             </p>
           </div>
 
           <div className="mt-12 text-[16px] text-gray-700 leading-relaxed space-y-6">
-            <p>
-              {cityData.introParagraph ? cityData.introParagraph : 
-              `Are you looking for a fast and reliable
-              <strong>ambulance service in ${cityData.name}</strong>? Jyoti
-              Ambulance Services offers comprehensive and immediate medical
-              transport solutions across {cityData.name} and its surrounding
-              areas. Our modern, fully-equipped ambulance fleet is strategically
-              positioned to guarantee the quickest response time for any medical
-              emergency.`
-            }
-            </p>
+            {cityData.introParagraph ? (
+              <p>{cityData.introParagraph}</p>
+            ) : (
+              <p>
+                Are you looking for a fast and reliable {" "}
+                <strong>ambulance service in {cityData.name}</strong>? Jyoti
+                Ambulance Services offers comprehensive and immediate medical
+                transport solutions across {cityData.name} and its surrounding
+                areas. Our modern, fully-equipped ambulance fleet is
+                strategically positioned to guarantee the quickest response time
+                for any medical emergency.
+              </p>
+            )}
 
             {/* Section targeting the "Ambulance Number" keyword */}
             <div className="p-6 bg-white rounded-lg shadow-md border-l-4 border-red-500">
@@ -311,11 +326,14 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       </section>
 
       <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} />
-      <HospitalsWeServe hospitals={cityData.hospitalsServed} city={cityData.name} />
+      <HospitalsWeServe
+        hospitals={cityData.hospitalsServed}
+        city={cityData.name}
+      />
       <HowToBookAmbulance cityData={cityData} />
       <ServicesOffered services={cityData.servicesOffered} />
       <AreasWeServe cityData={cityData} />
-      <FAQs faqs={cityData.faqs} city={cityData.name}/>
+      <FAQs faqs={cityData.faqs} city={cityData.name} />
       <ServiceAreas />
       <ServicesSection />
       <AboutSection />
