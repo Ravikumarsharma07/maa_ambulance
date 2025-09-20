@@ -57,6 +57,16 @@ const AreasWeServe = ({ cityData }: { cityData: CityPageProps }) => {
             </Link>
           ))}
         </div>
+
+        <div className="mx-auto mt-16 text-center text-gray-600 leading-[40px]">
+          {locations.map((location, index) => (
+            <Link href={`/${location.slug}`} key={index} className="hover:text-red-500">{" "}
+              <h3 className="inline-block">
+              Ambulance Services in {location.name} | {" "}
+              </h3>
+              </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
