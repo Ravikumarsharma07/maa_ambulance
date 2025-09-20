@@ -1,12 +1,12 @@
 "use client";
-import { LocalCityData } from '@/Types/CityData';
+import { City, PlaceDetails } from '@/constants/Cities';
 import { PhoneIcon } from 'lucide-react'
 import Image from 'next/image';
 import React, { useEffect } from 'react'
 
 
 
-const Hero = ({cityData}: {cityData:LocalCityData}) => {
+const Hero = ({cityData}: {cityData:PlaceDetails}) => {
   const [isMounted, setIsMounted] = React.useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Hero = ({cityData}: {cityData:LocalCityData}) => {
   }, [])
 
   return (
-     <section className="bg-[#081933]/90 relative">
+     <section className="bg-[#081933]/90 relative  2xl:flex 2xl:justify-center">
         {/* Background */}
       <div className='absolute inset-0'>
       <Image
@@ -35,7 +35,7 @@ const Hero = ({cityData}: {cityData:LocalCityData}) => {
           Fast & Reliable 24/7 <span className='text-red-500'>Ambulance</span> Service in <span className='text-blue-500'>{cityData.name}</span>
         </h1>
         <p className="mt-6 max-w-xl lg:text-lg text-gray-200">
-          24/7 emergency ambulance with certified paramedics. Call now for immediate transport.
+          {cityData?.subHeadline || `24/7 emergency ambulance with certified paramedics. Call now for immediate transport.`}
         </p>
 
         {/* --- Main Call to Action --- */}
@@ -60,7 +60,7 @@ const Hero = ({cityData}: {cityData:LocalCityData}) => {
                 alt="Professional Ambulance Service"
                 height={500}
                 width={400}
-                className={`${isMounted ? "-translate-x-4 md:translate-x-0 md:scale-[1.16] opacity-100" : "translate-x-44 scale-50 opacity-0"} transition-all duration-1000 h-full w-full object-cover`}
+                className={`${isMounted ? "-translate-x-4 md:translate-x-0 md:scale-[1.16] opacity-100" : "translate-x-44 scale-50 opacity-0"} transition-all duration-1000 overflow-visible h-full w-full object-cover`}
                 />
             </div>
       </div>

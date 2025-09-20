@@ -8,14 +8,18 @@ import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import cities from "@/constants/Cities";
+import cities, { City } from "@/constants/Cities";
 import ServiceAreas from "@/components/ServiceAreas";
 import FloatingCallBtn from "@/components/FloatingCallBtn";
 import Hero from "@/components/City_specific/Hero";
 import HowToBookAmbulance from "@/components/City_specific/HowToBookAmbulance";
 import AreasWeServe from "@/components/City_specific/AreasWeServe";
+import FAQs from "@/components/City_specific/FAQs";
+import WhyChooseUs from "@/components/City_specific/WhyChooseUs";
+import ServicesOffered from "@/components/City_specific/ServicesOffered";
+import HospitalsWeServe from "@/components/City_specific/HospitalsWeServe";
 
-const findCity = (cities: { name: string; slug: string; places: { name: string; slug: string }[] }[], paramCity: string)=>{
+const findCity = (cities: City[], paramCity: string)=>{
   for(let i = 0; i < cities.length; i++){
     const city = cities[i].places.find((place) => place.name.toLowerCase() === paramCity.toLowerCase())
     if(city){
@@ -23,49 +27,94 @@ const findCity = (cities: { name: string; slug: string; places: { name: string; 
     }
   }
 }
-// Generate metadata for each city page
+
+// Define a constant for your site's base URL
+const SITE_URL = "https://jyotiambulance.in";
+
 export async function generateMetadata({
   params,
 }: { params: Promise<{city: string}>}): Promise<Metadata> {
-  
-  const paramCity =await params
-  const city = paramCity.city.split("-").splice(3).join(" ")
+  const citySlug = (await params).city;
+  const cityData = findCity(cities, citySlug.split("-").splice(3).join(" ")); // A more robust lookup by the slug itself
 
-  const cityData = findCity(cities, city);
+  // --- Fallback for Not Found Pages ---
   if (!cityData) {
     return {
-      title: "City Not Found - Jyoti Ambulance Services",
+      title: "Ambulance Service Not Found | Jyoti Ambulance",
+      description: "We provide 24/7 ambulance services across major cities. Please check our locations page to find service in your area.",
     };
   }
+
+  // --- Core Metadata from our Optimized Data Structure ---
+  const title = cityData.metaTitle || `Ambulance Service in ${cityData.name} | Jyoti Ambulance`;
+  const description = cityData.metaDescription || `24/7 private and ICU ambulance service in ${cityData.name}. Call now for immediate assistance.`;
+  const canonicalUrl = `${SITE_URL}/${cityData.slug}`;
+  const imageUrl = `https://jyotiambulance.in/jyoti-ambulance-logo-2.png`;
+
   return {
-    title: `24x7 Ambulance Service in ${cityData.name} - Fast Emergency Medical Transport | Jyoti Ambulance`,
-    description: `Professional ambulance service in ${cityData.name}. 24/7 ICU ambulance, air ambulance, emergency medical transport. Fast response time. Call +91-98765-43210`,
-    keywords: `ambulance service in ${cityData.name}, ambulance near me ${cityData.name}, best ambulance service in ${cityData.name}, ambulance service, emergency ambulance ${cityData.name}, ICU ambulance ${cityData.name}, medical transport ${cityData.name}`,
+    // --- IMPORTANT: Set metadataBase to resolve relative image URLs ---
+    metadataBase: new URL(SITE_URL),
+
+    // --- Main SEO Tags ---
+    title: title,
+    description: description,
     alternates: {
-      canonical: `https://jyotiambulance.in/${cityData.slug}`,
+      canonical: canonicalUrl,
     },
+
+    // --- Open Graph (for Facebook, LinkedIn, etc.) ---
     openGraph: {
       type: "website",
       locale: "en_IN",
-      url: `https://jyotiambulance.in/${cityData.slug}`,
-      title: `24x7 Ambulance Service in ${cityData.name} - Jyoti Ambulance Services`,
-      description: `Fast, reliable ambulance services in ${cityData.name}. ICU ambulance, air ambulance, emergency medical transport with trained staff.`,
+      url: canonicalUrl,
+      title: title, // Use the primary optimized title
+      description: description, // Use the primary optimized description
       siteName: "Jyoti Ambulance Services",
       images: [
         {
-          url: "/ambulance-4.png",
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `Ambulance Service in ${cityData.name}`,
+          alt: `Best Private Ambulance Service in ${cityData.name}`,
         },
       ],
     },
+
+    // --- Twitter Card ---
     twitter: {
       card: "summary_large_image",
-      site: "@jyotiambulance",
-      title: `24x7 Ambulance Service in ${cityData.name} - Jyoti Ambulance Services`,
-      description: `Fast, reliable ambulance services in ${cityData.name}. ICU ambulance, air ambulance, emergency medical transport.`,
-      images: ["/ambulance-1.jpg"],
+      site: "https://x.com/jyotiambulance4", // Replace with your actual Twitter handle if you have one
+      title: title, // Use the primary optimized title
+      description: description, // Use the primary optimized description
+      images: [imageUrl], // Twitter can use the same OG image
+    },
+
+    // --- Additional Important Tags ---
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    // --- JSON-LD Schema for Rich Results (Crucial for Local Services) ---
+    other: {
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EmergencyService",
+        "name": `Jyoti Ambulance Service in ${cityData.name}`,
+        "description": description,
+        "url": canonicalUrl,
+        "telephone": "+91-98765-43210", // Your main contact number
+        "image": imageUrl,
+        "areaServed": {
+          "@type": "City",
+          "name": cityData.name,
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Jyoti Ambulance Services",
+            "url": SITE_URL,
+        }
+      }),
     },
   };
 }
@@ -167,19 +216,21 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               Ambulance Services in {cityData.name}
             </h1>
             <p className="md:text-xl text-gray-800">
-              Your trusted partner for 24/7 emergency medical transport.
+              {cityData.metaDescription ? cityData.metaDescription : "Your trusted partner for 24/7 emergency medical transport."}
             </p>
           </div>
 
           <div className="mt-12 text-[16px] text-gray-700 leading-relaxed space-y-6">
             <p>
-              Are you looking for a fast and reliable{" "}
-              <strong>ambulance service in {cityData.name}</strong>? Jyoti
+              {cityData.introParagraph ? cityData.introParagraph : 
+              `Are you looking for a fast and reliable
+              <strong>ambulance service in ${cityData.name}</strong>? Jyoti
               Ambulance Services offers comprehensive and immediate medical
               transport solutions across {cityData.name} and its surrounding
               areas. Our modern, fully-equipped ambulance fleet is strategically
               positioned to guarantee the quickest response time for any medical
-              emergency.
+              emergency.`
+            }
             </p>
 
             {/* Section targeting the "Ambulance Number" keyword */}
@@ -259,13 +310,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         </div>
       </section>
 
+      <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} />
+      <HospitalsWeServe hospitals={cityData.hospitalsServed} city={cityData.name} />
       <HowToBookAmbulance cityData={cityData} />
+      <ServicesOffered services={cityData.servicesOffered} />
       <AreasWeServe cityData={cityData} />
+      <FAQs faqs={cityData.faqs} city={cityData.name}/>
       <ServiceAreas />
       <ServicesSection />
       <AboutSection />
       <TestimonialsSection />
-      <FAQSection />
       <ContactSection />
       <Footer />
     </main>
