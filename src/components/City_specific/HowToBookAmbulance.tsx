@@ -47,7 +47,7 @@ const HowToBookAmbulance = ({ cityData }: { cityData: LocalCityData }) => {
         </div>
 
         {/* --- Step-by-Step Guide --- */}
-        <div className="mt-16 space-y-12 grid md:grid-cols-3 md:gap-6">
+        <div className="mt-16 grid md:grid-cols-3 md:gap-6">
           {/* Step 1 */}
           <div
             id="step1"

@@ -16,7 +16,7 @@ const HospitalsWeServe = ({hospitals, city}:{hospitals: string[] | undefined, ci
 
         <div className="mt-16 md:mt-20 grid md:grid-cols-3 gap-8 md:gap-10 px-4 md:px-10">
           {hospitals.map((hospital, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="flex items-center md:mb-10">
               <div className="flex-shrink-0">
                 <HospitalIcon className="w-8 h-8 md:w-8 md:h-8 text-red-500" />
               </div>

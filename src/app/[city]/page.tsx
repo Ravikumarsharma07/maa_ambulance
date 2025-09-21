@@ -18,6 +18,7 @@ import FAQs from "@/components/City_specific/FAQs";
 import WhyChooseUs from "@/components/City_specific/WhyChooseUs";
 import ServicesOffered from "@/components/City_specific/ServicesOffered";
 import HospitalsWeServe from "@/components/City_specific/HospitalsWeServe";
+import OutOfStation from "@/components/City_specific/OutOfStation";
 
 const findCity = (cities: City[], paramCity: string) => {
   for (let i = 0; i < cities.length; i++) {
@@ -332,6 +333,7 @@ export default async function CityPage({
       />
       <HowToBookAmbulance cityData={cityData} />
       <ServicesOffered services={cityData.servicesOffered} />
+      <OutOfStation city={cityData.name} /> 
       <AreasWeServe cityData={cityData} />
       <FAQs faqs={cityData.faqs} city={cityData.name} />
       <ServiceAreas />
