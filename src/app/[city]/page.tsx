@@ -113,7 +113,7 @@ export async function generateMetadata({
         name: `Jyoti Ambulance Service in ${cityData.name}`,
         description: description,
         url: canonicalUrl,
-        telephone: "+91-98765-43210", // Your main contact number
+        telephone: "+91-9990228876", // Your main contact number
         image: imageUrl,
         areaServed: {
           "@type": "City",
@@ -157,7 +157,7 @@ export default async function CityPage({
     name: `Jyoti Ambulance Service - ${cityData.name}`,
     description: `24x7 ambulance services in ${cityData.name}. ICU ambulances, air ambulances, and emergency medical transport with trained staff and advanced equipment.`,
     url: `https://jyotiambulance.in/${cityData.slug}`,
-    telephone: "+91-98765-43210",
+    telephone: "+91-9990228876",
     image: "https://jyotiambulance.com/ambulance.png", // ✅ Add logo/representative image
     priceRange: "₹₹ - ₹₹₹", // ✅ Optional but helps Google display rich snippets
     sameAs: [
@@ -239,7 +239,7 @@ export default async function CityPage({
               <p>{cityData.introParagraph}</p>
             ) : (
               <p>
-                Are you looking for a fast and reliable {" "}
+                Are you looking for a fast and reliable{" "}
                 <strong>ambulance service in {cityData.name}</strong>? Jyoti
                 Ambulance Services offers comprehensive and immediate medical
                 transport solutions across {cityData.name} and its surrounding
@@ -333,7 +333,7 @@ export default async function CityPage({
       />
       <HowToBookAmbulance cityData={cityData} />
       <ServicesOffered services={cityData.servicesOffered} />
-      <OutOfStation city={cityData.name} /> 
+      <OutOfStation city={cityData.name} />
       <AreasWeServe cityData={cityData} />
       <FAQs faqs={cityData.faqs} city={cityData.name} />
       <ServiceAreas />

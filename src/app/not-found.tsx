@@ -25,8 +25,8 @@ export default function NotFound() {
       
       <div className="mt-10 p-6 bg-white shadow rounded-lg max-w-md text-left">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">Need urgent help?</h3>
-        <a href="tel:+91-9654232540" className="text-gray-700">
-          Call our emergency helpline now: <span className="font-bold text-red-600">+91-9654232540</span>
+        <a href="tel:+91-9990228876" className="text-gray-700">
+          Call our emergency helpline now: <span className="font-bold text-red-600">+91-9990228876</span>
         </a>
       </div>
       

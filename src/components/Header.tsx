@@ -7,17 +7,21 @@ import {
   Menu,
   X,
   Mail,
-  MapPin,
   Facebook,
   Instagram,
   Twitter,
   Linkedin,
   Youtube,
+  ChevronDown,
+  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
+import { Services } from "@/constants/Services";
+import cities from "@/constants/Cities";
+import MobileNav from "./header_components/MobileNav";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -45,49 +49,18 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Our Services", href: "/services" },
+    { name: "Our Services", href: "/services"},
     { name: "Blogs", href: "/blog" },
-    { name: "Locations", href: "/available-areas" },
+    { name: "Locations", href: "/available-areas"},
     { name: "Contact Us", href: "/contact-us" },
   ];
   return (
     <>
-      {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 left-0 ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } inset-0 bg-white transition-all duration-500 ease-out w-[19rem] h-screen z-[9999] p-2`}
-      >
+      {/* nav for small screens */}
+      <MobileNav navLinks={navLinks} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
 
-        <div className="flex-between">
-          <Image
-            src="/jyoti-ambulance-logo-2.png"
-            alt="Jyoti Ambulance Logo"
-            width={250}
-            height={100}
-            className="w-[250px] h-[100px] object-cover relative right-4"
-          />
-          <button
-            className="text-gray-700 bg-[#ffd000] p-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <X strokeWidth={2.9} className="w-7 h-7" />
-          </button>
-        </div>
-        <nav className="space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="block px-4 py-2 text-lg font-semibold hover:bg-gray-200 text-gray-800 border-b border-gray-200"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-      </div>
 
+      {/* nav for big screens */}
       <header
         className={`fixed top-0 left-0  bg-white w-full backdrop-blur-sm shadow-lg z-[9998] transition-transform ${
           showNav ? "translate-y-0" : "translate-y-[-100%]"
@@ -128,16 +101,6 @@ const Header = () => {
               />
               jyotiambulance69@gmail.com
             </a>
-            {/* <a
-              className="flex items-center hover:text-yellow-400"
-              href="https://www.google.com/search?q=E-18%2F280+GF%2C+Sector+3%2C+Rohini%2C+Delhi+110085%2C+Near+MCD+School"
-            >
-              <MapPin
-                strokeWidth={2.5}
-                className="w-4 h-4 mr-2 font-semibold text-yellow-400"
-              />
-              E-18/280 GF, Sector 3, Rohini, Delhi 110085, Near MCD School
-            </a> */}
           </div>
           {/* social icons */}
           <div className="flex-center gap-3 md:gap-2">
@@ -160,7 +123,8 @@ const Header = () => {
         </div>
 
         <div className="mx-auto pr-4 sm:pr-6 lg:pr-8">
-          <div className="flex-between overflow-hidden py-0 md:py-3">
+          <div className="flex-between py-0 md:py-3">
+            {/* company logo  */}
             <Link href="/" className="text-2xl font-bold text-red-600">
               <Image
                 src="/jyoti-ambulance-logo-2.png"
@@ -174,16 +138,61 @@ const Header = () => {
               />
             </Link>
 
-            <nav className="hidden md:flex items-center px-2 xl:pr-32">
+            <nav className="hidden md:flex items-center px-2 xl:pr-32 z-0">
               {navLinks.map((item) => (
+                <div key={item.name} className="group relative">
                 <Link
-                  key={item.name}
                   href={`${item.href}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-600 lg:text-[17px] text-center hover:text-red-600 py-6 px-4 font-semibold transition-colors"
+                  className="text-gray-600 lg:text-[17px] flex-center text-center hover:text-red-600 py-6 px-4 font-semibold transition-colors"
                 >
-                  {item.name}
+                  {item.name} {(item.name === "Our Services" || item.name === "Locations") && <ChevronDown className="group-hover:rotate-180" />}
                 </Link>
+
+                {item.name === "Our Services" && (
+                  <div className="group-hover:block z-50 hidden absolute top-14 left-0 w-[320px] bg-white shadow-2xl ">
+                    {Services.slice(1, 10).map((service, index) => (
+                      <Link
+                        href={service.link}
+                        key={index}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-2 hover:text-red-500 text-gray-800 border-b border-gray-200"
+                      >
+                        {service.name} <ChevronRight className="w-4 h-4 inline-block" />
+                      </Link>
+                    ))}
+                    <Link
+                        href="/services"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block font-semibold px-4 py-2 hover:text-red-500 text-gray-800 border-b border-gray-200"
+                      >
+                        Explore all services <ChevronRight className="w-4 h-4 inline-block" />
+                      </Link>
+                  </div>
+                )}
+
+                {item.name === "Locations" && (
+                  <div className="group-hover:block z-50 hidden absolute top-14 left-0 w-[220px] bg-white shadow-2xl">
+                    {cities.map((location, index) => (
+                      <Link
+                        href={`/${location.slug}`}
+                        key={index}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-2 hover:text-red-500 text-gray-800 border-b border-gray-200"
+                      >
+                        {location.name} <ChevronRight className="w-4 h-4 inline-block" />
+                      </Link>
+                    ))}
+                    <Link
+                        href="/available-areas"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block font-semibold px-4 py-2 hover:text-red-500 text-gray-800 border-b border-gray-200"
+                      >
+                        Explore all locations <ChevronRight className="w-4 h-4 inline-block" />
+                      </Link>
+                  </div>
+                )}
+                </div>
               ))}
             </nav>
 
