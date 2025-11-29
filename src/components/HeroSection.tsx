@@ -11,11 +11,11 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   });
   return (
-    <section className="relative -z-10 py-12 lg:py-24 mt-24 lg:mt-32 overflow-hidden">
+    <section className="relative -z-10 py-12 lg:py-24 mt-24 md:mt-40 lg:mt-32 overflow-hidden">
 
-      {/* trianle top designs */}
+      {/* top most trianle designs */}
       <div
-        className={`flex-center h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[500px] md:w-[500px] bg-gray-100/20 rounded-[1.2rem] md:rounded-[2.2rem] rotate-[30deg] absolute -top-[75%] -left-[3%] sm:left-[1%] md:-top-[60%] md:left-[5%] z-30 transition-all duration-1000 ${
+        className={`flex-center h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] md:h-[300px] md:w-[300px] lg:h-[500px] lg:w-[500px]  bg-gray-100/20 rounded-[1.2rem] md:rounded-[2.2rem] rotate-[30deg] absolute -top-[75%] -left-[3%] sm:left-[1%] md:-top-[60%] md:left-[5%] z-30 transition-all duration-1000 ${
           isAnimating ? "translate-0" : "translate-[-200px]"
         }`}
         >
@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="max-w-7xl relative z-10 flex-between lg:gap-12">
         {/* Left Content */}
         <div className="text-center lg:text-left">
-          <h1 className="text-nowrap font-sans ml-2 md:ml-5 text-[1.5rem] sm:text-[2.2rem] md:text-[2.5rem] leading-[30px] sm:leading-[35px] md:leading-[40px] lg:leading-[75px] lg:text-[5rem] xl:text-[5.2rem] scale-y-[1.1] text-center text-shadow-md text-shadow-black font-bold text-white mb-2 md:mb-6">
+          <h1 className="text-nowrap font-sans ml-2 md:ml-5 text-[1.5rem] sm:text-[2.2rem] md:text-[2.5rem]  lg:text-[4.6rem] xl:text-[5.2rem] leading-[30px] sm:leading-[35px] md:leading-[40px] lg:leading-[75px] scale-y-[1.1] text-center text-shadow-md text-shadow-black font-bold text-white mb-2 md:mb-6">
             Jyoti Ambulance
             <span className="text-[#ffc400] block text-[1.7rem] sm:text-[2.7rem] md:text-[3rem] lg:text-[5.4rem] tracking-wide font-extrabold">
               Services

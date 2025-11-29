@@ -50,9 +50,10 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
     { name: "Our Services", href: "/services"},
-    { name: "Blogs", href: "/blog" },
+    // { name: "Blogs", href: "/blog" },
     { name: "Locations", href: "/available-areas"},
     { name: "Contact Us", href: "/contact-us" },
+    { name: "Developer Portfolio", href: "https://ravi-kr-sharma.vercel.app/" },
   ];
   return (
     <>
@@ -132,19 +133,19 @@ const Header = () => {
                 width={320}
                 height={100}
                 fetchPriority="high"
-                className="max-md:w-[12rem] h-[3.6rem] md:h-[5rem] object-cover"
+                className="max-md:w-[12rem] h-[3.6rem] md:h-[5rem] lg:w-[14rem] xl:w-[16rem] object-cover"
                 priority
                 quality={100}
               />
             </Link>
 
-            <nav className="hidden md:flex items-center px-2 xl:pr-32 z-0">
+            <nav className="hidden md:flex items-center px-2 xl:pr-16 z-0">
               {navLinks.map((item) => (
                 <div key={item.name} className="group relative">
                 <Link
                   href={`${item.href}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-600 lg:text-[17px] flex-center text-center hover:text-red-600 py-6 px-4 font-semibold transition-colors"
+                  className={`text-gray-600 lg:text-[16px] xl:text-[17px] flex-center text-center ${item.name === "Developer Portfolio" && "text-red-500"} hover:text-red-600 py-6 px-3 xl:px-4 font-semibold transition-colors`}
                 >
                   {item.name} {(item.name === "Our Services" || item.name === "Locations") && <ChevronDown className="group-hover:rotate-180" />}
                 </Link>
