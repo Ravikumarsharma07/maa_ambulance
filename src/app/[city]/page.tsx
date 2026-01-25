@@ -327,15 +327,15 @@ export default async function CityPage({
       </section>
 
       <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} />
-      <HospitalsWeServe
+      {/* <HospitalsWeServe
         hospitals={cityData.hospitalsServed}
         city={cityData.name}
-      />
+      /> */}
       <HowToBookAmbulance cityData={cityData} />
-      <ServicesOffered services={cityData.servicesOffered} />
-      <OutOfStation city={cityData.name} />
-      <AreasWeServe cityData={cityData} />
-      <FAQs faqs={cityData.faqs} city={cityData.name} />
+      {/* <ServicesOffered services={cityData.servicesOffered} /> */}
+      {/* <OutOfStation city={cityData.name} /> */}
+      {/* <AreasWeServe cityData={cityData} /> */}
+      {/* <FAQs faqs={cityData.faqs} city={cityData.name} /> */}
       <ServiceAreas />
       <ServicesSection />
       <AboutSection />
