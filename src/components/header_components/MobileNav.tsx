@@ -22,15 +22,29 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
       } inset-0 bg-white transition-all duration-500 ease-out w-[20rem] h-screen z-[9999] p-2 pb-16 overflow-scroll`}
     >
       <div className="flex-between">
-        <Image
-          src="/jyoti-ambulance-logo-2.png"
-          alt="Jyoti Ambulance Logo"
-          width={250}
-          height={100}
-          className="w-[250px] h-[100px] object-cover relative right-4"
-        />
+        <Link
+              href="/"
+              className="ml-4 pt-2 pb-4 text-xl md:text-2xl font-bold flex-center"
+            >
+              <Image
+                src="/company-logo.png"
+                alt="Maa Ambulance Service Logo"
+                width={320}
+                height={100}
+                fetchPriority="high"
+                className="w-12 h-12 md:w-16 md:h-16 object-cover"
+                priority
+                quality={100}
+              />
+              <p className="flex flex-col leading-6">
+                <span className="text-[#1F2933]">
+                  MAA
+                </span>{" "}
+                <span className="text-[#E53935]">Ambulance</span>
+              </p>
+            </Link>
         <button
-          className="text-gray-700 bg-[#ffd000] p-2"
+          className="text-[#1F2933] bg-[#178A52] p-2"
           onClick={() => setIsMenuOpen(false)}
         >
           <X strokeWidth={2.9} className="w-7 h-7" />
@@ -45,7 +59,7 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               onClick={
                 () => setIsMenuOpen(false)
               }
-              className="block px-4 py-2 text-lg font-semibold hover:bg-gray-200 text-gray-800 border-b border-gray-200"
+              className="block px-4 py-2 text-lg font-semibold text-[#178A52] border-b-2 border-[green]"
             >
               {link.name}{" "}
               {link.name === "Our Services" && (
@@ -82,7 +96,7 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                     href={service.link}
                     key={index}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block px-4 py-2 hover:text-red-500 text-gray-800 border-b border-gray-200"
+                    className="block pl-4 pr-2 py-2 text-gray-800 border-b border-gray-200"
                   >
                     {service.name}{" "}
                     <ChevronRight className="w-4 h-4 inline-block" />

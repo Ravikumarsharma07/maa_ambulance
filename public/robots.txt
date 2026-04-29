@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://jyotiambulance.in
+Host: https://maambulanceservice.com/
 
 # Sitemaps
-Sitemap: https://jyotiambulance.in/sitemap.xml
+Sitemap: https://maambulanceservice.com/sitemap.xml

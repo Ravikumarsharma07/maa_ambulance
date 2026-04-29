@@ -1,1323 +1,1146 @@
 import { City } from "../Cities";
+import { Number2 } from "../PhoneNumbers";
+const phoneNumber = Number2;
 
-export const Bihar:City = {
+export const Bihar: City = {
   name: "Bihar",
   slug: "ambulance-service-in-bihar",
+  headOffice: "Boring Road (Boring Canal Road), Patna, Bihar",
   places: [
+    // --- Bihar ---
     {
       name: "Bihar",
       slug: "ambulance-service-in-bihar",
-      // Optimized to target "Best," "ICU," "Number," and the state name.
-      metaTitle: "Best ICU Ambulance Service Number in Bihar | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," "outstation," and all major cities.
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Bihar. We cover Patna, Gaya, Muzaffarpur, and more for local, outstation, and emergency transport. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords for the entire state.
-      pageHeadline: "Best ICU & Private Ambulance Service in Bihar",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "One Emergency Number for All of Bihar: +91-9540944424",
-      // Intro enriched with state-wide expertise and keywords like "near you" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Bihar | 24/7 Maa Ambulance",
+      metaDescription: `Emergency ICU ambulance service in Bihar covering Patna, Muzaffarpur, Gaya & Bhagalpur. Fast hospital transfers and outstation support at ${phoneNumber}. Call 24/7.`,
+      pageHeadline: "24/7 ICU & Private Ambulance Service in Bihar",
+      subHeadline: `Emergency Ambulance Number in Bihar: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the most reliable private ambulance network serving all of Bihar. Our state-wide coordinated fleet is the answer when you search for an 'ambulance service near me,' providing the best ICU, ventilator, and emergency transport across major cities like Patna, Gaya, and Muzaffarpur. We specialize in seamless local and outstation transfers, ensuring a professional and rapid response wherever you are in Bihar.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service offers dependable private ICU ambulance support across Bihar, ensuring life-saving transport in Patna, Muzaffarpur, Gaya, Bhagalpur, and Darbhanga. We specialize in rapid response near major medical hubs like AIIMS Patna, IGIMS, and Paras HMRI. Our team is experienced in navigating state highways and city traffic to provide timely local emergency pickups, inter-district hospital transfers, and long-distance outstation transport to Delhi, Varanasi, or Kolkata for advanced medical treatment.",
+      nearByCities: [
+        "Patna",
+        "Muzaffarpur",
+        "Gaya",
+        "Bhagalpur",
+        "Darbhanga",
+        "Arrah",
+        "Begusarai",
+        "Purnia",
+      ],
       servicesOffered: [
         {
-          name: "Outstation & Inter-City ICU Transfers",
+          name: "ICU Ventilator Ambulance Bihar",
           description:
-            "We are specialists in seamless, long-distance ICU ambulance transfers between districts, such as from Darbhanga to a specialty hospital in Patna, ensuring continuity of care.",
+            "Advanced Life Support (ALS) units equipped with ventilators, cardiac monitors, and emergency drugs for critical patients across Bihar.",
         },
         {
-          name: "Emergency Ambulance Near Me in Bihar",
+          name: "Inter-City Patient Transfer",
           description:
-            "Our central dispatch coordinates our fleet across all districts, ensuring the closest available unit responds to your call, providing the fastest response in Bihar.",
+            "Reliable ambulance transport between districts like Patna to Gaya or Muzaffarpur to Darbhanga with continuous medical monitoring.",
         },
         {
-          name: "24/7 Bihar Ambulance Number",
+          name: "Outstation Ambulance to Delhi/NCR",
           description:
-            "One reliable number connects you with our entire network across the state, making it easy to get professional help during a stressful emergency, day or night.",
+            "Specialized long-distance ambulance services from Bihar to major hospitals in Delhi, Lucknow, or Varanasi for specialized care.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits for the region.
       whyChooseUs: [
-        "The Best & Largest Coordinated Network in Bihar",
-        "Seamless Inter-City Patient Transfers",
-        "Fastest Response Across All Major Cities & Highways",
-        "Uniform Standard of High-Quality ICU Care",
-        "One Reliable Number for the Whole State",
+        "Extensive network covering both urban centers and rural districts of Bihar",
+        "Expertise in long-distance transfers to Delhi and other metropolitan cities",
+        "24/7 availability with a fleet of ICU, BLS, and Mortuary ambulances",
+        "Experienced paramedics and nursing staff trained for emergency handling",
+        "Quickest pickup times near Patna's major private and government hospitals",
       ],
-
-      // Expanded hospital list to show authority across multiple major cities in Bihar.
       hospitalsServed: [
-        "AIIMS, Patna",
-        "IGIMS, Patna",
-        "Patna Medical College and Hospital (PMCH)",
-        "Anugrah Narayan Magadh Medical College (ANMCH), Gaya",
-        "Sri Krishna Medical College & Hospital (SKMCH), Muzaffarpur",
-        "Jawaharlal Nehru Medical College & Hospital (JLNMCH), Bhagalpur",
-        "Darbhanga Medical College & Hospital (DMCH)",
+        "AIIMS Patna",
+        "IGIMS (Indira Gandhi Institute of Medical Sciences)",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital",
+        "PMCH (Patna Medical College and Hospital)",
+        "Sri Krishna Medical College (SKMCH), Muzaffarpur",
+        "Anugrah Narayan Magadh Medical College, Gaya",
+        "Jawaharlal Nehru Medical College, Bhagalpur",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the single best ambulance number for the whole of Bihar?",
-          answer:
-            "For any emergency anywhere in Bihar (including Patna, Gaya, Muzaffarpur, etc.), the single best number to call for a private ICU ambulance is our 24/7 central helpline: +91-9540944424.",
+          question: "Which is the best private ambulance service in Patna, Bihar?",
+          answer: `Maa Ambulance Service provides the most reliable 24/7 ICU and private ambulance support in Patna and Bihar. Call ${phoneNumber} for immediate help.`,
         },
         {
-          question:
-            "Do you provide ambulance service in Bihar for outstation travel?",
+          question: "Do you provide ambulance services from Bihar to Delhi?",
           answer:
-            "Yes, we are specialists in providing ambulance services for outstation travel from any city in Bihar. Our vehicles are equipped for long-distance critical care transport, ensuring patient safety and comfort.",
+            "Yes, we specialize in long-distance ICU ambulance transfers from Bihar to Delhi, NCR, and other neighboring states with full medical support.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance service in Bihar?",
+          question: "Are your ambulances equipped with ventilators?",
           answer:
-            "While the 102/108 services are vital for primary emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand for critical patients, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, our ICU ambulances are fully equipped with ventilators, oxygen cylinders, monitors, and trained medical staff for critical emergencies.",
         },
       ],
     },
+
+    // ----------------------- 1.Patna -----------------------
     {
       name: "Patna",
       slug: "ambulance-service-in-patna",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle: "Best ICU Ambulance Service Number in Patna | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Patna. We provide 24/7 transport to AIIMS, IGIMS, and for outstation travel. Call for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Patna | Maa",
+      metaDescription: `Best private ICU ambulance service in Patna near Bailey Road and Kankarbagh. Fast emergency and outstation support at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Patna",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Patna Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Patna: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is Patna's best private ambulance service, specializing in critical care ICU transport. Our local teams are familiar with all areas, from Kankarbagh to Bailey Road, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to AIIMS and IGIMS to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides fast private ICU ambulance service in Patna for emergencies near Bailey Road, Boring Road, Kankarbagh, Ashiana-Digha Road, and Gandhi Maidan corridors. Our team knows the traffic pressure around Rajendra Nagar Terminal, RPS More, AIIMS Patna approach roads, and Mahatma Gandhi Setu links, helping us dispatch the nearest ambulance for emergency pickup, hospital transfer, and outstation patient movement without delay.",
+      nearByCities: [
+        "Bihar Sharif",
+        "Ara",
+        "Begusarai",
+        "Muzaffarpur",
+        "Gaya",
+        "Sasaram",
+        "Chapra",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Patna",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Patna's top hospitals.",
+            "Advanced ICU ambulances with ventilator, monitor, oxygen, suction, and trained staff for critical patient transfers across Patna.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Patna to any city, ensuring high-quality care throughout the journey.",
+            "Fast private ambulance dispatch for homes, apartments, clinics, railway stations, and hospitals in Patna and nearby districts.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Patient Transfer",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Patna.",
+            "Safe outstation ambulance transfers from Patna to Delhi, Kolkata, Ranchi, Varanasi, and other cities with medical supervision.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Patna.
       whyChooseUs: [
-        "Patna's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with AIIMS, IGIMS & Paras Hospital",
+        "Fast routing across Bailey Road, Ashiana-Digha Road, and Kankarbagh corridors",
+        "Quick pickup near RPS More, Rajendra Nagar, Gandhi Maidan, and airport routes",
+        "Private ICU ambulances with oxygen, ventilator, and trained paramedics",
+        "24/7 emergency number for local, hospital, and outstation transfers",
+        "Reliable support during Patna traffic bottlenecks and bridge congestion",
       ],
-
-     
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "All India Institute of Medical Sciences (AIIMS), Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
+        "Paras HMRI Hospital, Patna",
         "Indira Gandhi Institute of Medical Sciences (IGIMS)",
-        "Patna Medical College and Hospital (PMCH)",
-        "Paras HMRI Hospital",
-        "Medanta Super Speciality Hospital",
-        "Big Apollo Spectra Hospital",
+        "AIIMS Patna",
+        "Big Apollo Spectra Hospitals, Patna",
+        "Ruban Memorial Hospital, Patna",
+        "NMCH, Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Patna?",
-          answer:
-            "For any emergency in Patna, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Patna?",
+          answer: `Call ${phoneNumber} for a 24/7 private ICU ambulance in Patna.`,
         },
         {
           question:
-            "Do you provide ambulance service from Patna for outstation travel?",
+            "Do you provide ICU ambulance service near Bailey Road and Kankarbagh?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Patna. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ICU ambulance service near Bailey Road, Kankarbagh, Raja Bazar, and major Patna hospital zones.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Patna?",
+          question: "Can I book an outstation ambulance from Patna?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Patna with medical staff, oxygen support, and critical care equipment.",
         },
       ],
     },
+
+    // ----------------------- 2.Gaya -----------------------
     {
       name: "Gaya",
       slug: "ambulance-service-in-gaya",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle: "Best ICU Ambulance Service Number in Gaya | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Gaya. We serve residents and pilgrims 24/7, providing transport to ANMCH and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Gaya | Maa",
+      metaDescription: `Best private ICU ambulance service in Gaya near Tower Chowk and Bodh Gaya Road. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Gaya",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Gaya Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise (pilgrims) and keywords like "near you" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Gaya: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for the holy city of Gaya, serving residents and pilgrims alike. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to ANMCH to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service offers rapid private ICU ambulance service in Gaya for urgent cases near Tower Chowk, Swarajpuri Road, Bodh Gaya Road, and Gaya Junction corridors. Our drivers know the traffic movement around Delha, AP Colony, and medical routes linking Magadh Medical College and central Gaya, allowing faster dispatch for home emergencies, hospital referrals, and outstation ambulance transport.",
+      nearByCities: [
+        "Patna",
+        "Bihar Sharif",
+        "Sasaram",
+        "Ara",
+        "Darbhanga",
+        "Muzaffarpur",
+        "Begusarai",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Gaya",
+          name: "Emergency ICU Ambulance in Gaya",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Gaya's top hospitals.",
+            "Critical care ambulances equipped with ventilator, oxygen, monitor, and trained paramedics for serious medical cases.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Gaya to Patna or any other city.",
+            "Fast private ambulance booking for Gaya homes, hotels, clinics, and nearby Bodh Gaya travel routes.",
         },
         {
-          name: "Emergency Ambulance for Pilgrims",
+          name: "Outstation Ambulance Service",
           description:
-            "We offer a rapid-response emergency service for pilgrims and tourists. Our fleet is positioned to be the 'ambulance near me' you can count on in any part of the city.",
+            "Safe outstation patient transport from Gaya with proper medical supervision and transit care.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Gaya.
       whyChooseUs: [
-        "Gaya's Best & Most Trusted Fleet",
-        "Fastest Response for Residents & Pilgrims",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with ANMCH",
+        "Fast route handling through Tower Chowk, Bodh Gaya Road, and Gaya Junction corridors",
+        "Quick access to local hospitals, Bodh Gaya, and major highway exit routes",
+        "24/7 private and ICU ambulance support for critical transfers",
+        "Experienced medical team for stable and serious patients",
+        "Reliable service for emergency, referral, and outstation transport",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Anugrah Narayan Magadh Medical College & Hospital (ANMCH)",
-        "AIIMS, Gaya (Deoghar)",
-        "Gautam Buddha Mahila College Hospital",
-        "VIMS Hospital",
-        "Maa Vaishno Devi Hospital",
+        "Anugrah Narayan Magadh Medical College and Hospital",
+        "Jeevan Rekha Hospital, Gaya",
+        "Magadh Hospital, Gaya",
+        "AP Colony Nursing Home, Gaya",
+        "Buddha Emergency Hospital, Gaya",
+        "Narayan Hospital, Gaya",
+        "Paras HMRI Hospital, Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for a medical emergency in Gaya?",
-          answer:
-            "For any medical emergency in Gaya, for residents or pilgrims, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch.",
+          question: "What is the best ambulance number in Gaya?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Gaya.`,
         },
         {
           question:
-            "Do you provide ambulance service from Gaya for outstation travel?",
+            "Do you provide ICU ambulance service near Gaya Junction and Bodh Gaya Road?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Gaya. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ICU ambulance service near Gaya Junction, Tower Chowk, AP Colony, and Bodh Gaya routes.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Gaya?",
+          question: "Can I book an outstation ambulance from Gaya?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance service from Gaya with trained staff and medical equipment.",
         },
       ],
     },
+    
+    // ----------------------- 3.Muzaffarpur -----------------------
     {
       name: "Muzaffarpur",
       slug: "ambulance-service-in-muzaffarpur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Muzaffarpur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Muzaffarpur. We provide 24/7 transport to SKMCH and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Muzaffarpur | Maa",
+      metaDescription: `Best private ICU ambulance service in Muzaffarpur near Zero Mile and Kalambagh. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Muzaffarpur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Muzaffarpur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Muzaffarpur: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Muzaffarpur, providing a critical lifeline for the entire city. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like SKMCH to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides quick private ICU ambulance service in Muzaffarpur for emergencies near Zero Mile, Kalambagh Chowk, Imli Chatti, and Station Road. Our team understands local bottlenecks around Bhagwanpur, Juran Chhapra, and Brahampura routes, helping us deliver faster response for emergency calls, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Patna",
+        "Darbhanga",
+        "Begusarai",
+        "Chapra",
+        "Bihar Sharif",
+        "Purnia",
+        "Katihar",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Muzaffarpur",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Muzaffarpur's top hospitals.",
+            "Well-equipped ICU ambulances with ventilator, oxygen, monitor, and trained staff for critical patient transport.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Muzaffarpur to Patna or any other city.",
+            "Fast dispatch for patients near Muzaffarpur Junction, homes, clinics, and nearby North Bihar medical routes.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance Booking",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Muzaffarpur.",
+            "Trusted outstation ambulance transfers from Muzaffarpur with proper care for long-distance travel.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Muzaffarpur.
       whyChooseUs: [
-        "Muzaffarpur's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with SKMCH",
+        "Fast response via Zero Mile, Kalambagh Chowk, and Station Road corridors",
+        "Quick access to Juran Chhapra, Bhagwanpur, and major city hospitals",
+        "24/7 private and ICU ambulances for emergency and scheduled transport",
+        "Experienced team for critical care transfers and hospital referrals",
+        "Reliable support across congested Muzaffarpur corridors",
       ],
-
-     
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Sri Krishna Medical College & Hospital (SKMCH)",
-        "Prasad Hospital",
-        "Ashirwad Hospital",
-        "Maa Janki Hospital & Research Center",
-        "Vaishali Superspeciality Hospital",
+        "Prasad Hospital, Muzaffarpur",
+        "Mediwell Hospital, Muzaffarpur",
+        "Apex Children's Hospital, Muzaffarpur",
+        "Kejriwal Hospital, Muzaffarpur",
+        "Mahabir Hospital, Muzaffarpur",
+        "Medanta Hospital, Muzaffarpur",
+        "SKMCH, Muzaffarpur",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Muzaffarpur?",
-          answer:
-            "For any emergency in Muzaffarpur, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Muzaffarpur?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Muzaffarpur.`,
         },
         {
           question:
-            "Do you provide ambulance service from Muzaffarpur for outstation travel?",
+            "Do you provide ambulance service near Zero Mile and Muzaffarpur Junction?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Muzaffarpur. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ambulance service near Zero Mile, Kalambagh Chowk, Muzaffarpur Junction, and nearby areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Muzaffarpur?",
+          question: "Can I book an outstation ambulance from Muzaffarpur?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance service from Muzaffarpur with trained staff and medical equipment.",
         },
       ],
     },
+
+    // ----------------------- 4.Bhagalpur -----------------------
     {
       name: "Bhagalpur",
       slug: "ambulance-service-in-bhagalpur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Bhagalpur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Bhagalpur. We provide 24/7 transport to JLNMCH and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Bhagalpur | Maa",
+      metaDescription: `Best private ICU ambulance service in Bhagalpur near Tilkamanjhi and Zero Mile. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Bhagalpur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Bhagalpur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Bhagalpur: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Bhagalpur, providing critical medical transport across the city. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like JLNMCH to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service offers dependable private ICU ambulance service in Bhagalpur for emergencies near Tilkamanjhi Chowk, Zero Mile, MG Road, and Nathnagar corridors. Our dispatch team knows the pressure points around Vikramshila Setu approach roads, Adampur, and city-hospital routes, helping us cut travel delays for critical pickups, hospital referrals, and outstation ambulance transfers.",
+      nearByCities: [
+        "Munger",
+        "Katihar",
+        "Purnia",
+        "Begusarai",
+        "Saharsa",
+        "Patna",
+        "Darbhanga",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Bhagalpur",
+          name: "ICU Ambulance Near Bhagalpur",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Bhagalpur's top hospitals.",
+            "Critical care ambulances with ventilator, monitor, oxygen, and trained paramedics for serious patient transport.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Service in Bhagalpur",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Bhagalpur to Patna or any other city.",
+            "Fast ambulance support for homes, clinics, diagnostic centers, and nursing care facilities in Bhagalpur.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance Transfer",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Bhagalpur.",
+            "24/7 outstation ambulance service from Bhagalpur for medically supervised long-distance transfers.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Bhagalpur.
       whyChooseUs: [
-        "Bhagalpur's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with JLNMCH",
+        "Quick routing via Tilkamanjhi, Zero Mile, and Vikramshila Setu approach roads",
+        "Fast access to Bhagalpur city hospitals and highway-linked referral routes",
+        "Private ICU ambulances ready for emergency and referral movement",
+        "Experienced transit care team for critical and non-critical patients",
+        "Reliable day and night ambulance booking for local and outstation travel",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Jawaharlal Nehru Medical College & Hospital (JLNMCH)",
-        "Glocal Hospital",
-        "Ayushman Hospital",
-        "Shivam Hospital & Research Centre",
-        "Surya Clinic & Hospital",
+        "Bhagalpur City Hospital",
+        "K K Nursing Home, Bhagalpur",
+        "RPS Memorial Super Speciality Hospital, Bhagalpur",
+        "Jawaharlal Nehru Medical College and Hospital",
+        "Glocal Hospital, Bhagalpur",
+        "Sadar Hospital, Bhagalpur",
+        "Apollo Clinic, Bhagalpur",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
           question:
-            "What is the best ambulance number for an emergency in Bhagalpur?",
+            "Do you provide ambulance service near Tilkamanjhi and Zero Mile?",
           answer:
-            "For any emergency in Bhagalpur, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+            "Yes, we provide fast ambulance service near Tilkamanjhi, Zero Mile, MG Road, and surrounding Bhagalpur areas.",
         },
         {
-          question:
-            "Do you provide ambulance service from Bhagalpur for outstation travel?",
+          question: "Is ICU ambulance available in Bhagalpur 24/7?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Bhagalpur. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, our ICU ambulance service in Bhagalpur is available 24/7.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Bhagalpur?",
+          question: "Can I book outstation ambulance from Bhagalpur?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance service from Bhagalpur with trained staff and critical care support.",
         },
       ],
     },
+
+    // ----------------------- 5.Darbhanga -----------------------
     {
       name: "Darbhanga",
       slug: "ambulance-service-in-darbhanga",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Darbhanga | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Darbhanga. We provide 24/7 transport to DMCH, AIIMS Darbhanga, and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Darbhanga | Maa",
+      metaDescription: `Best private ICU ambulance service in Darbhanga near Laheriasarai and DMCH Road. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Darbhanga",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Darbhanga Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Darbhanga: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Darbhanga, providing critical medical transport across the city. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like DMCH to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides prompt private ICU ambulance service in Darbhanga for emergencies near Laheriasarai, DMCH Road, VIP Road, and Benta Chowk. Our drivers understand traffic movement around Delhi More, Donar, and city-hospital routes, helping us deliver quick response for emergency pickups, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Muzaffarpur",
+        "Patna",
+        "Begusarai",
+        "Saharsa",
+        "Purnia",
+        "Katihar",
+        "Bhagalpur",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Darbhanga",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Darbhanga's top hospitals.",
+            "Advanced ICU ambulance support with oxygen, ventilator, monitor, and trained staff for critical patients.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Darbhanga to Patna or any other city.",
+            "Fast ambulance dispatch for homes, apartments, clinics, and hospital zones in and around Darbhanga.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance from Darbhanga",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Darbhanga.",
+            "Reliable outstation ambulance transfers from Darbhanga for stable and serious patients needing supervised travel.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Darbhanga.
       whyChooseUs: [
-        "Darbhanga's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with DMCH & Paras Hospital",
+        "Fast movement through Laheriasarai, DMCH Road, VIP Road, and Benta Chowk",
+        "Quick access to Darbhanga hospitals and North Bihar referral routes",
+        "24/7 private ICU ambulances for emergency and planned transfers",
+        "Professional handling for residential, clinic, and hospital pickups",
+        "Reliable local and outstation service with trained medical staff",
       ],
-
-      
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Darbhanga Medical College & Hospital (DMCH)",
-        "AIIMS, Darbhanga",
-        "Paras Global Hospital",
-        "Heritage Hospital",
-        "City Hospital & Research Centre",
+        "Darbhanga Medical College and Hospital (DMCH)",
+        "Shri Vishudhanand Hospital Pvt. Ltd.",
+        "S N Sarraf Hospital, Darbhanga",
+        "Panacea Medicare & Research Centre, Darbhanga",
+        "Paras HMRI Hospital, Darbhanga",
+        "Kejriwal Hospital, Darbhanga",
+        "Madhubani-Darbhanga regional referral hospitals",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Darbhanga?",
-          answer:
-            "For any emergency in Darbhanga, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Darbhanga?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Darbhanga.`,
         },
         {
-          question:
-            "Do you provide ambulance service from Darbhanga for outstation travel?",
+          question: "Do you provide ambulance near DMCH and Laheriasarai?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Darbhanga. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ambulance service near DMCH, Laheriasarai, VIP Road, and nearby Darbhanga areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Darbhanga?",
+          question: "Is outstation ambulance available from Darbhanga?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Darbhanga with medical supervision and emergency support.",
         },
       ],
     },
-    {
-      name: "Purnea",
-      slug: "ambulance-service-in-purnea",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Purnea | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Purnea. We provide 24/7 transport to GMC Purnea and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Purnea",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Purnea Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Purnea and the surrounding region. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like GMC Purnea to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
 
-      // Services expanded to target specific, high-intent keywords.
+    // ----------------------- 6.Purnia -----------------------
+    {
+      name: "Purnia",
+      slug: "ambulance-service-in-purnia",
+      metaTitle: "Best ICU Ambulance in Purnia | Maa",
+      metaDescription: `Best private ICU ambulance service in Purnia near Line Bazar and NH-31. Fast emergency booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Purnia",
+      subHeadline: `24/7 Emergency Ambulance Number in Purnia: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service provides fast private ICU ambulance service in Purnia for emergencies near Line Bazar, NH-31, Khuskibagh, and Ford Company Chowk corridors. Our team knows the traffic flow around Gulabbagh, bus stand routes, and major medical access roads, helping us dispatch the nearest ambulance for emergency pickup, hospital transfer, and outstation patient movement without delay.",
+      nearByCities: [
+        "Katihar",
+        "Bhagalpur",
+        "Saharsa",
+        "Darbhanga",
+        "Muzaffarpur",
+        "Begusarai",
+        "Patna",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Purnea",
+          name: "ICU Ambulance Service in Purnia",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Purnea's top hospitals.",
+            "Advanced ICU ambulances with ventilator, monitor, oxygen, suction, and trained staff for critical patient transfers across Purnia.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Purnea to Patna or any other city.",
+            "Fast private ambulance dispatch for homes, clinics, and hospital zones in Purnia and nearby districts.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Patient Transfer",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Purnea.",
+            "Safe outstation ambulance transfers from Purnia to Patna, Siliguri, Kolkata, and other cities with medical supervision.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Purnea.
       whyChooseUs: [
-        "Purnea's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with GMC & Sadar Hospital",
+        "Fast routing across Line Bazar, NH-31, and Gulabbagh corridors",
+        "Quick pickup near medical colleges, bus stand, and highway exit routes",
+        "Private ICU ambulances with oxygen, ventilator, and trained paramedics",
+        "24/7 emergency number for local, hospital, and outstation transfers",
+        "Reliable support during North East Bihar traffic and highway congestion",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Government Medical College and Hospital, Purnea (GMC Purnea)",
-        "Sadar Hospital, Purnea",
-        "Maxima Hospital",
-        "Millia Hospital",
-        "LINE Sėvå Sådåñ",
+        "GMCH, Purnia",
+        "Line Bazar specialty hospitals, Purnia",
+        "Shahnaj Hospital, Purnia",
+        "Hope Hospital, Purnia",
+        "Prerna Hospital, Purnia",
+        "Sadar Hospital, Purnia",
+        "Max/Patna referral transfer support hospitals",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Purnea?",
-          answer:
-            "For any emergency in Purnea, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Purnia?",
+          answer: `Call ${phoneNumber} for a 24/7 private ICU ambulance in Purnia.`,
         },
         {
           question:
-            "Do you provide ambulance service from Purnea for outstation travel?",
+            "Do you provide ICU ambulance service near Line Bazar and NH-31?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Purnea. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ICU ambulance service near Line Bazar, Gulabbagh, and major Purnia hospital routes.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Purnea?",
+          question: "Can I book an outstation ambulance from Purnia?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Purnia with medical staff, oxygen support, and critical care equipment.",
         },
       ],
     },
-    {
-      name: "Samastipur",
-      slug: "ambulance-service-in-samastipur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Samastipur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Samastipur. We provide 24/7 transport to Sadar Hospital and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Samastipur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Samastipur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best and most responsive private ambulance service for Samastipur. Our local teams are familiar with the entire district, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
 
-      // Services expanded to target specific, high-intent keywords.
+    // ----------------------- 7.Ara -----------------------
+    {
+      name: "Ara",
+      slug: "ambulance-service-in-ara",
+      metaTitle: "Best ICU Ambulance in Ara | Maa",
+      metaDescription: `Best private ICU ambulance service in Ara near Arrah Chowk and Katira. Fast emergency booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Ara",
+      subHeadline: `24/7 Emergency Ambulance Number in Ara: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service offers rapid private ICU ambulance service in Ara for urgent cases near Arrah Chowk, Katira, Ramna Maidan, and Judge Kothi More. Our drivers know the high-traffic intersections around Pakri, Zero Mile, and Station Road, allowing faster dispatch for home emergencies, hospital referrals, and outstation ambulance transport across Bhojpur district.",
+      nearByCities: [
+        "Patna",
+        "Sasaram",
+        "Bihar Sharif",
+        "Begusarai",
+        "Chapra",
+        "Gaya",
+        "Muzaffarpur",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Samastipur",
+          name: "Emergency ICU Ambulance in Ara",
           description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport.",
+            "Critical care ambulances equipped with ventilator, oxygen, monitor, and trained paramedics for serious medical cases.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Samastipur to major medical centers in Patna or any other city.",
+            "Fast private ambulance booking for Ara homes, clinics, nursing facilities, and nearby commercial areas.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance Service",
           description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Samastipur.",
+            "Safe outstation patient transport from Ara with proper medical supervision and transit care.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Samastipur.
       whyChooseUs: [
-        "Samastipur's Best & Most Reliable Fleet",
-        "Fastest Response Across the District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Local Hospitals",
+        "Fast route handling through Arrah Chowk, Katira, and Judge Kothi More",
+        "Quick access to Ara hospitals and Patna transfer routes",
+        "24/7 private and ICU ambulance support for critical transfers",
+        "Experienced medical team for stable and serious patients",
+        "Reliable service for emergency, referral, and outstation transport",
       ],
-
-     
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Sadar Hospital, Samastipur",
-        "Railway Divisional Hospital",
-        "Prabhuji Hospital",
-        "Sanjeevani Hospital",
-        "Hope Hospital",
+        "Jay Prabha Medanta Super Specialty Hospital, Ara",
+        "Phulwaso Memorial Hospital Pvt. Ltd., Ara",
+        "Care Hospital, Ara",
+        "Samagra Hospital, Ara",
+        "Sadar Hospital, Ara",
+        "Arrah regional trauma and referral hospitals",
+        "Paras HMRI Hospital, Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Samastipur?",
-          answer:
-            "For any emergency in Samastipur, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Ara?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Ara.`,
         },
         {
           question:
-            "Do you provide ambulance service from Samastipur for outstation travel?",
+            "Do you provide ICU ambulance service near Arrah Chowk and Katira?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Samastipur. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ICU ambulance service near Arrah Chowk, Katira, Pakri, and nearby Ara areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Samastipur?",
+          question: "Can I book an outstation ambulance from Ara?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance service from Ara with trained staff and medical equipment.",
         },
       ],
     },
+
+    // ----------------------- 8.Begusarai -----------------------
+    {
+      name: "Begusarai",
+      slug: "ambulance-service-in-begusarai",
+      metaTitle: "Best ICU Ambulance in Begusarai | Maa",
+      metaDescription: `Best private ICU ambulance service in Begusarai near Pokharia and NH-31. Fast booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Begusarai",
+      subHeadline: `24/7 Emergency Ambulance Number in Begusarai: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service provides quick private ICU ambulance service in Begusarai for emergencies near Pokharia, Har Har Mahadev Chowk, NH-31, and Kachahari Road. Our team understands local bottlenecks around traffic chowks, railway crossing routes, and city medical corridors, helping us deliver faster response for emergency calls, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Patna",
+        "Muzaffarpur",
+        "Darbhanga",
+        "Bhagalpur",
+        "Munger",
+        "Bihar Sharif",
+        "Saharsa",
+      ],
+      servicesOffered: [
+        {
+          name: "ICU Ambulance Service in Begusarai",
+          description:
+            "Well-equipped ICU ambulances with ventilator, oxygen, monitor, and trained staff for critical patient transport.",
+        },
+        {
+          name: "Private Ambulance Near Me",
+          description:
+            "Fast dispatch for patients near Begusarai homes, clinics, and regional hospitals.",
+        },
+        {
+          name: "Outstation Ambulance Booking",
+          description:
+            "Trusted outstation ambulance transfers from Begusarai with proper care for long-distance travel.",
+        },
+      ],
+      whyChooseUs: [
+        "Fast response via NH-31, Pokharia, and main Begusarai medical corridors",
+        "Quick access to city hospitals and district referral routes",
+        "24/7 private and ICU ambulances for emergency and scheduled transport",
+        "Experienced team for critical care transfers and hospital referrals",
+        "Reliable support across congested Begusarai corridors",
+      ],
+      hospitalsServed: [
+        "Miracare Multispeciality Hospital, Begusarai",
+        "Prashant Heart Hospital, Begusarai",
+        "Goodluck Hospital, Begusarai",
+        "Sadar Hospital, Begusarai",
+        "Begusarai specialty hospitals in Pokharia",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
+      ],
+      faqs: [
+        {
+          question: "What is the best ambulance number in Begusarai?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Begusarai.`,
+        },
+        {
+          question: "Do you provide ambulance service near NH-31 and Pokharia?",
+          answer:
+            "Yes, we provide fast ambulance service near Pokharia, Kachahari Road, NH-31, and nearby Begusarai areas.",
+        },
+        {
+          question: "Can I book an outstation ambulance from Begusarai?",
+          answer:
+            "Yes, we provide outstation ambulance service from Begusarai with trained staff and medical equipment.",
+        },
+      ],
+    },
+
+    // ----------------------- 9.Bihar Sharif -----------------------
+    {
+      name: "Bihar Sharif",
+      slug: "ambulance-service-in-bihar-sharif",
+      metaTitle: "Best ICU Ambulance in Bihar Sharif | Maa",
+      metaDescription: `Best private ICU ambulance service in Bihar Sharif near Ranchi Road and Sohsarai. Fast booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Bihar Sharif",
+      subHeadline: `24/7 Emergency Ambulance Number in Bihar Sharif: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service offers dependable private ICU ambulance service in Bihar Sharif for emergencies near Ranchi Road, Sohsarai, Bari Pahari, and Bharaopar. Our dispatch team knows the pressure points around hospital roads, bypass connectors, and city entry routes, helping us cut travel delays for critical pickups, hospital referrals, and outstation ambulance transfers.",
+      nearByCities: [
+        "Patna",
+        "Gaya",
+        "Ara",
+        "Begusarai",
+        "Sasaram",
+        "Muzaffarpur",
+        "Darbhanga",
+      ],
+      servicesOffered: [
+        {
+          name: "ICU Ambulance Near Bihar Sharif",
+          description:
+            "Critical care ambulances with ventilator, monitor, oxygen, and trained paramedics for serious patient transport.",
+        },
+        {
+          name: "Private Ambulance Service in Bihar Sharif",
+          description:
+            "Fast ambulance support for homes, clinics, diagnostic centers, and nursing care facilities in Bihar Sharif.",
+        },
+        {
+          name: "Outstation Ambulance Transfer",
+          description:
+            "24/7 outstation ambulance service from Bihar Sharif for medically supervised long-distance transfers.",
+        },
+      ],
+      whyChooseUs: [
+        "Quick routing via Ranchi Road, Sohsarai, and city bypass corridors",
+        "Fast access to Bihar Sharif hospitals and Patna transfer routes",
+        "Private ICU ambulances ready for emergency and referral movement",
+        "Experienced transit care team for critical and non-critical patients",
+        "Reliable day and night ambulance booking for local and outstation travel",
+      ],
+      hospitalsServed: [
+        "Nalanda Bone and Spine Centre Pvt. Ltd.",
+        "Nibha Hospital, Bihar Sharif",
+        "Revival Hospital and Trauma Centre, Bihar Sharif",
+        "Prime Hospital, Bihar Sharif",
+        "Kumar Hospital, Bihar Sharif",
+        "Gurudev Multispeciality Health Care, Bihar Sharif",
+        "Sadar Hospital, Bihar Sharif",
+      ],
+      faqs: [
+        {
+          question:
+            "Do you provide ambulance service near Ranchi Road and Sohsarai?",
+          answer:
+            "Yes, we provide fast ambulance service near Ranchi Road, Sohsarai, Bharaopar, and nearby Bihar Sharif areas.",
+        },
+        {
+          question: "Is ICU ambulance available in Bihar Sharif 24/7?",
+          answer:
+            "Yes, our ICU ambulance service in Bihar Sharif is available 24/7.",
+        },
+        {
+          question: "Can I book outstation ambulance from Bihar Sharif?",
+          answer:
+            "Yes, we provide outstation ambulance service from Bihar Sharif with trained staff and critical care support.",
+        },
+      ],
+    },
+
+    // ----------------------- 10.Katihar -----------------------
     {
       name: "Katihar",
       slug: "ambulance-service-in-katihar",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Katihar | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Katihar. We provide 24/7 transport to Katihar Medical College and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Katihar | Maa",
+      metaDescription: `Best private ICU ambulance service in Katihar near Mangal Bazar and station roads. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Katihar",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Katihar Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Katihar: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Katihar, specializing in rapid patient transfers to Katihar Medical College and Hospital. Our local teams ensure we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides prompt private ICU ambulance service in Katihar for emergencies near Mangal Bazar, Katihar Junction, Mirchaibari, and NH-linked city roads. Our drivers understand traffic movement around station routes, medical market zones, and district access roads, helping us deliver quick response for emergency pickups, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Purnia",
+        "Bhagalpur",
+        "Saharsa",
+        "Darbhanga",
+        "Munger",
+        "Begusarai",
+        "Patna",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Katihar",
           description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport to specialty centers.",
+            "Advanced ICU ambulance support with oxygen, ventilator, monitor, and trained staff for critical patients.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Katihar to major medical centers in Patna, Siliguri, or any other city.",
+            "Fast ambulance dispatch for homes, apartments, clinics, and hospital zones in and around Katihar.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance from Katihar",
           description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Katihar.",
+            "Reliable outstation ambulance transfers from Katihar for stable and serious patients needing supervised travel.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Katihar.
       whyChooseUs: [
-        "Katihar's Best & Most Reliable Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Katihar Medical College",
+        "Fast movement through station roads, Mirchaibari, and NH-linked corridors",
+        "Quick access to Katihar hospitals and North East Bihar referral routes",
+        "24/7 private ICU ambulances for emergency and planned transfers",
+        "Professional handling for residential, clinic, and hospital pickups",
+        "Reliable local and outstation service with trained medical staff",
       ],
-
-      
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Katihar Medical College and Hospital",
+        "Katihar Sewa Sadan",
         "Sadar Hospital, Katihar",
-        "Lions Eye Hospital",
-        "Purnima Medical & Research Institute",
-        "Railway Hospital",
+        "Katihar Medical College Hospital",
+        "District hospital referral network, Katihar",
+        "Shahnaj Hospital, Purnia",
+        "GMCH, Purnia",
+        "Bhagalpur referral hospitals",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Katihar?",
-          answer:
-            "For any emergency in Katihar, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Katihar?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Katihar.`,
         },
         {
           question:
-            "Do you provide ambulance service from Katihar for outstation travel?",
+            "Do you provide ambulance near Katihar Junction and Mirchaibari?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Katihar. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ambulance service near Katihar Junction, Mirchaibari, and surrounding Katihar areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Katihar?",
+          question: "Is outstation ambulance available from Katihar?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Katihar with medical supervision and emergency support.",
         },
       ],
     },
-    {
-      name: "Hajipur",
-      slug: "ambulance-service-in-hajipur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Hajipur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," "outstation," and transfers to Patna.
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Hajipur. We provide 24/7 transport and specialize in outstation transfers to Patna. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Hajipur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Hajipur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise (Gandhi Setu) and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Hajipur, providing a critical link to major medical facilities. Our local teams are familiar with the entire area, ensuring we are the fastest response when you need an 'ambulance service near me.' We specialize in critical ICU emergencies and rapid outstation transfers across the Gandhi Setu to top hospitals in Patna.",
 
-      // Services expanded to target specific, high-intent keywords.
+    // ----------------------- 11.Munger -----------------------
+    {
+      name: "Munger",
+      slug: "ambulance-service-in-munger",
+      metaTitle: "Best ICU Ambulance in Munger | Maa",
+      metaDescription: `Best private ICU ambulance service in Munger near Station Road and Purabsarai. Fast booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Munger",
+      subHeadline: `24/7 Emergency Ambulance Number in Munger: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service provides fast private ICU ambulance service in Munger for emergencies near Station Road, Purabsarai, Safiabad, and Jamalpur link roads. Our team knows the traffic flow around bus stand routes, hospital lanes, and NH approach roads, helping us dispatch the nearest ambulance for emergency pickup, hospital transfer, and outstation patient movement without delay.",
+      nearByCities: [
+        "Bhagalpur",
+        "Begusarai",
+        "Patna",
+        "Katihar",
+        "Purnia",
+        "Saharsa",
+        "Muzaffarpur",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Hajipur",
+          name: "ICU Ambulance Service in Munger",
           description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and stabilization before a potential transfer.",
+            "Advanced ICU ambulances with ventilator, monitor, oxygen, suction, and trained staff for critical patient transfers across Munger.",
         },
         {
-          name: "Ambulance Service for Outstation to Patna",
+          name: "Private Ambulance Near Me",
           description:
-            "We are experts in providing safe, reliable, and medically supervised ambulances for outstation patient transfers from Hajipur to any hospital in Patna.",
+            "Fast private ambulance dispatch for homes, clinics, and hospital zones in Munger and nearby Jamalpur areas.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Patient Transfer",
           description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Hajipur.",
+            "Safe outstation ambulance transfers from Munger to Patna, Bhagalpur, Kolkata, and other cities with medical supervision.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Hajipur.
       whyChooseUs: [
-        "Hajipur's Best & Most Reliable Fleet",
-        "Fastest Transfers to Patna via Gandhi Setu",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Local & Patna Hospitals",
+        "Fast routing across Station Road, Purabsarai, and Jamalpur corridors",
+        "Quick pickup near bus stand, rail routes, and city hospital zones",
+        "Private ICU ambulances with oxygen, ventilator, and trained paramedics",
+        "24/7 emergency number for local, hospital, and outstation transfers",
+        "Reliable support during district road and market congestion",
       ],
-
-      
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Sadar Hospital, Hajipur",
-        "Vaishali Institute of Medical Sciences",
-        "Sanjivani Nursing Home",
-        "Navin Hospital",
-        "E.C.R Central Hospital",
+        "J P Multispeciality Hospital Pvt. Ltd., Munger",
+        "Sadar Hospital, Munger",
+        "Munger regional speciality hospitals on Station Road",
+        "Jamalpur referral hospitals",
+        "Bhagalpur referral hospitals",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "Can you transfer a critical patient from Hajipur to AIIMS, Patna?",
-          answer:
-            "Yes, we specialize in safe, inter-city ICU transfers from Hajipur to any hospital in Patna, including AIIMS and IGIMS. Our ambulances are fully equipped for critical care. Call us at +91-9540944424.",
+          question: "What is the best ambulance number in Munger?",
+          answer: `Call ${phoneNumber} for a 24/7 private ICU ambulance in Munger.`,
         },
         {
           question:
-            "What is the best ambulance number for an emergency in Hajipur?",
+            "Do you provide ICU ambulance service near Station Road and Jamalpur?",
           answer:
-            "For any emergency in Hajipur, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+            "Yes, we provide fast ICU ambulance service near Station Road, Purabsarai, Safiabad, and Jamalpur routes.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Hajipur?",
+          question: "Can I book an outstation ambulance from Munger?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment, and specializes in outstation transfers to Patna, which are not typically covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Munger with medical staff, oxygen support, and critical care equipment.",
         },
       ],
     },
-    {
-      name: "Kishanganj",
-      slug: "ambulance-service-in-kishanganj",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Kishanganj | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Kishanganj. We provide 24/7 transport to MGM Medical College and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Kishanganj",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Kishanganj Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Kishanganj, providing a critical medical link for the Seemanchal region. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to MGM Medical College to scheduled outstation transfers towards Siliguri or Patna, we offer a complete 24/7 medical transport solution.",
 
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Kishanganj",
-          description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport to specialty centers.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Kishanganj to major medical centers in Siliguri, Patna, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Kishanganj.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Kishanganj.
-      whyChooseUs: [
-        "Kishanganj's Best & Most Reliable Fleet",
-        "Fastest Response Across the District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with MGM Medical College",
-      ],
-
-      
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "MGM Medical College & LSK Hospital",
-        "Sadar Hospital, Kishanganj",
-        "Insan Hospital",
-        "Red Cross Hospital",
-        "Life Care Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Kishanganj?",
-          answer:
-            "For any emergency in Kishanganj, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Kishanganj for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Kishanganj. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Kishanganj?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Vaishali",
-      slug: "ambulance-service-in-vaishali",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Vaishali | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," and "outstation transfers to Patna."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Vaishali. We provide 24/7 emergency transport and specialize in outstation transfers to Patna. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Vaishali",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Vaishali Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation to Patna."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for the historic district of Vaishali, providing a crucial medical lifeline. Our local teams ensure we are the fastest response when you need an 'ambulance service near me.' We specialize in providing critical ICU care locally and facilitating safe, rapid outstation ambulance transfers to major super-speciality hospitals in Patna.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Vaishali",
-          description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient stabilization and care.",
-        },
-        {
-          name: "Ambulance Service for Outstation to Patna",
-          description:
-            "We are experts in providing safe, reliable, and medically supervised ambulances for outstation patient transfers from Vaishali to any hospital in Patna.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in the Vaishali district.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Vaishali.
-      whyChooseUs: [
-        "Vaishali's Best & Most Reliable Fleet",
-        "Specialists in Fast Transfers to Patna",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Local & Patna Hospitals",
-      ],
-
-      
-
-      // Expanded and corrected hospital list for more local authority.
-      hospitalsServed: [
-        "Sadar Hospital, Hajipur (Vaishali District Hospital)",
-        "VIMS, Phulwaria",
-        "Patanjali Arogya Kendra",
-        "AIIMS, Patna (for transfers)",
-        "IGIMS, Patna (for transfers)",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "I need to transfer a patient from Vaishali to IGIMS, Patna. Can you help?",
-          answer:
-            "Absolutely. We specialize in safe, fully-equipped ICU ambulance transfers from Vaishali to any hospital in Patna, including IGIMS and AIIMS. Call us at +91-9540944424 for immediate arrangements.",
-        },
-        {
-          question:
-            "What is the best ambulance number for an emergency in Vaishali?",
-          answer:
-            "For any emergency in Vaishali, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Vaishali?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment, and specializes in outstation transfers to Patna, which are not typically covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Motihari",
-      slug: "ambulance-service-in-motihari",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Motihari | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Motihari (East Champaran). We provide 24/7 transport and outstation transfers. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Motihari",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline:
-        "Motihari (East Champaran) Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Motihari and the entire East Champaran district. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to Sadar Hospital to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Motihari",
-          description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Motihari to major medical centers in Patna or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Motihari.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Motihari.
-      whyChooseUs: [
-        "Motihari's Best & Most Reliable Fleet",
-        "Fastest Response Across East Champaran",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Local Hospitals",
-      ],
-
-    
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "Sadar Hospital, Motihari",
-        "Rahmaniya Medical Centre",
-        "Mangalam Hospital",
-        "Prabhavati Hospital",
-        "Anurag Narayan College Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Motihari?",
-          answer:
-            "For any emergency in Motihari, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Motihari for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Motihari. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Motihari?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Madhubani",
-      slug: "ambulance-service-in-madhubani",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Madhubani | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Madhubani. We provide 24/7 transport to Madhubani Medical College and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Madhubani",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Madhubani Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for the historic city of Madhubani. Our local teams are familiar with the entire district, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to Madhubani Medical College to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Madhubani",
-          description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport to specialty centers.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Madhubani to major medical centers in Patna, Darbhanga, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Madhubani.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Madhubani.
-      whyChooseUs: [
-        "Madhubani's Best & Most Reliable Fleet",
-        "Fastest Response Across the District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Madhubani Medical College",
-      ],
-
-      
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "Madhubani Medical College and Hospital",
-        "Sadar Hospital, Madhubani",
-        "Prathama Blood Bank & Hospital",
-        "Pandaul Medical College & Hospital",
-        "Apple Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Madhubani?",
-          answer:
-            "For any emergency in Madhubani, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Madhubani for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Madhubani. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Madhubani?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Sitamarhi",
-      slug: "ambulance-service-in-sitamarhi",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Sitamarhi | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Sitamarhi. We provide 24/7 transport to Sadar Hospital and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Sitamarhi",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Sitamarhi Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for the sacred city of Sitamarhi. Our local teams are familiar with the entire district, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to Sadar Hospital to scheduled outstation transfers to Patna, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Sitamarhi",
-          description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Sitamarhi to major medical centers in Patna, Muzaffarpur, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Sitamarhi.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Sitamarhi.
-      whyChooseUs: [
-        "Sitamarhi's Best & Most Reliable Fleet",
-        "Fastest Response Across the District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Sadar Hospital",
-      ],
-
-     
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "Sadar Hospital, Sitamarhi",
-        "N. S. Memorial Hospital",
-        "Gupta Nursing Home",
-        "Prabha Hospital",
-        "Sitamarhi Central Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Sitamarhi?",
-          answer:
-            "For any emergency in Sitamarhi, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Sitamarhi for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Sitamarhi. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Sitamarhi?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
+    // ----------------------- 12.Chhapra -----------------------
     {
       name: "Chhapra",
       slug: "ambulance-service-in-chhapra",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Chhapra (Saran) | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Chhapra (Saran). We provide 24/7 transport to Sadar Hospital and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Chhapra | Maa",
+      metaDescription: `Best private ICU ambulance service in Chhapra near Daroga Rai Chowk and station roads. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Chhapra",
-      // Subheadline directly answers the "Number" keyword search and includes the district name.
-      subHeadline: "Chhapra (Saran) Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Chhapra: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Chhapra and the entire Saran district. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to Sadar Hospital to scheduled outstation transfers towards Patna, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service offers rapid private ICU ambulance service in Chhapra for urgent cases near Daroga Rai Chowk, Chhapra Junction, Sahebganj, and district hospital routes. Our drivers know the high-traffic intersections around bus stand roads, Gandhi Chowk, and Patna-bound highway links, allowing faster dispatch for home emergencies, hospital referrals, and outstation ambulance transport.",
+      nearByCities: [
+        "Patna",
+        "Muzaffarpur",
+        "Ara",
+        "Begusarai",
+        "Bihar Sharif",
+        "Sasaram",
+        "Darbhanga",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Chhapra",
+          name: "Emergency ICU Ambulance in Chhapra",
           description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport.",
+            "Critical care ambulances equipped with ventilator, oxygen, monitor, and trained paramedics for serious medical cases.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Chhapra to major medical centers in Patna or any other city.",
+            "Fast private ambulance booking for Chhapra homes, clinics, nursing facilities, and nearby commercial areas.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance Service",
           description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Chhapra.",
+            "Safe outstation patient transport from Chhapra with proper medical supervision and transit care.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Chhapra.
       whyChooseUs: [
-        "Chhapra's Best & Most Reliable Fleet",
-        "Fastest Response Across the Saran District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Sadar Hospital",
+        "Fast route handling through station roads, Daroga Rai Chowk, and Patna highway links",
+        "Quick access to Chhapra hospitals and district referral centers",
+        "24/7 private and ICU ambulance support for critical transfers",
+        "Experienced medical team for stable and serious patients",
+        "Reliable service for emergency, referral, and outstation transport",
       ],
-
-      
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
         "Sadar Hospital, Chhapra",
-        "Prabhu Nath Hospital",
-        "Saran Medical",
-        "P C Vigyan Hospital",
-        "Saran Seva Sadan",
+        "Chhapra regional trauma and referral hospitals",
+        "Patna referral hospitals",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
+        "IGIMS, Patna",
+        "PMCH, Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Chhapra?",
-          answer:
-            "For any emergency in Chhapra, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Chhapra?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Chhapra.`,
         },
         {
           question:
-            "Do you provide ambulance service from Chhapra for outstation travel?",
+            "Do you provide ambulance service near Chhapra Junction and district hospital?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Chhapra. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ambulance service near Chhapra Junction, Sahebganj, district hospital routes, and nearby areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Chhapra?",
+          question: "Can I book an outstation ambulance from Chhapra?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance service from Chhapra with trained staff and medical equipment.",
         },
       ],
     },
+
+    // ----------------------- 13.Saharsa -----------------------
+    {
+      name: "Saharsa",
+      slug: "ambulance-service-in-saharsa",
+      metaTitle: "Best ICU Ambulance in Saharsa | Maa",
+      metaDescription: `Best private ICU ambulance service in Saharsa near Naya Bazar and DB Road. Fast emergency booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Saharsa",
+      subHeadline: `24/7 Emergency Ambulance Number in Saharsa: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service provides quick private ICU ambulance service in Saharsa for emergencies near Naya Bazar, DB Road, Gangjala Chowk, and Bangaon Road. Our team understands local bottlenecks around Sant Nagar, Baijnathpur bypass routes, and city medical access roads, helping us deliver faster response for emergency calls, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Purnia",
+        "Katihar",
+        "Darbhanga",
+        "Bhagalpur",
+        "Begusarai",
+        "Patna",
+        "Munger",
+      ],
+      servicesOffered: [
+        {
+          name: "ICU Ambulance Service in Saharsa",
+          description:
+            "Well-equipped ICU ambulances with ventilator, oxygen, monitor, and trained staff for critical patient transport.",
+        },
+        {
+          name: "Private Ambulance Near Me",
+          description:
+            "Fast dispatch for patients near Naya Bazar, clinics, nursing homes, and nearby Saharsa hospital routes.",
+        },
+        {
+          name: "Outstation Ambulance Booking",
+          description:
+            "Trusted outstation ambulance transfers from Saharsa with proper care for long-distance travel.",
+        },
+      ],
+      whyChooseUs: [
+        "Fast response via Naya Bazar, DB Road, Gangjala Chowk, and bypass routes",
+        "Quick access to city nursing homes and district hospital corridors",
+        "24/7 private and ICU ambulances for emergency and scheduled transport",
+        "Experienced team for critical care transfers and hospital referrals",
+        "Reliable support across congested Saharsa corridors",
+      ],
+      hospitalsServed: [
+        "Kaushik Hospital, Saharsa",
+        "Gayatri Nursing Home, Saharsa",
+        "Sri Ram Emergency Hospital, Saharsa",
+        "Arogya Mandir Hospital, Saharsa",
+        "Sadar Hospital, Saharsa",
+        "Saharsa private emergency hospitals in Naya Bazar",
+        "Patna referral hospitals",
+      ],
+      faqs: [
+        {
+          question: "What is the best ambulance number in Saharsa?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Saharsa.`,
+        },
+        {
+          question:
+            "Do you provide ambulance service near Naya Bazar and Gangjala Chowk?",
+          answer:
+            "Yes, we provide fast ambulance service near Naya Bazar, DB Road, Gangjala Chowk, and nearby Saharsa areas.",
+        },
+        {
+          question: "Can I book an outstation ambulance from Saharsa?",
+          answer:
+            "Yes, we provide outstation ambulance service from Saharsa with trained staff and medical equipment.",
+        },
+      ],
+    },
+
+    // ----------------------- 14.Sasaram -----------------------
+    {
+      name: "Sasaram",
+      slug: "ambulance-service-in-sasaram",
+      metaTitle: "Best ICU Ambulance in Sasaram | Maa",
+      metaDescription: `Best private ICU ambulance service in Sasaram near GT Road and Civil Court area. Fast booking at ${phoneNumber}. Call now.`,
+      pageHeadline: "Best ICU & Private Ambulance Service in Sasaram",
+      subHeadline: `24/7 Emergency Ambulance Number in Sasaram: ${phoneNumber}`,
+      introParagraph:
+        "Maa Ambulance Service offers dependable private ICU ambulance service in Sasaram for emergencies near GT Road, Civil Court, Takia, and railway station corridors. Our dispatch team knows the pressure points around bypass roads, district hospital routes, and NH-19 access, helping us cut travel delays for critical pickups, hospital referrals, and outstation ambulance transfers.",
+      nearByCities: [
+        "Ara",
+        "Patna",
+        "Gaya",
+        "Bihar Sharif",
+        "Begusarai",
+        "Chhapra",
+        "Muzaffarpur",
+      ],
+      servicesOffered: [
+        {
+          name: "ICU Ambulance Near Sasaram",
+          description:
+            "Critical care ambulances with ventilator, monitor, oxygen, and trained paramedics for serious patient transport.",
+        },
+        {
+          name: "Private Ambulance Service in Sasaram",
+          description:
+            "Fast ambulance support for homes, clinics, diagnostic centers, and nursing care facilities in Sasaram.",
+        },
+        {
+          name: "Outstation Ambulance Transfer",
+          description:
+            "24/7 outstation ambulance service from Sasaram for medically supervised long-distance transfers.",
+        },
+      ],
+      whyChooseUs: [
+        "Quick routing via GT Road, bypass roads, and district hospital corridors",
+        "Fast access to Sasaram hospitals and Patna-Gaya transfer routes",
+        "Private ICU ambulances ready for emergency and referral movement",
+        "Experienced transit care team for critical and non-critical patients",
+        "Reliable day and night ambulance booking for local and outstation travel",
+      ],
+      hospitalsServed: [
+        "Sadar Hospital, Sasaram",
+        "Rohtas regional trauma and referral hospitals",
+        "private emergency hospitals in Sasaram",
+        "Narayan Medical College and Hospital, Sasaram region",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
+        "AIIMS Patna",
+      ],
+      faqs: [
+        {
+          question:
+            "Do you provide ambulance service near GT Road and Civil Court in Sasaram?",
+          answer:
+            "Yes, we provide fast ambulance service near GT Road, Civil Court, Takia, and nearby Sasaram areas.",
+        },
+        {
+          question: "Is ICU ambulance available in Sasaram 24/7?",
+          answer:
+            "Yes, our ICU ambulance service in Sasaram is available 24/7.",
+        },
+        {
+          question: "Can I book outstation ambulance from Sasaram?",
+          answer:
+            "Yes, we provide outstation ambulance service from Sasaram with trained staff and critical care support.",
+        },
+      ],
+    },
+
+    // ----------------------- 15.Siwan -----------------------
     {
       name: "Siwan",
       slug: "ambulance-service-in-siwan",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle: "Best ICU Ambulance Service Number in Siwan | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Siwan. We provide 24/7 transport to Sadar Hospital and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
+      metaTitle: "Best ICU Ambulance in Siwan | Maa",
+      metaDescription: `Best private ICU ambulance service in Siwan near Station Road and Babunia More. Fast booking at ${phoneNumber}. Call now.`,
       pageHeadline: "Best ICU & Private Ambulance Service in Siwan",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Siwan Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      subHeadline: `24/7 Emergency Ambulance Number in Siwan: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Siwan, providing critical medical transport across the entire district. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides prompt private ICU ambulance service in Siwan for emergencies near Station Road, Babunia More, Hospital Road, and district market corridors. Our drivers understand traffic movement around main chowks, bus stand routes, and referral roads toward Chhapra and Patna, helping us deliver quick response for emergency pickups, hospital transfers, and outstation patient transport.",
+      nearByCities: [
+        "Chhapra",
+        "Patna",
+        "Muzaffarpur",
+        "Ara",
+        "Begusarai",
+        "Bihar Sharif",
+        "Gaya",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Siwan",
           description:
-            "Our advanced life support ambulances are equipped as mobile ICUs with essential medical equipment for critical patient care and transport.",
+            "Advanced ICU ambulance support with oxygen, ventilator, monitor, and trained staff for critical patients.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Private Ambulance Near Me",
           description:
-            "We provide safe and reliable ambulances for outstation patient transfers from Siwan to major medical centers in Patna, Gorakhpur, or any other city.",
+            "Fast ambulance dispatch for homes, apartments, clinics, and hospital zones in and around Siwan.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Outstation Ambulance from Siwan",
           description:
-            "With our fleet positioned for quick dispatch, we provide the fastest response when you search for an 'ambulance service near me' in Siwan.",
+            "Reliable outstation ambulance transfers from Siwan for stable and serious patients needing supervised travel.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Siwan.
       whyChooseUs: [
-        "Siwan's Best & Most Reliable Fleet",
-        "Fastest Response Across the District",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) Capable Vehicles",
-        "Direct Coordination with Local Hospitals",
+        "Fast movement through Station Road, Babunia More, and district hospital corridors",
+        "Quick access to Siwan hospitals and Patna-Chhapra referral routes",
+        "24/7 private ICU ambulances for emergency and planned transfers",
+        "Professional handling for residential, clinic, and hospital pickups",
+        "Reliable local and outstation service with trained medical staff",
       ],
-
-    
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
         "Sadar Hospital, Siwan",
-        "Siwan Medical College & Hospital",
-        "BPL Hospital",
-        "Pragati Hospital",
-        "Ruban Memorial Hospital",
+        "Siwan private emergency and trauma hospitals",
+        "Chhapra referral hospitals",
+        "Paras HMRI Hospital, Patna",
+        "Jay Prabha Medanta Super Specialty Hospital, Patna",
+        "IGIMS, Patna",
+        "AIIMS Patna",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Siwan?",
-          answer:
-            "For any emergency in Siwan, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+          question: "What is the best ambulance number in Siwan?",
+          answer: `Call ${phoneNumber} for 24/7 private and ICU ambulance service in Siwan.`,
         },
         {
           question:
-            "Do you provide ambulance service from Siwan for outstation travel?",
+            "Do you provide ambulance near Station Road and Babunia More?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Siwan. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we provide fast ambulance service near Station Road, Babunia More, Hospital Road, and surrounding Siwan areas.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Siwan?",
+          question: "Is outstation ambulance available from Siwan?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Yes, we provide outstation ambulance transfers from Siwan with medical supervision and emergency support.",
         },
       ],
     },

@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Inter } from 'next/font/google';
 import Script from "next/script";
+import { Number1 } from "@/constants/PhoneNumbers";
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -21,26 +22,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jyoti Ambulance Services | 24x7 Emergency Ambulance Services",
+  title: "Maa Ambulance Services | Best Emergency Ambulance Services in India",
   description:
     "Book 24/7 emergency, ICU, and air ambulance services across India. Fast response with trained paramedics.",
   openGraph: {
-    title: "Jyoti Ambulance Services | 24x7 Ambulance Services",
+    title: "Maa Ambulance Services | Best Emergency Ambulance Services in India",
     description:
       "Reliable ambulance booking in all over India. ICU, ventilator, and air ambulance available 24/7.",
-    url: "https://jyotiambulance.in/",
+    url: "https://maambulanceservice.com/",
     type: "website",
     images: [
       {
-        url: "https://jyotiambulance.in/jyoti-ambulance-logo-2.png",
+        url: "https://maambulanceservice.com/company-logo.png",
         width: 1200,
         height: 630,
-        alt: "Jyoti Ambulance Services Delhi",
+        alt: "Maa Ambulance Services",
       },
     ],
   },
   alternates: {
-    canonical: "https://jyotiambulance.in/ambulance-service-in-delhi-ncr",
+    canonical: "https://maambulanceservice.com/ambulance-service-in-delhi-ncr",
   },
 };
 
@@ -57,12 +58,12 @@ export default function RootLayout({
     description:
       "Jyoti Ambulance provides immediate 24/7 emergency medical transport services across Delhi, Gurgaon, Noida, Bihar, Uttar Pradesh, Uttarakhand, and NCR. ICU, Ventilator, Cardiac, and Air Ambulance transfers with trained paramedics.",
     image: "https://jyotiambulance.in/jyoti-ambulance-logo-2.png",
-    url: "https://jyotiambulance.in/",
-    telephone: "+91-9654232540",
-    priceRange: "₹₹ - ₹₹₹₹",
+    url: "https://maambulanceservice.com/",
+    telephone: `${Number1}`,
+    priceRange: "499 INR - 10,000 INR",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "E-18/280 GF, Sector 3, Rohini, Delhi 110085, Near MCD School",
+      streetAddress: "Sector-2, Rohini, Delhi 110085",
       addressLocality: "New Delhi",
       addressRegion: "DL",
       postalCode: "110085",
@@ -99,7 +100,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-  <meta name="google-site-verification" content="fgH1ZKa6AS26wxaHoGk2O2e0bYvJ8m16Ia9shN2i3SY" />
   <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FTGK5SNL61"
           strategy="afterInteractive"

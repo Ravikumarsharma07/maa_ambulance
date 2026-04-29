@@ -1,308 +1,443 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight, Phone, Shield, Clock, Heart, MapPin, ChevronDown } from "lucide-react";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCallBtn from "@/components/FloatingCallBtn";
 import ContactSection from "@/components/ContactSection";
-import { Services, getServiceBySlug } from "@/constants/Services";
 import ServiceAreas from "@/components/ServiceAreas";
 import ServicesSection from "@/components/ServicesSection";
-import Link from "next/link";
-import {
-  ChevronRight,
-  Clock,
-  HeartPulse,
-  ShieldCheck,
-  Phone,
-} from "lucide-react";
 
-// 1. Generate SEO metadata for each service page
+import { Services, getServiceBySlug } from "@/constants/Services";
+import { Number2 } from "@/constants/PhoneNumbers";
+import { SITE_URL } from "@/constants/SiteURL";
+
+// ─── Metadata ──────────────────────────────────────────────────────────────────
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ service: string }>;
 }): Promise<Metadata> {
-  const paramService = await params;
-  const service = getServiceBySlug(paramService.service);
+  const resolvedParams = await params;
+  const service = getServiceBySlug(resolvedParams.service);
+
   if (!service) {
-    return {
-      title: "Service Not Found - Jyoti Ambulance Services",
-    };
+    return { title: "Service Not Found - Maa Ambulance Services" };
   }
 
-  const siteUrl = "https://jyotiambulance.in";
+  const siteUrl = SITE_URL;
 
   return {
-    title: `${service.name} in Delhi | 24/7 Emergency Support | Jyoti Ambulance`,
-    description: service.description,
-    keywords: `${service.name}, ${service.name} in Delhi, ambulance service, Jyoti Ambulance`,
-    alternates: {
-      canonical: `${siteUrl}/services/${service.slug}`,
-    },
+    title: service.metaTitle,
+    description: service.metaDescription,
+    keywords: `${service.name}, ${service.name} in India, emergency ambulance, Maa Ambulance Services`,
+    alternates: { canonical: `${siteUrl}/services/${service.slug}` },
     openGraph: {
       type: "website",
       locale: "en_IN",
       url: `${siteUrl}/services/${service.slug}`,
-      title: `${service.name} in Delhi | Jyoti Ambulance Services`,
-      description: service.description,
-      siteName: "Jyoti Ambulance Services",
-      images: [
-        {
-          url: `${siteUrl}/${service.imageURL}`, // Use dynamic image
-          width: 1200,
-          height: 630,
-          alt: service.name,
-        },
-      ],
+      title: service.metaTitle,
+      description: service.metaDescription,
+      siteName: "Maa Ambulance Services",
+      images: [{ url: `${siteUrl}${service.imageURL}`, width: 1200, height: 630, alt: service.name }],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@jyotiambulance", // Replace with your Twitter handle
-      title: `${service.name} in Delhi | Jyoti Ambulance Services`,
-      description: service.description,
-      images: [`${siteUrl}/${service.imageURL}`],
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: [`${siteUrl}${service.imageURL}`],
     },
   };
 }
 
-// 2. Generate static pages for all services at build time
 export function generateStaticParams() {
-  return Services.map((service) => ({
-    service: service.slug,
-  }));
+  return Services.map((service) => ({ service: service.slug }));
 }
 
-// 3. The Page Component
+// ─── Page ──────────────────────────────────────────────────────────────────────
 export default async function ServicePage({
   params,
 }: {
   params: Promise<{ service: string }>;
 }) {
-  const paramService = await params;
-  const service = getServiceBySlug(paramService.service);
+  const resolvedParams = await params;
+  const service = getServiceBySlug(resolvedParams.service);
+  if (!service) notFound();
 
-  if (!service) {
-    notFound(); // Triggers the 404 page
-  }
+  const relatedServicesData = Services.filter((s) =>
+    service.relatedServices?.includes(s.slug)
+  );
 
-  const siteUrl = "https://jyotiambulance.in"; // Replace with your actual domain
+  const PHONE_NUMBER =`${Number2}`;
+  const siteUrl = SITE_URL;
 
-  // JSON-LD Schema for the specific service page
-  const jsonLd = {
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: service.name,
     name: service.name,
     description: service.description,
-    image: `${siteUrl}/${service.imageURL}`,
+    image: `${siteUrl}${service.imageURL}`,
     provider: {
       "@type": "EmergencyService",
-      name: "Jyoti Ambulance Services",
-      telephone: "+91-9990228876",
+      name: "Maa Ambulance Services",
+      telephone: PHONE_NUMBER,
       url: siteUrl,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Delhi",
-        addressCountry: "IN",
-      },
     },
-    areaServed: {
-      "@type": "City",
-      name: "Delhi",
-    },
-    serviceArea: {
-      "@type": "Place",
-      name: "Delhi",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Delhi",
-        addressCountry: "IN",
-      },
-    },
+    areaServed: { "@type": "Country", name: "India" },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity:
+      service.faqs?.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })) || [],
   };
 
   return (
-    <main>
+    <main className="bg-[#F8F7F4] mt-8 min-h-screen">
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {service.faqs && service.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       <FloatingCallBtn />
       <Header />
-      <article className="container mx-auto px-4 py-12 pt-28 md:pt-44 ">
-        {/* BREADCRUMBS for SEO and Navigation */}
-        <div className="max-w-7xl mx-auto mb-6 text-sm text-gray-500">
-          <Link href="/" className="hover:text-red-600">
-            Home
-          </Link>
-          <ChevronRight className="inline-block w-4 h-4 mx-1" />
-          <Link href="/services" className="hover:text-red-600">
-            Services
-          </Link>
-          <ChevronRight className="inline-block w-4 h-4 mx-1" />
-          <span className="text-gray-700 font-medium">{service.name}</span>
-        </div>
 
-        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-12">
-          {/* --- Main Content (Left Column) --- */}
-          <div className="w-full lg:w-2/3">
-            {/* Page Title & Subtitle */}
-            <div className="mb-4">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">
+      {/* ── MOBILE STICKY CALL BAR ── */}
+      {/* <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 p-2 bg-white border-t border-gray-100 shadow-[0_-4px_24px_rgba(0,0,0,0.08)]">
+        <a
+          href={`tel:${PHONE_NUMBER}`}
+          className="flex items-center justify-center gap-3 bg-red-600 text-white font-bold text-base py-3 rounded-2xl w-full tracking-wide active:scale-95 transition-transform"
+          aria-label={`Call Maa Ambulance at ${PHONE_NUMBER}`}
+        >
+          <Phone className="w-5 h-5 animate-pulse" aria-hidden="true" />
+          Call {PHONE_NUMBER}
+        </a>
+      </div> */}
+
+      <article className="pt-24 md:pt-36 pb-28 lg:pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* ── BREADCRUMB ── */}
+          <nav
+            aria-label="Breadcrumb"
+            className="flex flex-wrap items-center gap-1 text-xs text-gray-400 mb-6 font-medium tracking-wide"
+          >
+            <Link href="/" className="hover:text-red-600 transition-colors">Home</Link>
+            <ChevronRight className="w-3 h-3" aria-hidden="true" />
+            <Link href="/services" className="hover:text-red-600 transition-colors">Services</Link>
+            <ChevronRight className="w-3 h-3" aria-hidden="true" />
+            <span className="text-gray-700">{service.name}</span>
+          </nav>
+
+          {/* ── MAIN GRID ── */}
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+
+            {/* ══ LEFT COLUMN ══ */}
+            <div className="w-full lg:w-[65%] min-w-0">
+
+              {/* Live badge */}
+              <div className="inline-flex items-center gap-2 bg-red-50 border border-red-100 text-red-700 text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">
+                <span className="relative flex h-2 w-2" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
+                </span>
+                Emergency Medical Transport
+              </div>
+
+              {/* H1 */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-3"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 {service.name}
               </h1>
-              <p className="text-lg text-gray-600">
-                Your Trusted Partner for Rapid Emergency Response
+
+              <p className="text-sm sm:text-base text-gray-500 font-medium mb-4">
+                Pan-India Emergency Response · Maa Ambulance Services
               </p>
-            </div>
 
-            {/* Trust Signal: Reviewed By */}
-            <div className="text-xs text-gray-500 mb-6 border-b pb-4">
-              Medically reviewed by Dr. Anjali Sharma | Last Updated: September
-              8, 2025
-            </div>
+              {/* Verified bar */}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-l-4 border-amber-500 bg-amber-50 px-4 py-2.5 rounded-r-xl mb-6 text-xs sm:text-sm text-amber-800 font-medium">
+                <span className="flex items-center gap-1.5">
+                  <Shield className="w-3.5 h-3.5" aria-hidden="true" />
+                  Verified Medical Transport
+                </span>
+                <span className="hidden sm:inline text-amber-300">|</span>
+                <span className="flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5" aria-hidden="true" />
+                  Available 24/7 Across India
+                </span>
+                <span className="hidden sm:inline text-amber-300">|</span>
+                <span className="flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                  DGCA Certified Fleet
+                </span>
+              </div>
 
-            {/* Hero Image */}
-            <div className="relative h-64 md:h-96 w-full mb-8 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={service.imageURL}
-                alt={`${service.name} in Delhi`}
-                fill
-                className="object-cover"
-                priority
+              {/* HERO IMAGE */}
+              <div className="relative h-56 sm:h-72 md:h-[380px] w-full rounded-2xl overflow-hidden mb-8 border border-gray-100">
+                <Image
+                  src={service.imageURL}
+                  alt={`${service.name} — Maa Ambulance Services`}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 65vw"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" aria-hidden="true" />
+                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-4 sm:p-5">
+                  <span className="bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                    📍 Nationwide Coverage
+                  </span>
+                  <span className="bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full tracking-wide">
+                    ⚡ 30–60 Min Response
+                  </span>
+                </div>
+              </div>
+
+              {/* TRUST BADGES */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10" role="list" aria-label="Service highlights">
+                {[
+                  { icon: <Clock className="w-6 h-6 text-red-600" aria-hidden="true" />, label: "24/7 Dispatch" },
+                  { icon: <Heart className="w-6 h-6 text-red-600" aria-hidden="true" />, label: "ICU-Level Care" },
+                  { icon: <Shield className="w-6 h-6 text-red-600" aria-hidden="true" />, label: "Safe Transit" },
+                  { icon: <MapPin className="w-6 h-6 text-red-600" aria-hidden="true" />, label: "Pan-India Reach" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    role="listitem"
+                    className="flex flex-col items-center justify-center gap-2 p-4 bg-white border border-gray-100 rounded-2xl text-center"
+                  >
+                    {item.icon}
+                    <p className="text-xs sm:text-sm font-semibold text-gray-700 leading-tight">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* BODY CONTENT */}
+              <div
+                className="
+                  prose prose-sm sm:prose-base max-w-none text-gray-600
+                  prose-headings:font-bold prose-headings:text-gray-900
+                  prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4
+                  prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-3
+                  prose-h3:text-xl prose-h3:mt-7
+                  prose-a:text-red-600 prose-a:no-underline hover:prose-a:underline
+                  prose-li:marker:text-red-500
+                  prose-strong:text-gray-800
+                "
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+                dangerouslySetInnerHTML={{ __html: service.content }}
               />
-            </div>
 
-            {/* Key Features / Trust Box */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center my-8">
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <Clock className="mx-auto h-8 w-8 text-red-600 mb-2" />
-                <p className="font-semibold text-sm">24/7 Availability</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <HeartPulse className="mx-auto h-8 w-8 text-red-600 mb-2" />
-                <p className="font-semibold text-sm">Certified Paramedics</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <ShieldCheck className="mx-auto h-8 w-8 text-red-600 mb-2" />
-                <p className="font-semibold text-sm">Govt. Approved</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <p className="text-3xl font-bold text-red-600">15</p>
-                <p className="font-semibold text-sm">Min Avg. Response</p>
-              </div>
-            </div>
-
-            {/* Main Body Content */}
-            <div
-              className="prose lg:prose-xl max-w-none prose-h2:font-bold prose-h3:font-semibold"
-              dangerouslySetInnerHTML={{ __html: service.content }}
-            />
-
-            {/* --- DYNAMIC FAQ Section --- */}
-            <div className="mt-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 border-b pb-3">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-4">
-                <details className="p-4 border rounded-lg bg-white shadow-sm">
-                  <summary className="font-semibold cursor-pointer">
-                    How much does an {service.name} cost in Delhi?
-                  </summary>
-                  <p className="mt-2 text-gray-700">
-                    The cost depends on factors like the type of ambulance,
-                    distance, and required medical equipment. Please call us at{" "}
-                    <a
-                      href="tel:+919876543210"
-                      className="text-red-600 font-semibold"
+              {/* STATS STRIP */}
+              <div className="mt-10 grid grid-cols-3 divide-x divide-gray-100 bg-gray-900 rounded-2xl overflow-hidden" aria-label="Service statistics">
+                {[
+                  { value: "500+", label: "Missions Completed" },
+                  { value: "98%", label: "Patient Safety Rate" },
+                  { value: "28", label: "States Covered" },
+                ].map((stat) => (
+                  <div key={stat.label} className="flex flex-col items-center justify-center py-5 px-2 text-center">
+                    <span
+                      className="text-2xl sm:text-3xl font-extrabold text-red-400 leading-none"
+                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                     >
-                      +91-98765-43210
-                    </a>{" "}
-                    for a transparent, upfront quote.
-                  </p>
-                </details>
-                <details className="p-4 border rounded-lg bg-white shadow-sm">
-                  <summary className="font-semibold cursor-pointer">
-                    What areas in Delhi do you serve?
-                  </summary>
-                  <p className="mt-2 text-gray-700">
-                    We serve all areas of Delhi NCR, including South Delhi,
-                    North Delhi, East Delhi, West Delhi, Gurgaon, Noida, and
-                    surrounding regions. Our fleet is strategically placed for
-                    the fastest response times across the city.
-                  </p>
-                </details>
-                <details className="p-4 border rounded-lg bg-white shadow-sm">
-                  <summary className="font-semibold cursor-pointer">
-                    What is included in the {service.name}?
-                  </summary>
-                  <p className="mt-2 text-gray-700">
-                    Our {service.name} includes a certified medical team,
-                    essential life-support equipment, and direct transport to
-                    the hospital of your choice. Specific equipment varies based
-                    on the service selected.
-                  </p>
-                </details>
+                      {stat.value}
+                    </span>
+                    <span className="text-[10px] sm:text-xs text-gray-400 font-medium mt-1 leading-tight">{stat.label}</span>
+                  </div>
+                ))}
               </div>
+
+              {/* CERTIFICATIONS */}
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                {[
+                  { icon: "🏥", text: "DGCA Approved Aircraft Operations" },
+                  { icon: "📋", text: "ACLS & PALS Certified Crew" },
+                  { icon: "🔒", text: "HIPAA-Compliant Data Handling" },
+                ].map((item) => (
+                  <div
+                    key={item.text}
+                    className="flex items-center gap-3 flex-1 bg-white border border-gray-100 rounded-xl px-4 py-3"
+                  >
+                    <span className="text-xl shrink-0" aria-hidden="true">{item.icon}</span>
+                    <span className="text-xs text-gray-600 font-medium leading-snug">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* FAQs */}
+              {service.faqs && service.faqs.length > 0 && (
+                <section className="mt-12" aria-labelledby="faq-heading">
+                  <div className="flex items-center gap-3 mb-6">
+                    <h2
+                      id="faq-heading"
+                      className="text-2xl sm:text-3xl font-extrabold text-gray-900"
+                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                    >
+                      Frequently Asked Questions
+                    </h2>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 overflow-hidden bg-white divide-y divide-gray-100">
+                    {service.faqs.map((faq, idx) => (
+                      <details key={idx} className="group">
+                        <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none hover:bg-red-50 transition-colors">
+                          <span className="font-semibold text-sm sm:text-base text-gray-800 leading-snug">
+                            {faq.question}
+                          </span>
+                          <ChevronDown
+                            className="w-5 h-5 text-red-400 shrink-0 transition-transform duration-300 group-open:rotate-180"
+                            aria-hidden="true"
+                          />
+                        </summary>
+                        <div className="px-5 pb-5 pt-1 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+                          {faq.answer}
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
+
+            {/* ══ RIGHT SIDEBAR ══ */}
+            <aside
+              className="hidden lg:flex w-full lg:w-[35%] flex-col gap-6 lg:sticky top-28 h-fit"
+              aria-label="Quick contact and related services"
+            >
+              {/* CTA CARD */}
+              <div className="bg-gray-900 rounded-3xl overflow-hidden">
+                <div className="h-1 bg-red-600" aria-hidden="true" />
+                <div className="p-6">
+                  <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-red-400 mb-2">
+                    Emergency Line · Available 24/7
+                  </p>
+                  <h3
+                    className="text-2xl font-extrabold text-white leading-tight mb-3"
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    Need Help Right Now?
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed mb-6">
+                    Our dispatch coordinators are standing by. One call mobilizes the nearest ambulance to your location immediately.
+                  </p>
+                  <a
+                    href={`tel:${PHONE_NUMBER}`}
+                    className="flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-5 rounded-2xl w-full text-base transition-colors active:scale-95"
+                    aria-label={`Call emergency line at ${PHONE_NUMBER}`}
+                  >
+                    <Phone className="w-5 h-5 animate-pulse" aria-hidden="true" />
+                    {PHONE_NUMBER}
+                  </a>
+                  <div className="flex items-center justify-center gap-2 mt-4">
+                    <span className="relative flex h-2 w-2" aria-hidden="true">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                    </span>
+                    <span className="text-xs text-gray-500">Dispatchers online now</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* STATS (sidebar) */}
+              <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden">
+                <div className="grid grid-cols-2 divide-x divide-gray-100">
+                  {[
+                    { value: "500+", label: "Missions Flown" },
+                    { value: "98%", label: "Safety Rate" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="py-5 text-center">
+                      <p
+                        className="text-3xl font-extrabold text-red-600 leading-none"
+                        style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                      >
+                        {stat.value}
+                      </p>
+                      <p className="text-xs text-gray-400 font-medium mt-1">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="border-t border-gray-100 px-5 py-3 text-center text-xs text-gray-500 font-medium bg-gray-50">
+                  Serving 28 States · All Major Airports
+                </div>
+              </div>
+
+              {/* RELATED SERVICES */}
+              {relatedServicesData && relatedServicesData.length > 0 && (
+                <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden">
+                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                    <h4 className="text-xs font-bold tracking-widest text-gray-500 uppercase">
+                      Related Services
+                    </h4>
+                    <span className="text-[10px] bg-red-50 text-red-600 font-semibold px-2.5 py-1 rounded-full border border-red-100">
+                      {relatedServicesData.length} available
+                    </span>
+                  </div>
+                  <ul className="divide-y divide-gray-50">
+                    {relatedServicesData.map((related) => (
+                      <li key={related.slug}>
+                        <Link
+                          href={related.link}
+                          className="group flex items-center justify-between px-5 py-3.5 hover:bg-red-50 transition-colors"
+                        >
+                          <span className="text-sm font-medium text-gray-700 group-hover:text-red-700 transition-colors">
+                            {related.name}
+                          </span>
+                          <ChevronRight
+                            className="w-4 h-4 text-gray-300 group-hover:text-red-500 group-hover:translate-x-0.5 transition-all"
+                            aria-hidden="true"
+                          />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* CERTIFICATIONS (sidebar) */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5">
+                <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-4">
+                  Certifications & Trust
+                </p>
+                <div className="flex flex-col gap-3">
+                  {[
+                    { icon: "🏥", text: "DGCA Approved Aircraft Operations" },
+                    { icon: "📋", text: "ACLS & PALS Certified Medical Crew" },
+                    { icon: "🔒", text: "HIPAA-Compliant Patient Data" },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-3">
+                      <span
+                        className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-sm shrink-0"
+                        aria-hidden="true"
+                      >
+                        {item.icon}
+                      </span>
+                      <span className="text-xs text-gray-600 font-medium leading-snug">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </aside>
+
           </div>
-
-          {/* --- Sticky Sidebar (Right Column) --- */}
-          <aside className="w-full lg:w-1/3 lg:sticky top-24 h-fit">
-            <div className="border rounded-lg p-6 bg-red-50 shadow-lg">
-              <h3 className="text-2xl font-bold text-center text-red-800 mb-4">
-                Emergency Helpline
-              </h3>
-              <p className="text-center text-gray-600 mb-4">
-                Available 24/7 for Immediate Dispatch
-              </p>
-
-              <a
-                href="tel:+91-9540944424"
-                className="w-full flex items-center justify-center bg-red-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-red-700 transition-colors md:text-xl shadow-md"
-              >
-                <Phone className="w-6 h-6 mr-3" />
-                Call +91-9540944424
-              </a>
-            </div>
-
-            {/* Related Services */}
-            <div className="mt-8">
-              <h4 className="font-bold text-xl mb-4">Related Services</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/services/icu-ambulance-services"
-                    className="flex justify-between items-center text-gray-700 hover:text-red-600 hover:bg-gray-50 p-3 rounded-md transition-colors"
-                  >
-                    <span>ICU Ambulance</span>{" "}
-                    <ChevronRight className="w-5 h-5" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/air-ambulance-service"
-                    className="flex justify-between items-center text-gray-700 hover:text-red-600 hover:bg-gray-50 p-3 rounded-md transition-colors"
-                  >
-                    <span>Air Ambulance</span>{" "}
-                    <ChevronRight className="w-5 h-5" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/mortuary-van-services"
-                    className="flex justify-between items-center text-gray-700 hover:text-red-600 hover:bg-gray-50 p-3 rounded-md transition-colors"
-                  >
-                    <span>Mortuary Van Services</span>{" "}
-                    <ChevronRight className="w-5 h-5" />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </aside>
         </div>
       </article>
+
       <ServicesSection />
       <ServiceAreas />
       <ContactSection />

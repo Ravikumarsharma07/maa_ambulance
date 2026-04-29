@@ -1,225 +1,291 @@
 import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import cities from "@/constants/Cities";
 import { Services } from "@/constants/Services";
-import Image from "next/image";
+import { Number1, Number2, Number3 } from "@/constants/PhoneNumbers";
+
+// ── Twitter/X icon (not in lucide-react stable) ──────────────────────────────
+const XIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+  </svg>
+);
+
+const PHONE_NUMBERS = [
+  { label: "Emergency Line 1", number: Number1, href: `tel:${Number1}` },
+  { label: "Emergency Line 2", number: Number2, href: `tel:${Number2}` },
+  { label: "Emergency Line 3", number: Number3, href: `tel:${Number3}` },
+];
+
+const OFFICES = [
+  "Rohini Sec 2, Pkt. 4, Delhi",
+  "Gaur City 2, Venue 16, Ghaziabad",
+  "Mayur Vihar Ph3, DDA Flats, Delhi",
+  "Defence Colony, Onco Plus Hospital, Delhi",
+];
+
+const SOCIALS = [
+  {
+    href: "https://www.facebook.com/maaambulanceservice/",
+    icon: <Facebook className="w-5 h-5" />,
+    label: "Facebook",
+  },
+  {
+    href: "https://x.com/maaambulance",
+    icon: <XIcon />,
+    label: "X (Twitter)",
+  },
+  {
+    href: "https://www.instagram.com/maaambulanceservices/",
+    icon: <Instagram className="w-5 h-5" />,
+    label: "Instagram",
+  },
+  {
+    href: "https://www.youtube.com/@maaambulanceservices",
+    icon: <Youtube className="w-5 h-5" />,
+    label: "YouTube",
+  },
+];
 
 const Footer = () => {
-  const services = [...Services.slice(0, 5)];
+  const topServices = Services.slice(0, 8);
+  const topCities = cities.slice(0, 10);
 
   return (
-    <footer className="bg-gray-900 text-white">
-      {/* Emergency Banner */}
-      <div className="bg-red-600 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-lg font-semibold">
-              24/7 Emergency Ambulance Service
+    <footer className="bg-gray-900 text-white" aria-label="Site footer">
+
+      {/* ── EMERGENCY BANNER ── */}
+      <div className="bg-red-600" role="complementary" aria-label="Emergency contact banner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
+            <p className="text-sm sm:text-base font-semibold text-white/90">
+              24/7 Emergency Ambulance Service · Pan-India
             </p>
-            <a
-              href="tel:+91-9540944424"
-              className="text-2xl font-bold hover:text-red-200 transition-colors"
-            >
-              📞 +91-9540944424
-            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              {PHONE_NUMBERS.map(({ number, href, label }) => (
+                <a
+                  key={number}
+                  href={href}
+                  className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-white hover:text-red-200 transition-colors"
+                  aria-label={`${label}: ${number}`}
+                >
+                  <Phone className="w-4 h-4" aria-hidden="true" />
+                  {number}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="py-16">
+      {/* ── MAIN FOOTER ── */}
+      <div className="py-14 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold text-red-400 mb-4">
-                Jyoti Ambulance Services
-              </h3>
-              {/* qr-code for fund  */}
-              <div>
-                <Image
-                  src="/qr-code.jpg"
-                  alt="QR Code"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                India's most trusted ambulance service provider with 15+ years
-                of experience in emergency medical transport. Available 24/7
-                across major cities.
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+            {/* ── BRAND COLUMN ── */}
+            <div className="sm:col-span-2 lg:col-span-1">
+              <Link
+                href="/"
+                className="inline-block mb-4"
+                aria-label="Maa Ambulance Services homepage"
+              >
+                <span
+                  className="text-xl font-extrabold text-white"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Maa <span className="text-red-400">Ambulance</span>
+                </span>
+              </Link>
+              <p className="text-sm text-gray-400 leading-relaxed mb-6 max-w-xs">
+                One of India's most trusted 24/7 ambulance service providers —
+                ICU, ALS, BLS, air ambulance, and mobile mortuary services
+                across 53+ cities. Founded 2020 by Mahesh Yadav, Rohini, Delhi.
               </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.facebook.com/jyotiambulance"
-                  className="text-gray-400 hover:text-red-400 transition-colors"
-                >
-                  <Facebook className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://x.com/jyotiambulance4"
-                  className="text-gray-400 hover:text-red-400 transition-colors"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://www.instagram.com/jyotiambulance"
-                  className="text-gray-400 hover:text-red-400 transition-colors"
-                >
-                  <Instagram className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCljuoYlZFsPQ_GnuC_R7ltw"
-                  className="text-gray-400 hover:text-red-400 transition-colors"
-                >
-                  <Youtube className="w-6 h-6" />
-                </a>
+
+              {/* Social icons */}
+              <div className="flex items-center gap-3" role="list" aria-label="Social media links">
+                {SOCIALS.map(({ href, icon, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Maa Ambulance on ${label}`}
+                    role="listitem"
+                    className="w-9 h-9 rounded-xl bg-white/5 hover:bg-red-600 border border-white/8 hover:border-red-600 flex items-center justify-center text-gray-400 hover:text-white transition-all"
+                  >
+                    {icon}
+                  </a>
+                ))}
               </div>
             </div>
 
-            {/* Services */}
+            {/* ── SERVICES COLUMN ── */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
+              <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-5">
+                Our Services
+              </h4>
+              <ul className="space-y-2.5" role="list">
+                {topServices.map((service) => (
+                  <li key={service.slug} role="listitem">
                     <Link
                       href={`/services/${service.slug.toLowerCase()}`}
-                      className="text-gray-300 hover:text-red-400 transition-colors text-sm"
+                      className="text-sm text-gray-300 hover:text-red-400 transition-colors"
                     >
                       {service.name}
                     </Link>
                   </li>
                 ))}
-                <Link
-                  href={`/services`}
-                  className="text-red-400 hover:text-red-300 transition-colors text-sm font-medium"
-                >
-                  View all services →
-                </Link>
+                <li role="listitem">
+                  <Link
+                    href="/services"
+                    className="text-sm text-red-400 hover:text-red-300 font-semibold transition-colors"
+                  >
+                    View all services →
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Service Areas */}
+            {/* ── CITIES COLUMN ── */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Service Areas</h4>
-              <div className="grid grid-cols-1 gap-2">
-                {cities.slice(0, 8).map((city) => (
-                  <Link
-                    key={city.name}
-                    href={`/${city.slug.toLowerCase()}`}
-                    className="text-gray-300 hover:text-red-400 transition-colors text-sm"
-                  >
-                    Ambulance in {city.name}
-                  </Link>
+              <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-5">
+                Service Areas
+              </h4>
+              <ul className="space-y-2.5" role="list">
+                {topCities.map((city) => (
+                  <li key={city.name} role="listitem">
+                    <Link
+                      href={`/${city.slug.toLowerCase()}`}
+                      className="text-sm text-gray-300 hover:text-red-400 transition-colors"
+                      title={`Ambulance service in ${city.name}`}
+                    >
+                      Ambulance in {city.name}
+                    </Link>
+                  </li>
                 ))}
-                <Link
-                  href="/available-areas"
-                  className="text-red-400 hover:text-red-300 transition-colors text-sm font-medium"
-                >
-                  View All Cities →
-                </Link>
-              </div>
+                <li role="listitem">
+                  <Link
+                    href="/available-areas"
+                    className="text-sm text-red-400 hover:text-red-300 font-semibold transition-colors"
+                  >
+                    View all cities →
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            {/* Contact Info */}
+            {/* ── CONTACT COLUMN ── */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">
-                Contact Information
+              <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-5">
+                Contact & Hours
               </h4>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <Phone className="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0" />
-                  <div className="flex flex-col">
-                    <p className="text-gray-300">Emergency Hotline</p>
+              <div className="space-y-5">
+
+                {/* Phones */}
+                <div className="flex items-start gap-3">
+                  <Phone className="w-4 h-4 text-red-400 mt-0.5 shrink-0" aria-hidden="true" />
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">
+                      Emergency Hotline
+                    </p>
+                    {PHONE_NUMBERS.map(({ number, href }) => (
+                      <a
+                        key={number}
+                        href={href}
+                        className="block text-sm text-white font-semibold hover:text-red-400 transition-colors"
+                        aria-label={`Call ${number}`}
+                      >
+                        {number}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-3">
+                  <Mail className="w-4 h-4 text-red-400 mt-0.5 shrink-0" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                      Email Support
+                    </p>
                     <a
-                      href="tel:+91-9540944424"
-                      className="text-white font-medium hover:text-red-400"
+                      href="mailto:maaambulance18@gmail.com"
+                      className="text-sm text-white hover:text-red-400 transition-colors"
                     >
-                      +91-9540944424
-                    </a>
-                    <a
-                      href="tel:+91-9990228876"
-                      className="text-white font-medium hover:text-red-400"
-                    >
-                      +91-9990228876
+                      maaambulance18@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Mail className="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0" />
+                {/* Offices */}
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-red-400 mt-0.5 shrink-0" aria-hidden="true" />
                   <div>
-                    <p className="text-gray-300">Email Support</p>
-                    <a
-                      href="mailto:jyotiambulance69@gmail.com"
-                      className="text-white hover:text-red-400"
-                    >
-                      jyotiambulance69@gmail.com
-                    </a>
+                    <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-2">
+                      Our Offices
+                    </p>
+                    <ul className="space-y-1">
+                      {OFFICES.map((addr) => (
+                        <li key={addr} className="text-sm text-gray-300 leading-snug">
+                          {addr}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0" />
+                {/* Hours */}
+                <div className="flex items-start gap-3">
+                  <Clock className="w-4 h-4 text-red-400 mt-0.5 shrink-0" aria-hidden="true" />
                   <div>
-                    <p className="text-gray-300">Head Office</p>
-                    <Link
-                      href="https://www.google.com/search?q=E-18%2F280+GF%2C+Sector+3%2C+Rohini%2C+Delhi+110085%2C+Near+MCD+School"
-                      className=""
-                    >
-                      <p className="text-white hover:text-red-400">
-                        E-18/280 GF, Sector 3, Rohini,
-                        <br /> Delhi 110085, Near MCD School
+                    <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                      Service Hours
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-2 w-2" aria-hidden="true">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                      </span>
+                      <p className="text-sm text-white font-semibold">
+                        24 / 7 / 365 — Always On
                       </p>
-                    </Link>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Office: 10:00 AM – 6:00 PM
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Clock className="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300">Service Hours</p>
-                    <p className="text-white font-medium">24/7 Emergency</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800 py-8">
-        <div className="text-ray-400 font-serif mb-4 md:mb-0 text-center text-lg">
-          Need a professional website?
-          <a
-            href="https://ravi-kr-sharma.vercel.app/"
-            className="font-semibold font-sans text-red-400 hover:text-red-300 underline max-sm:block transition-colors ml-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact the Developer
-          </a>
-        </div>
-
-        <div className="mt-6 pt-6 border-t border-gray-800 text-center">
-          <p className="text-gray-500 text-sm">
+      {/* ── BOTTOM BAR ── */}
+      <div className="border-t border-white/5 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p className="text-xs text-gray-600 leading-relaxed max-w-lg">
             Licensed ambulance service provider across India. All ambulances are
-            equipped with modern medical equipment and staffed by trained
+            equipped with modern medical equipment and staffed by ACLS-certified
             professionals.
+          </p>
+          <p className="text-xs text-gray-600 shrink-0">
+            Need a website?{" "}
+            <a
+              href="https://ravi-kr-sharma.vercel.app/"
+              className="text-red-400 hover:text-red-300 font-semibold transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact the Developer
+            </a>
           </p>
         </div>
       </div>
+
     </footer>
   );
 };

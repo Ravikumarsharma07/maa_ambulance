@@ -1,6 +1,7 @@
 "use client";
+
 import CityPageProps from "@/Types/CityData";
-import { MapPinIcon } from "lucide-react";
+import { MapPin, ChevronRight } from "lucide-react";
 import SubHeading from "../smallComponents/SubHeading";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -8,65 +9,109 @@ import cities from "@/constants/Cities";
 import Link from "next/link";
 
 const AreasWeServe = ({ cityData }: { cityData: CityPageProps }) => {
-  // Replace this with the actual list of localities for the given city/state.
-  const [locations, setLocations] = useState<{ name: string; slug: string; }[]>([]);
+  const [locations, setLocations] = useState<{ name: string; slug: string }[]>(
+    []
+  );
   const param = useParams();
+
   useEffect(() => {
     if (!param.city) return;
     const cityName = String(param.city).split("-").splice(3).join(" ");
-    const cityData = cities
-      .filter((city) => city.name.toLowerCase() === cityName)
-    const localities = cityData[0]?.places
+    const matched = cities.filter(
+      (city) => city.name.toLowerCase() === cityName
+    );
+    const localities = matched[0]?.places;
     setLocations(localities || []);
   }, [param.city]);
 
-  if (!locations.length) return null;
+  // Filter out index 0 (parent city) and deduplicate
+  const displayLocations = locations.filter((_, i) => i !== 0);
+
+  if (!displayLocations.length) return null;
 
   return (
-    <section className="bg-white py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* --- Section Header --- */}
-        <div className="mx-auto max-w-2xl text-center">
+    <section
+      className="py-16 sm:py-24 bg-white"
+      aria-labelledby="areas-we-serve-heading"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* ── HEADER ── */}
+        <div className="text-center mb-12 sm:mb-16">
           <SubHeading
-            title={`Ambulance Service Locations In ${cityData.name}`}
+            title={`Ambulance Service Areas in ${cityData.name}`}
           />
-          <p className="md:text-lg  text-gray-600">
-            Our ambulance fleet is strategically positioned across all major
-            localities to ensure the fastest possible response time, 24/7.
+          <p
+            id="areas-we-serve-heading"
+            className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto mt-3 leading-relaxed"
+          >
+            Our ambulance fleet is strategically pre-positioned across all major
+            localities in {cityData.name} — ensuring the fastest possible
+            dispatch time, 24×7.
           </p>
         </div>
 
-        {/* --- Grid of Locations --- */}
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:gap-8">
-          {locations.map((location, index) => (
-            index === 0 ? null : <Link
-              key={location.slug}
-              href={`/${location.slug}`}
-            >
-            <div
-              className="flex items-center gap-x-3 rounded-lg border bg-gray-50 p-4 transition-all duration-300 hover:border-red-500 hover:shadow-md"
-            >
-              <MapPinIcon
-                className="h-6 w-6 flex-none text-red-500"
-                aria-hidden="true"
-              />
-              <h3 className="text-base font-semibold text-gray-800">
-                {location.name}
-              </h3>
-            </div>
-            </Link>
-          ))}
+        {/* ── LOCATION CARDS GRID ── */}
+        <nav aria-label={`Localities served by Maa Ambulance in ${cityData.name}`}>
+          <ul
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
+            role="list"
+          >
+            {displayLocations.map((location) => (
+              <li key={location.slug} role="listitem">
+                <Link
+                  href={`/${location.slug}`}
+                  className="group flex items-center justify-between gap-2 bg-[#F8F7F4] hover:bg-red-50 border border-gray-100 hover:border-red-200 rounded-xl px-4 py-3.5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                  aria-label={`Ambulance service in ${location.name}`}
+                  title={`24/7 Ambulance Service in ${location.name}`}
+                >
+                  <span className="flex items-center gap-2 min-w-0">
+                    <MapPin
+                      className="w-3.5 h-3.5 text-red-500 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm font-semibold text-gray-800 group-hover:text-red-700 transition-colors truncate leading-snug">
+                      {location.name}
+                    </span>
+                  </span>
+                  <ChevronRight
+                    className="w-3.5 h-3.5 text-gray-300 group-hover:text-red-400 group-hover:translate-x-0.5 transition-all shrink-0"
+                    aria-hidden="true"
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* ── SEO TEXT LINK STRIP ── */}
+        <div
+          className="mt-14 sm:mt-16 pt-8 border-t border-gray-100"
+          aria-label="Text links to ambulance services in nearby areas"
+        >
+          <p className="text-xs font-bold tracking-widest uppercase text-gray-400 text-center mb-5">
+            More areas we cover
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-1 gap-y-1 text-xs text-gray-400 leading-relaxed text-center">
+            {displayLocations.map((location, index) => (
+              <span key={location.slug} className="inline-flex items-center">
+                <Link
+                  href={`/${location.slug}`}
+                  className="hover:text-red-600 transition-colors font-medium text-gray-500"
+                  title={`Ambulance Service in ${location.name}`}
+                >
+                  Ambulance Service in {location.name}
+                </Link>
+                {index < displayLocations.length - 1 && (
+                  <span className="mx-1.5 text-gray-200" aria-hidden="true">
+                    |
+                  </span>
+                )}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="mx-auto mt-16 text-center text-gray-600 leading-[40px]">
-          {locations.map((location, index) => (
-            <Link href={`/${location.slug}`} key={index} className="hover:text-red-500">{" "}
-              <h3 className="inline-block">
-              Ambulance Services in {location.name} | {" "}
-              </h3>
-              </Link>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -1,65 +1,111 @@
-import {
-  Clock,
-  ArrowRight,
-} from "lucide-react";
+import { Phone, ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Services } from "@/constants/Services";
 import SubHeading from "./smallComponents/SubHeading";
+import { Number3 } from "@/constants/PhoneNumbers";
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-gray-100">
+    <section
+      id="services"
+      aria-labelledby="services-heading"
+      className="py-16 bg-[#F8F7F4]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+
+        {/* ── HEADER ── */}
+        <div className="text-center mb-12 sm:mb-16">
           <SubHeading title="Types of Ambulance Services" />
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Fast 24/7 Nationwide Ambulance Service in India. Equipped fleet and
-            trained staff for rapid, safe emergency medical transport.
+          <p
+            id="services-heading"
+            className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto mt-3 leading-relaxed"
+          >
+            Fast 24/7 nationwide ambulance service across India — equipped fleet
+            and certified medical staff for rapid, safe emergency transport.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {/* ── GRID ── */}
+        <ul
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6"
+          role="list"
+          aria-label="Available ambulance services"
+        >
           {Services.map((service, index) => (
-            <div
-              key={index}
-              className="relative flex-col-between bg-white p-5 rounded-t-xl hover:shadow-lg hover:-translate-y-2 transition-all duration-300 border-t-4 border-red-600"
-            >
-              <div>
-              <Image
-                src={service.imageURL}
-                alt={service.name}
-                width={500}
-                height={500}
-                className="w-full h-[190px] object-cover rounded-t-lg mb-2 px-1"
-              />
+            <li key={index} role="listitem">
+              <div className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-red-100 hover:shadow-[0_8px_40px_rgba(192,57,43,0.10)] transition-all duration-300">
 
-                <h3 className="text-lg font-sans font-semibold text-gray-900 mb-2">
-                  {service.name}
-                </h3>
-                <p className="text-gray-600 text-[16px] mb-2">
-                  {service.description}
-                </p>
+                {/* Image */}
+                <div className="relative h-44 sm:h-48 w-full overflow-hidden shrink-0">
+                  <Image
+                    src={service.imageURL}
+                    alt={`${service.name} — Maa Ambulance Services`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  {/* Subtle red top bar on hover */}
+                  <div
+                    className="absolute top-0 left-0 right-0 h-1 bg-red-600 translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-300"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* Body */}
+                <div className="flex flex-col flex-1 p-5">
+                  <h3
+                    className="text-base sm:text-[17px] font-bold text-gray-900 mb-2 leading-snug"
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    {service.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed flex-1 mb-4 line-clamp-3">
+                    {service.description}
+                  </p>
+
+                  <Link
+                    href={service.link}
+                    className="group/btn inline-flex items-center gap-1.5 text-red-600 font-semibold text-sm hover:gap-2.5 transition-all duration-200"
+                    aria-label={`Learn more about ${service.name}`}
+                  >
+                    Learn more
+                    <ArrowRight
+                      className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </div>
               </div>
-              <Link
-                href={service.link}
-                className="group flex-center transition-transform duration-700 bg-red-600 hover:bg-black text-sm font-sans transition-color text-gray-100 hover:text-white px-4 py-2 mt-2 rounded-full"
-              >
-                Read More
-                <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4 ml-1" />
-              </Link>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <div className="text-center mt-16">
+        {/* ── BOTTOM CTA ── */}
+        <div className="mt-14 sm:mt-20 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="tel:+91-9540944424"
-            className="bg-red-600 hover:bg-red-700 text-white px-3 py-4 md:px-8 rounded-lg md:text-xl font-semibold inline-flex items-center transition-colors shadow-lg"
+            href={`tel:${Number3}`}
+            className="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-bold text-base sm:text-lg px-7 py-4 rounded-2xl transition-all shadow-md w-full sm:w-auto"
+            aria-label="Call to book an emergency ambulance now"
           >
-            <Clock className="w-6 h-6 mr-3" />
+            <span
+              className="relative flex h-2.5 w-2.5 shrink-0"
+              aria-hidden="true"
+            >
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-60" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white" />
+            </span>
             Book Emergency Ambulance Now
           </a>
+
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-red-600 font-medium text-sm transition-colors"
+            aria-label="View all ambulance services"
+          >
+            View all services
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

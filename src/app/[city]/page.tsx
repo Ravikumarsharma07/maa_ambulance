@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
@@ -19,6 +18,9 @@ import WhyChooseUs from "@/components/City_specific/WhyChooseUs";
 import ServicesOffered from "@/components/City_specific/ServicesOffered";
 import HospitalsWeServe from "@/components/City_specific/HospitalsWeServe";
 import OutOfStation from "@/components/City_specific/OutOfStation";
+import { Number1 } from "@/constants/PhoneNumbers";
+import { AboutService } from "@/components/City_specific/AboutService";
+import HeroVariantTwo from "@/components/City_specific/Hero-2";
 
 const findCity = (cities: City[], paramCity: string) => {
   for (let i = 0; i < cities.length; i++) {
@@ -32,7 +34,8 @@ const findCity = (cities: City[], paramCity: string) => {
 };
 
 // Define a constant for your site's base URL
-const SITE_URL = "https://jyotiambulance.in";
+
+const SITE_URL = "https://maambulanceservice.com/";
 
 export async function generateMetadata({
   params,
@@ -45,21 +48,18 @@ export async function generateMetadata({
   // --- Fallback for Not Found Pages ---
   if (!cityData) {
     return {
-      title: "Ambulance Service Not Found | Jyoti Ambulance",
+      title: "Ambulance Service Not Found | Maa Ambulance Services",
       description:
         "We provide 24/7 ambulance services across major cities. Please check our locations page to find service in your area.",
     };
   }
-
+  const nearbyCities = cityData.nearByCities?.slice(0, 3) || [];
+  const nerbyCityNames = nearbyCities.map((city) => city).join(", ");
   // --- Core Metadata from our Optimized Data Structure ---
-  const title =
-    cityData.metaTitle ||
-    `Ambulance Service in ${cityData.name} | Jyoti Ambulance`;
-  const description =
-    cityData.metaDescription ||
-    `24/7 private and ICU ambulance service in ${cityData.name}. Call now for immediate assistance.`;
+  const title =`All types of emergency ambulance service in ${cityData.name} ${nerbyCityNames} state 2010`;
+  const description = `All types of ambulance service [ ${Number1} ] Icu ventilator, Basic ambulance, Mobile Mortuary, Mukti rath & Monthly rental ambulance servce ${cityData.name} ${nerbyCityNames} `;
   const canonicalUrl = `${SITE_URL}/${cityData.slug}`;
-  const imageUrl = `https://jyotiambulance.in/jyoti-ambulance-logo-2.png`;
+  const imageUrl = `${SITE_URL}/company-logo.png`;
 
   return {
     // --- IMPORTANT: Set metadataBase to resolve relative image URLs ---
@@ -79,7 +79,7 @@ export async function generateMetadata({
       url: canonicalUrl,
       title: title, // Use the primary optimized title
       description: description, // Use the primary optimized description
-      siteName: "Jyoti Ambulance Services",
+      siteName: "Maa Ambulance Services",
       images: [
         {
           url: imageUrl,
@@ -88,15 +88,6 @@ export async function generateMetadata({
           alt: `Best Private Ambulance Service in ${cityData.name}`,
         },
       ],
-    },
-
-    // --- Twitter Card ---
-    twitter: {
-      card: "summary_large_image",
-      site: "https://x.com/jyotiambulance4", // Replace with your actual Twitter handle if you have one
-      title: title, // Use the primary optimized title
-      description: description, // Use the primary optimized description
-      images: [imageUrl], // Twitter can use the same OG image
     },
 
     // --- Additional Important Tags ---
@@ -110,10 +101,10 @@ export async function generateMetadata({
       "application/ld+json": JSON.stringify({
         "@context": "https://schema.org",
         "@type": "EmergencyService",
-        name: `Jyoti Ambulance Service in ${cityData.name}`,
+        name: `Maa Ambulance Service in ${cityData.name}`,
         description: description,
         url: canonicalUrl,
-        telephone: "+91-9990228876", // Your main contact number
+        telephone: Number1, // Your main contact number
         image: imageUrl,
         areaServed: {
           "@type": "City",
@@ -121,7 +112,7 @@ export async function generateMetadata({
         },
         provider: {
           "@type": "Organization",
-          name: "Jyoti Ambulance Services",
+          name: "Maa Ambulance Services",
           url: SITE_URL,
         },
       }),
@@ -154,18 +145,15 @@ export default async function CityPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: `Jyoti Ambulance Service - ${cityData.name}`,
-    description: `24x7 ambulance services in ${cityData.name}. ICU ambulances, air ambulances, and emergency medical transport with trained staff and advanced equipment.`,
-    url: `https://jyotiambulance.in/${cityData.slug}`,
-    telephone: "+91-9990228876",
-    image: "https://jyotiambulance.com/ambulance.png", // ✅ Add logo/representative image
-    priceRange: "₹₹ - ₹₹₹", // ✅ Optional but helps Google display rich snippets
+    name: `Maa Ambulance Service - ${cityData.name}`,
+    description: `24x7 Emergency ambulance services in ${cityData.name}. ICU ambulances, air ambulances, and emergency medical transport with trained staff and advanced equipment.`,
+    url: `https://maabulanceservice.com/${cityData.slug}`,
+    telephone: `${Number1}`,
+    image: "https://maambulanceservice.com/company-logo.png", // ✅ Add logo/representative image
+    priceRange: "599 INR - 10,000 INR", // ✅ Optional but helps Google display rich snippets
     sameAs: [
-      "https://www.facebook.com/jyotiambulanceservices/",
-      "https://www.instagram.com/jyotiambulanceservices/",
-      "https://x.com/jyotiambulance4",
-      "https://in.pinterest.com/jyotiambulance/",
-      "https://www.youtube.com/channel/UCljuoYlZFsPQ_GnuC_R7ltw",
+      "https://www.facebook.com/maaambulanceservice/",
+      "https://www.instagram.com/maaambulanceservices/",
     ], // ✅ Social profiles (if available)
     address: {
       "@type": "PostalAddress",
@@ -220,125 +208,23 @@ export default async function CityPage({
       <FloatingCallBtn />
       <Header />
       <Hero cityData={cityData} />
+      <HeroVariantTwo cityData={cityData} />
       {/* City-specific content section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-red-600 mb-4">
-              Ambulance Services in {cityData.name}
-            </h1>
-            <p className="md:text-xl text-gray-800">
-              {cityData.metaDescription
-                ? cityData.metaDescription
-                : "Your trusted partner for 24/7 emergency medical transport."}
-            </p>
-          </div>
+      <AboutService cityData={cityData} />
+      <AreasWeServe cityData={cityData} />
 
-          <div className="mt-12 text-[16px] text-gray-700 leading-relaxed space-y-6">
-            {cityData.introParagraph ? (
-              <p>{cityData.introParagraph}</p>
-            ) : (
-              <p>
-                Are you looking for a fast and reliable{" "}
-                <strong>ambulance service in {cityData.name}</strong>? Jyoti
-                Ambulance Services offers comprehensive and immediate medical
-                transport solutions across {cityData.name} and its surrounding
-                areas. Our modern, fully-equipped ambulance fleet is
-                strategically positioned to guarantee the quickest response time
-                for any medical emergency.
-              </p>
-            )}
-
-            {/* Section targeting the "Ambulance Number" keyword */}
-            <div className="p-6 bg-white rounded-lg shadow-md border-l-4 border-red-500">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                Emergency Ambulance Number in {cityData.name}
-              </h2>
-              <p className="max-sm:text-[16px]">
-                For immediate assistance, dial our 24-hour emergency{" "}
-                <strong>ambulance number in {cityData.name}</strong>. Our
-                dispatch team is ready to assist you day and night.
-              </p>
-              <p className="text-xl md:text-2xl font-bold bg-red-100 hover:bg-red-200 w-max p-2 px-4 rounded-full text-red-600 mt-4 tracking-wider">
-                <a href="tel:+91-9540944424">+91-9540944424</a>{" "}
-                {/* Replace with your actual phone number */}
-              </p>
-            </div>
-
-            <h2 className=" text-xl md:text-2xl font-bold text-gray-900 pt-4">
-              Our Range of Ambulance Services in {cityData.name}
-            </h2>
-            <p>
-              We provide a variety of ambulance options to cater to different
-              medical needs, ensuring patient safety and comfort. Our services
-              include:
-            </p>
-            <ul className="list-disc list-inside space-y-2 pl-4">
-              <li>
-                <strong>Advanced Life Support (ALS) Ambulances:</strong>{" "}
-                Equipped with ICU facilities, ventilators, and cardiac monitors
-                for critical patients.
-              </li>
-              <li>
-                <strong>Basic Life Support (BLS) Ambulances:</strong> Ideal for
-                non-emergency patient transport and stable patients.
-              </li>
-              <li>
-                <strong>Patient Transport Ambulance:</strong> For safe and
-                comfortable transfer to and from hospitals, clinics, and homes
-                in {cityData.name}.
-              </li>
-              <li>
-                <strong>Air Ambulance Services:</strong> Coordinating fast and
-                secure air medical transport for long-distance and critical
-                transfers.
-              </li>
-            </ul>
-
-            <p>
-              We are proud to serve all major private and government hospitals,
-              specialty clinics, and residential areas within {cityData.name}.
-              In addition to our local focus, we also provide seamless
-              inter-state patient transfers to and from regions like{" "}
-              <Link
-                href="/ambulance-service-in-delhi-ncr"
-                className="text-blue-600 underline font-semibold"
-              >
-                Delhi NCR
-              </Link>
-              ,{" "}
-              <Link
-                href="/ambulance-service-in-uttar-pradesh"
-                className="text-blue-600 underline font-semibold"
-              >
-                Uttar Pradesh
-              </Link>
-              , and{" "}
-              <Link
-                href="/ambulance-service-in-bihar"
-                className="text-blue-600 underline font-semibold"
-              >
-                Bihar
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} />
+      <HowToBookAmbulance cityData={cityData} />
+      {/* <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} /> */}
+      <AboutSection />
       <HospitalsWeServe
         hospitals={cityData.hospitalsServed}
         city={cityData.name}
       />
-      <HowToBookAmbulance cityData={cityData} />
-      <ServicesOffered services={cityData.servicesOffered} />
+      {/* <ServicesOffered services={cityData.servicesOffered} /> */}
       <OutOfStation city={cityData.name} />
-      <AreasWeServe cityData={cityData} />
       <FAQs faqs={cityData.faqs} city={cityData.name} />
       <ServiceAreas />
       <ServicesSection />
-      <AboutSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
