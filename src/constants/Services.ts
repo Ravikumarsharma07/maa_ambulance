@@ -21,7 +21,7 @@ export const Services: ServiceType[] = [
   {
     slug: "ambulance-service",
     name: "24/7 Ambulance Service",
-    imageURL: "/ambulance-1.jpg",
+    imageURL: "/ambulance-types/ambulance-service.png",
     description: "Fastest 24/7 emergency road ambulance services across India. BLS equipped vehicles with rapid response times for safe hospital transport.",
     metaTitle: "24/7 Emergency Ambulance Service in India | Fast Response",
     metaDescription: "Book the fastest 24/7 emergency road ambulance service in India. BLS equipped vehicles, trained paramedics, and immediate dispatch. Call Maa Ambulance now.",
@@ -48,7 +48,7 @@ export const Services: ServiceType[] = [
   {
     slug: "icu-ambulance-service",
     name: "ICU Ambulance Service",
-    imageURL: "/icu-ambulance.png",
+    imageURL: "/ambulance-types/icu-ambulance.png",
     description: "Advanced mobile ICU ambulances equipped with transport ventilators, cardiac monitors, and expert medical teams for critical patient transfers.",
     metaTitle: "ICU Ambulance Service | Mobile Intensive Care Unit Pan-India",
     metaDescription: "Need an ICU on wheels? Maa Ambulance provides advanced ICU Ambulance services with transport ventilators, monitors, and MD doctors for critical intercity transfers.",
@@ -74,7 +74,7 @@ export const Services: ServiceType[] = [
   {
     slug: "cardiac-ambulance-service",
     name: "Cardiac Ambulance Service",
-    imageURL: "/cardiac-ambulance.png",
+    imageURL: "/ambulance-types/cardiac-ambulance.png",
     description: "Specialized cardiac ambulances across India for heart attack and stroke patients. Equipped with ACLS tools, defibrillators, and cardiovascular experts.",
     metaTitle: "Emergency Cardiac Ambulance Service | Heart Attack Transport",
     metaDescription: "Immediate response Cardiac Ambulance service equipped with defibrillators, ECG, and ACLS paramedics for heart attack and stroke emergencies across India.",
@@ -100,7 +100,7 @@ export const Services: ServiceType[] = [
   {
     slug: "air-ambulance-service",
     name: "Air Ambulance Service",
-    imageURL: "/air-ambulnce.jpg",
+    imageURL: "/ambulance-types/air-ambulance.png",
     description: "Fastest domestic and international Air Ambulance service from anywhere in India. Chartered medical flights and commercial stretcher transfers.",
     metaTitle: "Air Ambulance Service in India | 24/7 Medical Flights & Evacuation",
     metaDescription: "Book the most reliable Air Ambulance service in India. We provide chartered medical flights and commercial stretcher transfers with complete bed-to-bed logistics.",
@@ -126,7 +126,7 @@ export const Services: ServiceType[] = [
   {
     slug: "train-ambulance-service",
     name: "Train Ambulance Service",
-    imageURL: "/trai-ambulance.jpg",
+    imageURL: "/ambulance-types/train-ambulance.png",
     description: "Cost-effective, highly supervised Train Ambulance services across the Indian Railway network. Safe long-distance medical transport with ICU setup.",
     metaTitle: "Train Ambulance Service in India | Affordable Medical Transport",
     metaDescription: "Book affordable Train Ambulance services across India. We convert AC railway coaches into ICU setups for safe, jerk-free long-distance patient transport.",
@@ -152,7 +152,7 @@ export const Services: ServiceType[] = [
   {
     slug: "outstation-ambulance-service",
     name: "Outstation Ambulance Service",
-    imageURL: "/outstationambulance.jpg",
+    imageURL: "/ambulance-types/outstation-ambulance.png",
     description: "Reliable outstation ambulance service for intercity and interstate patient transfers. Comfortable, long-haul medical transport anywhere in India.",
     metaTitle: "Outstation Ambulance Service | Intercity & Interstate Transfers",
     metaDescription: "Safe interstate and intercity outstation ambulance services across India. Long-haul BLS and ICU vehicles with experienced drivers for smooth travel.",
@@ -177,7 +177,7 @@ export const Services: ServiceType[] = [
   {
     slug: "event-ambulance-service",
     name: "Event Ambulance Service",
-    imageURL: "/event-ambulance.jpg",
+    imageURL: "/ambulance-types/event-ambulance.png",
     description: "Standby event ambulance services for corporate events, sports tournaments, and concerts. On-site medical support and rapid evacuation protocols.",
     metaTitle: "Event Ambulance Service | Medical Standby for Events & Sports",
     metaDescription: "Hire standby event ambulance services for sports, corporate events, and concerts. Professional on-site medical support and emergency evacuation.",
@@ -202,7 +202,7 @@ export const Services: ServiceType[] = [
   {
     slug: "monthly-rental-ambulance-service",
     name: "Monthly Rental Ambulance Service",
-    imageURL: "/rental-ambulance.jpg",
+    imageURL: "/ambulance-types/monthly-rental-ambulance.png",
     description: "Affordable monthly rental ambulances for hospitals, construction sites, and industrial areas. Flexible leasing with or without medical staff.",
     metaTitle: "Monthly Rental Ambulance Service | Industrial & Hospital Lease",
     metaDescription: "Lease or rent an ambulance on a monthly basis for construction sites, factories, mines, and hospitals. Flexible contracts with optional medical staff.",
@@ -230,7 +230,7 @@ export const Services: ServiceType[] = [
   {
     slug: "dead-body-transport-ambulance-service",
     name: "Dead Body Transport Ambulance Service",
-    imageURL: "/dead-body-transport.jpg",
+    imageURL: "/ambulance-types/dead-body-transport-ambulance.png",
     description: "Respectful dead body transport ambulance service for local, intercity, and interstate transfer of mortal remains across India.",
     metaTitle: "Dead Body Transport Ambulance Service | Interstate Transfer",
     metaDescription: "Respectful and prompt dead body transport by road or air across India. We assist with NOCs, police clearance, and safe transfer of mortal remains.",
@@ -256,7 +256,7 @@ export const Services: ServiceType[] = [
   {
     slug: "mobile-mortuary-service",
     name: "Mobile Mortuary Service",
-    imageURL: "/mobile-mortuary.jpg",
+    imageURL: "/ambulance-types/mobile-mortuary-ambulance.png",
     description: "Temperature-controlled mobile mortuary ambulances for the long-distance transportation of deceased individuals without body degradation.",
     metaTitle: "Mobile Mortuary Service | Deep Freeze Dead Body Transport",
     metaDescription: "Temperature-controlled mobile mortuary ambulances for safe, multi-day long-distance transportation of deceased individuals across India. Call 24/7.",
@@ -281,7 +281,7 @@ export const Services: ServiceType[] = [
   {
     slug: "dead-body-freezer-box-service",
     name: "Dead Body Freezer Box Service",
-    imageURL: "/freezer-box.jpg",
+    imageURL: "/ambulance-types/dead-body-freezer-box-ambulance.png",
     description: "Rent a portable dead body freezer box to preserve mortal remains at home while awaiting the arrival of relatives. 24/7 home delivery across India.",
     metaTitle: "Dead Body Freezer Box on Rent | 24/7 Home Delivery",
     metaDescription: "Hire a dead body freezer box to preserve mortal remains at home. Portable, temperature-controlled, glass-top coffin boxes delivered 24/7.",
@@ -307,7 +307,7 @@ export const Services: ServiceType[] = [
   {
     slug: "shav-vahan-ambulance-service",
     name: "Shav Vahan Ambulance Service",
-    imageURL: "/shav-vahan.jpg",
+    imageURL: "/ambulance-types/shav-vahan-ambulance.png",
     description: "Traditional Shav Vahan services for transferring the deceased from the hospital to the home or to the cremation ground respectfully.",
     metaTitle: "Shav Vahan Service | Respectful Hospital to Cremation Transport",
     metaDescription: "Book a traditional Shav Vahan for transferring deceased individuals from the hospital to home, or directly to the Shamshan Ghat respectfully.",
@@ -332,7 +332,7 @@ export const Services: ServiceType[] = [
   {
     slug: "funeral-ambulance-service",
     name: "Funeral Ambulance Service",
-    imageURL: "/funeral-ambulance.png",
+    imageURL: "/ambulance-types/funeral-ambulance.png",
     description: "Comprehensive funeral ambulance services featuring spacious seating for grieving family members alongside the deceased during the final journey.",
     metaTitle: "Funeral Ambulance Service | Final Procession Transport",
     metaDescription: "Spacious funeral ambulances accommodating immediate family members alongside the deceased. Dignified transport to burial or cremation sites.",
@@ -358,7 +358,7 @@ export const Services: ServiceType[] = [
   {
     slug: "cremation-ambulance-service",
     name: "Cremation Ambulance Service",
-    imageURL: "/cremation-ambulance.jpg",
+    imageURL: "/ambulance-types/cremation-ambulance.png",
     description: "Direct cremation ambulance services for seamless and timely transport to crematoriums and Shamshan Ghats anywhere in the city.",
     metaTitle: "Cremation Ambulance Service | Shamshan Ghat Transport",
     metaDescription: "Direct, timely, and respectful transport to crematoriums and Shamshan Ghats. Book Maa Ambulance's cremation ambulance service 24/7.",
@@ -383,7 +383,7 @@ export const Services: ServiceType[] = [
   {
     slug: "mukti-rath-ambulance-service",
     name: "Mukti Rath Ambulance Service",
-    imageURL: "/mukti-rath.jpg",
+    imageURL: "/ambulance-types/mukti-rath-ambulance.png",
     description: "Book a Mukti Rath for a dignified and cultural final journey. Chariot-style decorated vehicles for traditional Hindu funeral processions.",
     metaTitle: "Mukti Rath Service | Traditional Chariot Antim Yatra",
     metaDescription: "Book a traditional Mukti Rath for a grand and respectful final journey. Chariot-style decorated vehicles with floral arrangements for Antim Yatra.",
@@ -409,7 +409,7 @@ export const Services: ServiceType[] = [
   {
     slug: "antim-yatra-ambulance-service",
     name: "Antim Yatra Ambulance Service",
-    imageURL: "/antim-yatra.jpg",
+    imageURL: "/ambulance-types/antim-yatra-ambulance.png",
     description: "Specialized Antim Yatra ambulances for funeral processions. Glass-fitted vehicles allowing mourners to pay their last respects easily.",
     metaTitle: "Antim Yatra Ambulance Service | Glass Display Vehicles",
     metaDescription: "Specialized Antim Yatra vehicles with large glass displays for funeral processions. Allow the community to easily view and pay last respects.",

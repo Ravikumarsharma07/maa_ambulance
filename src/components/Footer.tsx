@@ -272,8 +272,8 @@ const Footer = () => {
             equipped with modern medical equipment and staffed by ACLS-certified
             professionals.
           </p>
-          <p className="text-xs text-gray-600 shrink-0">
-            Need a website?{" "}
+          <p className="text-xl text-gray-600 shrink-0">
+            Need a website?{" "} <br/>
             <a
               href="https://ravi-kr-sharma.vercel.app/"
               className="text-red-400 hover:text-red-300 font-semibold transition-colors"

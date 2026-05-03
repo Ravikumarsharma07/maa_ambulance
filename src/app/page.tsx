@@ -9,6 +9,7 @@ import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import FloatingCallBtn from '@/components/FloatingCallBtn';
+import PartnersSection from '../components/PartnersSection';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ServiceAreas />
+      <PartnersSection/>
       {/* <BlogSection /> */}
       <TestimonialsSection />
       <FAQSection />

@@ -25,7 +25,7 @@ const FloatingCallBtn = () => {
   }, [])
 
   return (
-    <div className="fixed bottom-5 right-4 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-10 right-4 z-50 flex flex-col items-end gap-3">
 
       {/* Tooltip (lighter + faster) */}
       <div

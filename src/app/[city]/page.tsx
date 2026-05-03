@@ -21,6 +21,7 @@ import OutOfStation from "@/components/City_specific/OutOfStation";
 import { Number1 } from "@/constants/PhoneNumbers";
 import { AboutService } from "@/components/City_specific/AboutService";
 import HeroVariantTwo from "@/components/City_specific/Hero-2";
+import PartnersSection from "@/components/PartnersSection";
 
 const findCity = (cities: City[], paramCity: string) => {
   for (let i = 0; i < cities.length; i++) {
@@ -207,24 +208,24 @@ export default async function CityPage({
       />
       <FloatingCallBtn />
       <Header />
-      <Hero cityData={cityData} />
+      {/* <Hero cityData={cityData} /> */}
       <HeroVariantTwo cityData={cityData} />
-      {/* City-specific content section */}
-      <AboutService cityData={cityData} />
-      <AreasWeServe cityData={cityData} />
+      <AboutService cityData={cityData} /> {/* City-specific content section */} 
+      <ServicesSection /> {/* types of ambulance services */}
+      <AreasWeServe cityData={cityData} /> {/* cities we serve in that specific state of India */}
 
-      <HowToBookAmbulance cityData={cityData} />
+      <HowToBookAmbulance cityData={cityData} /> 
       {/* <WhyChooseUs whyUs={cityData.whyChooseUs} city={cityData.name} /> */}
-      <AboutSection />
+      <AboutSection /> {/* general about section of company */}
       <HospitalsWeServe
         hospitals={cityData.hospitalsServed}
         city={cityData.name}
       />
+      <PartnersSection />
       {/* <ServicesOffered services={cityData.servicesOffered} /> */}
       <OutOfStation city={cityData.name} />
       <FAQs faqs={cityData.faqs} city={cityData.name} />
       <ServiceAreas />
-      <ServicesSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
