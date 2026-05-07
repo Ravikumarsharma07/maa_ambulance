@@ -52,7 +52,7 @@ const Hero = ({ cityData }: { cityData: PlaceDetails }) => {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative bg-gray-950 overflow-hidden pt-24 pb-14 mt-10 sm:mt-16 sm:pb-20"
+      className="relative bg-gray-950 overflow-hidden pt-24 pb-14 mt-10 sm:mt-20 sm:pb-20"
     >
       {/* ── background ── */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
@@ -63,7 +63,7 @@ const Hero = ({ cityData }: { cityData: PlaceDetails }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Breadcrumb ── */}
-        <nav aria-label="Breadcrumb" className={`mb-8 ${fadeUp()}`}>
+        <nav aria-label="Breadcrumb" className={`mb-4 ${fadeUp()}`}>
           <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500">
             <li><Link href="/" className="hover:text-gray-300 transition-colors">Home</Link></li>
             <li><ChevronRight className="w-3.5 h-3.5" aria-hidden="true" /></li>
@@ -205,7 +205,7 @@ const Hero = ({ cityData }: { cityData: PlaceDetails }) => {
             {/* ── Ambulance image card ── */}
             <div className="relative rounded-3xl overflow-hidden border border-white/8 bg-gray-900 h-[280px] sm:h-[340px] lg:h-[400px]">
               <Image
-                src="/hero-section/ambulance-4.png"
+                src="/hero-section/hero-image-3.png"
                 alt={`Maa Ambulance Service ICU ambulance ready for emergency dispatch in ${cityData.name}`}
                 fill
                 priority
