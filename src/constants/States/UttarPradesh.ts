@@ -1,774 +1,436 @@
 import { City } from "../Cities";
+import { Number3 } from "../PhoneNumbers";
 
 
+const phoneNumber = Number3;
 
 export const UttarPradesh:City = {
   name: "Uttar Pradesh",
   slug: "ambulance-service-in-uttar-pradesh",
   places: [
+    // ----- uttar pradesh -----
     {
       name: "Uttar Pradesh",
       slug: "ambulance-service-in-uttar-pradesh",
-      // Optimized to target "Best," "ICU," "Number," and the state name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Uttar Pradesh (UP) | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," "outstation," and major cities.
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Uttar Pradesh. We cover Lucknow, Kanpur, Agra, Varanasi for local, outstation, and emergency transport. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords for the entire state.
-      pageHeadline: "Best ICU & Private Ambulance Service in Uttar Pradesh",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline:
-        "One Emergency Number for All of Uttar Pradesh: +91-9540944424",
-      // Intro enriched with state-wide expertise and keywords like "near you" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Uttar Pradesh | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service across Uttar Pradesh. Emergency hospital transfers and outstation support via major expressways at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Uttar Pradesh",
+      subHeadline: `24/7 Emergency Ambulance Number in Uttar Pradesh: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the most reliable private ambulance network serving all of Uttar Pradesh. Our state-wide coordinated fleet is the answer when you search for an 'ambulance service near me,' providing the best ICU, ventilator, and emergency transport across major cities like Lucknow, Kanpur, Agra, and Varanasi. We specialize in seamless local and outstation transfers, ensuring a professional and rapid response wherever you are in UP.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides comprehensive private ICU ambulance support across Uttar Pradesh, covering key districts like Lucknow, Kanpur, Varanasi, Agra, Prayagraj, and the NCR region. We ensure rapid response times near major medical hubs and multi-specialty hospitals. Our experienced drivers expertly navigate UP's extensive highway and expressway network—including the Yamuna Expressway, Agra-Lucknow Expressway, and Purvanchal Expressway—to provide seamless local emergency dispatch, swift inter-city hospital transfers, and long-distance outstation patient transport under full medical supervision.",
+      nearByCities: [
+        "Lucknow",
+        "Kanpur",
+        "Varanasi",
+        "Agra",
+        "Prayagraj",
+        "Meerut",
+        "Gorakhpur",
+        "Noida",
+      ],
       servicesOffered: [
         {
-          name: "Outstation & Inter-City ICU Transfers",
+          name: "ICU Ambulance Service in Uttar Pradesh",
           description:
-            "We are specialists in seamless, long-distance ICU ambulance transfers between cities, such as from Kanpur to a specialty hospital in Lucknow, ensuring continuity of care.",
+            "State-of-the-art ICU ambulances equipped with life-saving equipment like ventilators, defibrillators, and multi-channel monitors for critical patient transfers across UP districts.",
         },
         {
-          name: "Emergency Ambulance Near Me in UP",
+          name: "Emergency Private Ambulance",
           description:
-            "Our central dispatch coordinates our fleet across all districts, ensuring the closest available unit responds to your call, providing the fastest response in Uttar Pradesh.",
+            "Rapid dispatch for residential areas, rural districts, and commercial hubs across Uttar Pradesh when immediate and reliable emergency medical care is required.",
         },
         {
-          name: "24/7 UP Ambulance Number",
+          name: "Inter-City & Outstation Patient Transport",
           description:
-            "One reliable number connects you with our entire network across the state, making it easy to get professional help during a stressful emergency, day or night.",
+            "Safe and professional long-distance ambulance services connecting UP to Delhi-NCR, Bihar, Madhya Pradesh, and other states, featuring oxygen support and specialized medical teams.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits for the region.
       whyChooseUs: [
-        "The Best & Largest Coordinated Network in UP",
-        "Seamless Inter-City Patient Transfers",
-        "Fastest Response Across All Major Cities & Highways",
-        "Uniform Standard of High-Quality ICU Care",
-        "One Reliable Number for the Whole State",
+        "Pan-UP coverage with strategic dispatch points across major cities for minimal waiting times",
+        "Expert navigation through Uttar Pradesh's major expressways for faster and smoother transit",
+        "Fully equipped Advanced Life Support (ALS) and Basic Life Support (BLS) medical units",
+        "Available 24/7 for emergency hospital admissions, trauma response, and home-to-hospital transfers",
+        "Transparent, affordable pricing with no hidden charges for patients across the state",
       ],
-
-      // Expanded hospital list to show authority across multiple major cities in UP.
       hospitalsServed: [
-        "KGMU, Lucknow",
-        "SGPGI, Lucknow",
-        "LPS Institute of Cardiology, Kanpur",
-        "S.N. Medical College, Agra",
-        "Sir Sunderlal Hospital (IMS-BHU), Varanasi",
-        "BRD Medical College, Gorakhpur",
-        "LLRM Medical College, Meerut",
+        "Sanjay Gandhi Postgraduate Institute of Medical Sciences (SGPGIMS), Lucknow",
+        "Medanta Super Speciality Hospital, Lucknow",
+        "Sir Sunderlal Hospital (BHU), Varanasi",
+        "Kailash Hospital, Noida",
+        "AIIMS (All India Institute of Medical Sciences), Gorakhpur",
+        "Lala Lajpat Rai (LLR) Hospital, Kanpur",
+        "Apollo Medics Super Speciality Hospital, Lucknow",
+        "S.N. Medical College & Hospital, Agra",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the single best ambulance number for the whole of Uttar Pradesh?",
-          answer:
-            "For any emergency anywhere in Uttar Pradesh (including Lucknow, Kanpur, Agra, etc.), the single best number to call for a private ICU ambulance is our 24/7 central helpline: +91-9540944424.",
+          question: "How can I book an emergency ambulance in Uttar Pradesh?",
+          answer: `You can call our 24/7 UP helpline at ${phoneNumber} for immediate ambulance dispatch to any city or district within the state.`,
         },
         {
-          question:
-            "Do you provide ambulance service in Uttar Pradesh for outstation travel?",
+          question: "Do you provide ICU ambulances with ventilators for inter-city transfers in UP?",
           answer:
-            "Yes, we are specialists in providing ambulance services for outstation travel from any city in UP. Our vehicles are equipped for long-distance critical care transport, ensuring patient safety and comfort.",
+            "Yes, our advanced ICU ambulances are fully equipped with transport ventilators, cardiac monitors, and experienced paramedics, making them ideal for long highway transfers between cities like Lucknow, Kanpur, and Delhi.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance service in UP?",
+          question: "Are your ambulance services available in rural or tier-2 cities of Uttar Pradesh?",
           answer:
-            "While the 102/108 services are vital for primary emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand for critical patients, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Absolutely. We have a vast network that allows us to provide timely medical transport and emergency support not just in metropolitan hubs, but also across tier-2 cities and remote districts of UP.",
         },
       ],
     },
+    // ----- 1.Lucknow -----  done
     {
       name: "Lucknow",
       slug: "ambulance-service-in-lucknow",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Lucknow | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Lucknow. We provide 24/7 transport to KGMU, SGPGI, and for outstation travel. Call now for a fast response.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Lucknow",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Lucknow Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Lucknow | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service in Lucknow. Emergency hospital transfers to Medanta, KGMU, and outstation support at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Lucknow",
+      subHeadline: `24/7 Emergency Ambulance Number in Lucknow: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is Lucknow's best private ambulance service, specializing in critical care ICU transport. Our local teams are familiar with all areas, from Gomti Nagar to Hazratganj, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides comprehensive private ICU ambulance support across Lucknow, covering key areas like Gomti Nagar, Hazratganj, Alambagh, Aliganj, and Amar Shaheed Path. We ensure rapid response times near major medical hubs like Medanta, KGMU, and SGPGI. Our experienced drivers expertly navigate Lucknow's major routes—including the Agra-Lucknow Expressway, Purvanchal Expressway, and Sitapur Road—to provide seamless local emergency dispatch, swift inter-city hospital transfers, and long-distance outstation patient transport under full medical supervision.",
+      nearByCities: [
+        "Kanpur",
+        "Unnao",
+        "Barabanki",
+        "Rae Bareli",
+        "Ayodhya",
+        "Sitapur",
+        "Hardoi",
+        "Gonda",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Lucknow",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient transport to Lucknow's premier hospitals.",
+            "State-of-the-art ICU ambulances equipped with life-saving equipment like ventilators, defibrillators, and multi-channel monitors for critical patient transfers across the city.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Emergency Private Ambulance",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Lucknow to any city, ensuring high-quality care throughout the journey.",
+            "Rapid dispatch for residential areas, commercial hubs, and metro stations across Lucknow when immediate and reliable emergency medical care is required.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Inter-City & Outstation Patient Transport",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Lucknow.",
+            "Safe and professional long-distance ambulance services connecting Lucknow to Delhi-NCR, Varanasi, Kanpur, and other states, featuring oxygen support and specialized medical teams.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Lucknow.
       whyChooseUs: [
-        "Fastest Response in Gomti Nagar & Hazratganj",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Professional and Certified Medical Staff",
-        "Direct Coordination with KGMU, SGPGI & Medanta",
+        "Pan-Lucknow coverage with strategic dispatch points in Gomti Nagar and Alambagh for minimal waiting times",
+        "Expert navigation through Lucknow's busy traffic and major expressways for faster transit",
+        "Fully equipped Advanced Life Support (ALS) and Basic Life Support (BLS) medical units",
+        "Available 24/7 for emergency hospital admissions, trauma response, and home-to-hospital transfers",
+        "Transparent, affordable pricing with no hidden charges for residents across the capital city",
       ],
-
-      // Strong, existing hospital list.
       hospitalsServed: [
+        "Sanjay Gandhi Postgraduate Institute of Medical Sciences (SGPGIMS)",
         "King George's Medical University (KGMU)",
-        "Sanjay Gandhi Postgraduate Institute of Medical Sciences (SGPGI)",
+        "Medanta Super Speciality Hospital, Sushant Golf City",
         "Dr. Ram Manohar Lohia Institute of Medical Sciences",
-        "Medanta Hospital, Lucknow",
-        "Apollomedics Super Speciality Hospital",
-        "Vivekananda Polyclinic and Institute of Medical Sciences",
+        "Apollo Medics Super Speciality Hospital",
+        "Max Super Speciality Hospital, Gomti Nagar",
+        "Civil Hospital, Hazratganj",
+        "Sahara Hospital",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Lucknow?",
-          answer:
-            "For any emergency in Lucknow, the best and most reliable number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We will dispatch the nearest available unit immediately.",
+          question: "How can I book an emergency ambulance in Lucknow?",
+          answer: `You can call our 24/7 Lucknow helpline at ${phoneNumber} for immediate ambulance dispatch to any neighborhood or district within the city.`,
         },
         {
-          question:
-            "Do you provide ambulance service from Lucknow for outstation travel?",
+          question: "Do you provide ICU ambulances with ventilators for transfers to Medanta or SGPGI?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Lucknow. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, our advanced ICU ambulances are fully equipped with transport ventilators, cardiac monitors, and experienced paramedics, ensuring safe transfers to premier hospitals like Medanta, SGPGI, and KGMU.",
         },
         {
-          question:
-            "How is your private service different from the free 102 ambulance in Lucknow?",
+          question: "Are outstation ambulance services available from Lucknow to Delhi?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Absolutely. We specialize in long-distance patient transport and provide fully equipped ICU ambulances for safe and comfortable journeys from Lucknow to Delhi via the Agra-Lucknow Expressway.",
         },
       ],
     },
+    // ----- 2.Kanpur -----  done
     {
       name: "Kanpur",
       slug: "ambulance-service-in-kanpur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Kanpur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Kanpur. We provide 24/7 transport to Regency, LPS Cardiology, and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Kanpur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Kanpur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Kanpur | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service in Kanpur. Emergency hospital transfers to Regency, LLR, and outstation support at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Kanpur",
+      subHeadline: `24/7 Emergency Ambulance Number in Kanpur: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for the industrial hub of Kanpur. Our local teams are familiar with all areas, from Civil Lines to Kakadeo, ensuring we are the fastest response when you need an 'ambulance service near me.' Whether for a critical cardiac emergency, an ICU transfer to a specialty hospital, or a planned outstation journey, we provide a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides comprehensive private ICU ambulance support across Kanpur, covering key areas like Swaroop Nagar, Civil Lines, Kidwai Nagar, Kakadeo, and Naubasta. We ensure rapid response times near major medical hubs like Regency Hospital and LLR (Hallett) Hospital. Our experienced drivers expertly navigate Kanpur's major routes—including NH-19 and the Kanpur-Lucknow Expressway (Awadh Expressway)—to provide seamless local emergency dispatch, swift inter-city hospital transfers, and long-distance outstation patient transport under full medical supervision.",
+      nearByCities: [
+        "Lucknow",
+        "Unnao",
+        "Fatehpur",
+        "Etawah",
+        "Kannauj",
+        "Auraiya",
+        "Banda",
+        "Hamirpur",
+      ],
       servicesOffered: [
         {
-          name: "ICU & Cardiac Ambulance in Kanpur",
+          name: "ICU Ambulance Service in Kanpur",
           description:
-            "Our advanced life support ambulances are mobile ICUs, specializing in critical cardiac care for safe transport to premier centers like LPS Institute of Cardiology.",
+            "State-of-the-art ICU ambulances equipped with life-saving equipment like ventilators, defibrillators, and multi-channel monitors for critical patient transfers across the industrial city.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Emergency Private Ambulance",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Kanpur to Lucknow, Delhi, or any other city.",
+            "Rapid dispatch for residential areas, commercial hubs, and industrial zones across Kanpur when immediate and reliable emergency medical care is required.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Inter-City & Outstation Patient Transport",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Kanpur.",
+            "Safe and professional long-distance ambulance services connecting Kanpur to Delhi-NCR, Lucknow, Prayagraj, and other states, featuring continuous oxygen support and specialized medical teams.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Kanpur.
       whyChooseUs: [
-        "Kanpur's Best & Most Trusted Fleet",
-        "Specialized in Cardiac Emergencies",
-        "Fastest Response Across the City",
-        "Advanced Life Support (ALS) Equipment",
-        "Direct Coordination with Regency & LPS Cardiology",
+        "Pan-Kanpur coverage with strategic dispatch points in Swaroop Nagar and Kidwai Nagar for minimal waiting times",
+        "Expert navigation through Kanpur's busy traffic and major highway networks for faster transit",
+        "Fully equipped Advanced Life Support (ALS) and Basic Life Support (BLS) medical units",
+        "Available 24/7 for emergency hospital admissions, trauma response, and home-to-hospital transfers",
+        "Transparent, affordable pricing with no hidden charges for residents across the city",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Regency Hospital",
-        "GSVM Medical College",
-        "LPS Institute of Cardiology",
-        "Mariampur Hospital",
-        "Tulsi Hospitals",
-        "Kulwanti Hospital",
+        "Lala Lajpat Rai (LLR) Hospital / Hallett Hospital",
+        "Regency Hospital Ltd, Sarvodaya Nagar",
+        "Apollo Spectra Hospitals",
+        "SPM Hospital Research & Trauma Centre",
+        "Priya Hospital, Barra",
+        "New Leelamani Hospital",
+        "Madhuraj Hospital",
+        "Mahaadeva Multispeciality Hospital",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Kanpur?",
-          answer:
-            "For any emergency in Kanpur, especially cardiac cases, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch.",
+          question: "How can I book an emergency ambulance in Kanpur?",
+          answer: `You can call our 24/7 Kanpur helpline at ${phoneNumber} for immediate ambulance dispatch to any neighborhood or district within the city.`,
         },
         {
-          question:
-            "Do you provide ambulance service from Kanpur for outstation travel?",
+          question: "Do you provide ICU ambulances with ventilators for transfers to Regency or LLR Hospital?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Kanpur. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, our advanced ICU ambulances are fully equipped with transport ventilators, cardiac monitors, and experienced paramedics, ensuring safe transfers to premier hospitals like Regency and LLR.",
         },
         {
-          question:
-            "How is your private service different from the free 102 ambulance in Kanpur?",
+          question: "Are outstation ambulance services available from Kanpur to Delhi or Lucknow?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced cardiac and ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Absolutely. We specialize in long-distance patient transport and provide fully equipped ICU ambulances for safe and comfortable journeys from Kanpur to major cities like Lucknow and Delhi via the expressways.",
         },
       ],
     },
+    // ----- 3.Agra -----  done
     {
-      name: "Agra",
-      slug: "ambulance-service-in-agra",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle: "Best ICU Ambulance Service Number in Agra | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Agra. We serve residents and tourists 24/7, providing transport to S.N. Medical College and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Agra",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Agra Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      name: "Kanpur",
+      slug: "ambulance-service-in-kanpur",
+      metaTitle: "Best ICU Ambulance Service in Kanpur | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service in Kanpur. Emergency hospital transfers to Regency, LLR, and outstation support at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Kanpur",
+      subHeadline: `24/7 Emergency Ambulance Number in Kanpur: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for residents and tourists in Agra. Our local teams are familiar with all areas, from Taj Ganj to Sanjay Place, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides comprehensive private ICU ambulance support across Kanpur, covering key areas like Swaroop Nagar, Civil Lines, Kidwai Nagar, Kakadeo, and Naubasta. We ensure rapid response times near major medical hubs like Regency Hospital and LLR (Hallett) Hospital. Our experienced drivers expertly navigate Kanpur's major routes—including NH-19 and the Kanpur-Lucknow Expressway (Awadh Expressway)—to provide seamless local emergency dispatch, swift inter-city hospital transfers, and long-distance outstation patient transport under full medical supervision.",
+      nearByCities: [
+        "Lucknow",
+        "Unnao",
+        "Fatehpur",
+        "Etawah",
+        "Kannauj",
+        "Auraiya",
+        "Banda",
+        "Hamirpur",
+      ],
       servicesOffered: [
         {
-          name: "ICU Ambulance Service in Agra",
+          name: "ICU Ambulance Service in Kanpur",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Agra's top hospitals.",
+            "State-of-the-art ICU ambulances equipped with life-saving equipment like ventilators, defibrillators, and multi-channel monitors for critical patient transfers across the industrial city.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Emergency Private Ambulance",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Agra to Delhi, Lucknow, or any other city.",
+            "Rapid dispatch for residential areas, commercial hubs, and industrial zones across Kanpur when immediate and reliable emergency medical care is required.",
         },
         {
-          name: "Tourist & Emergency Ambulance Near Me",
+          name: "Inter-City & Outstation Patient Transport",
           description:
-            "We offer a rapid-response emergency service for tourists and residents. Our fleet is positioned to be the 'ambulance near me' you can count on in any part of the city.",
+            "Safe and professional long-distance ambulance services connecting Kanpur to Delhi-NCR, Lucknow, Prayagraj, and other states, featuring continuous oxygen support and specialized medical teams.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Agra.
       whyChooseUs: [
-        "Agra's Best & Most Trusted Fleet",
-        "Fastest Response for Tourists & Residents",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with Local Hospitals",
+        "Pan-Kanpur coverage with strategic dispatch points in Swaroop Nagar and Kidwai Nagar for minimal waiting times",
+        "Expert navigation through Kanpur's busy traffic and major highway networks for faster transit",
+        "Fully equipped Advanced Life Support (ALS) and Basic Life Support (BLS) medical units",
+        "Available 24/7 for emergency hospital admissions, trauma response, and home-to-hospital transfers",
+        "Transparent, affordable pricing with no hidden charges for residents across the city",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "S.N. Medical College",
-        "Rainbow Hospital",
-        "Pushpanjali Hospital and Research Centre",
-        "Synergy Plus Hospital",
-        "Amit Jaggi Memorial Hospital",
+        "Lala Lajpat Rai (LLR) Hospital / Hallett Hospital",
+        "Regency Hospital Ltd, Sarvodaya Nagar",
+        "Apollo Spectra Hospitals",
+        "SPM Hospital Research & Trauma Centre",
+        "Priya Hospital, Barra",
+        "New Leelamani Hospital",
+        "Madhuraj Hospital",
+        "Mahaadeva Multispeciality Hospital",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for a tourist emergency in Agra?",
-          answer:
-            "For any medical emergency in Agra, for tourists or residents, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch.",
+          question: "How can I book an emergency ambulance in Kanpur?",
+          answer: `You can call our 24/7 Kanpur helpline at ${phoneNumber} for immediate ambulance dispatch to any neighborhood or district within the city.`,
         },
         {
-          question:
-            "Do you provide ambulance service from Agra for outstation travel?",
+          question: "Do you provide ICU ambulances with ventilators for transfers to Regency or LLR Hospital?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Agra. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, our advanced ICU ambulances are fully equipped with transport ventilators, cardiac monitors, and experienced paramedics, ensuring safe transfers to premier hospitals like Regency and LLR.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Agra?",
+          question: "Are outstation ambulance services available from Kanpur to Delhi or Lucknow?",
           answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Absolutely. We specialize in long-distance patient transport and provide fully equipped ICU ambulances for safe and comfortable journeys from Kanpur to major cities like Lucknow and Delhi via the expressways.",
         },
       ],
     },
+    // ----- 3.Varanasi -----  done
     {
       name: "Varanasi",
       slug: "ambulance-service-in-varanasi",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Varanasi | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Varanasi (Kashi). We provide 24/7 transport to IMS-BHU and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Varanasi (Kashi)",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Varanasi Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise (ghats, lanes) and keywords like "near you" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Varanasi | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service in Varanasi. Emergency hospital transfers to BHU and outstation support across Eastern UP at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Varanasi",
+      subHeadline: `24/7 Emergency Ambulance Number in Varanasi: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best and most dependable private ambulance service for the holy city of Varanasi. Our local drivers are experts at navigating the city's unique narrow lanes and ghat areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU transfers to IMS-BHU to planned outstation journeys, we offer a complete 24/7 medical transport solution for residents and pilgrims.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides specialized private ICU ambulance support throughout Varanasi, serving key areas like BHU, Cantt, Godowlia, Sarnath, and Rohania. We ensure rapid response times near major medical centers like Sir Sunderlal Hospital. Our drivers are experts at navigating Varanasi’s unique geography and major transit routes—including the NH-19 and the Purvanchal Expressway—to facilitate swift local emergencies, inter-city transfers to Lucknow or Delhi, and professional outstation patient transport with dedicated medical supervision.",
+      nearByCities: [
+        "Prayagraj",
+        "Ghazipur",
+        "Mirzapur",
+        "Jaunpur",
+        "Mughalsarai",
+        "Azamgarh",
+        "Bhadohi",
+        "Chandauli",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Varanasi",
           description:
-            "Our advanced life support ambulances are mobile ICUs, fully equipped for critical patient transport to premier medical centers like IMS-BHU.",
+            "Advanced life-support units equipped with ventilators, multi-channel monitors, and emergency drugs for critical care transport within the holy city.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Emergency Private Ambulance",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Varanasi to Lucknow, Delhi, or any other city.",
+            "Fastest response for residential colonies, ghats, and commercial zones in Varanasi, ensuring immediate medical evacuation when time is critical.",
         },
         {
-          name: "Emergency Ambulance Near Ghats",
+          name: "Inter-State Patient Transport",
           description:
-            "We specialize in rapid response for medical emergencies in the dense areas around the ghats, providing crucial timely assistance when it's needed most.",
+            "Professional long-distance ambulance services from Varanasi to Lucknow, Patna, or Delhi, featuring specialized medical teams and continuous oxygen support.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Varanasi.
       whyChooseUs: [
-        "Varanasi's Best & Most Trusted Fleet",
-        "Expert Navigation of Ghats & Narrow Lanes",
-        "Fastest Response Across the City",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with IMS-BHU & Apex Hospital",
+        "Deep local knowledge of Varanasi’s routes for faster emergency response",
+        "24/7 availability for transfers to BHU and other multi-specialty hospitals",
+        "State-of-the-art ALS and BLS units for all types of medical emergencies",
+        "Experienced paramedics trained in handling critical trauma and cardiac cases",
+        "Transparent and competitive pricing for residents of Varanasi and surrounding districts",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
-        "Sir Sunderlal Hospital (IMS-BHU)",
+        "Sir Sunderlal Hospital (BHU)",
+        "Heritage Hospitals, Lanka",
         "Apex Hospital",
-        "Heritage Hospitals",
+        "Popular Hospital",
+        "Homi Bhabha Cancer Hospital",
         "Shubham Hospital",
-        "Galaxy Hospital Varanasi",
+        "Galaxy Hospital",
+        "Pt. Deen Dayal Upadhyaya Government Hospital",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency near the Kashi ghats?",
-          answer:
-            "For any emergency in Varanasi, especially near the ghats, the best number for a private ICU ambulance is our 24/7 helpline at +91-9540944424. Our experienced drivers ensure the fastest possible access.",
+          question: "How do I book an ICU ambulance near BHU, Varanasi?",
+          answer: `You can contact our emergency dispatch at ${phoneNumber} for immediate ICU ambulance arrival near BHU or any part of Varanasi.`,
         },
         {
-          question:
-            "Do you provide ambulance service from Varanasi for outstation travel?",
+          question: "Do you provide ambulance services from Varanasi to Lucknow or Delhi?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Varanasi. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
+            "Yes, we specialize in outstation transfers. We provide fully equipped ambulances for long-distance travel from Varanasi to major medical hubs like Lucknow, Delhi, and Patna.",
         },
         {
-          question:
-            "How is your service different from the free 102 ambulance in Varanasi?",
+          question: "Are your ambulances equipped with ventilators?",
           answer:
-            "While the 102/108 services are essential for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Our ICU fleet is fully equipped with portable ventilators, cardiac monitors, and oxygen cylinders to ensure the safety of critical patients during transit.",
         },
       ],
     },
+    // ----- 4.Prayagraj -----  done
     {
       name: "Prayagraj",
       slug: "ambulance-service-in-prayagraj",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Prayagraj | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Prayagraj (Allahabad). We provide 24/7 transport to SRN Hospital and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Prayagraj",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline:
-        "Prayagraj (Allahabad) Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
+      metaTitle: "Best ICU Ambulance Service in Prayagraj | 24/7 Maa Ambulance",
+      metaDescription: `Reliable private ICU ambulance service in Prayagraj. Emergency hospital transfers to SRN, Kamla Nehru, and outstation support at ${phoneNumber}. Fast response, call now.`,
+      pageHeadline: "Emergency ICU & Private Ambulance Service in Prayagraj",
+      subHeadline: `24/7 Emergency Ambulance Number in Prayagraj: ${phoneNumber}`,
       introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Prayagraj (Allahabad). Our local teams are familiar with all areas, from Civil Lines to Sangam, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution for residents and pilgrims.",
-
-      // Services expanded to target specific, high-intent keywords.
+        "Maa Ambulance Service provides comprehensive private ICU ambulance support across Prayagraj, covering key areas like Civil Lines, Naini, Phaphamau, Jhunsi, and Teliyarganj. We ensure rapid response times near major medical hubs such as SRN Hospital and Kamla Nehru Memorial. Our experienced drivers navigate Prayagraj's critical transit points—including the New Yamuna Bridge and NH-19—to provide seamless local emergency dispatch, swift inter-city hospital transfers to Lucknow or Varanasi, and long-distance outstation patient transport under full medical supervision.",
+      nearByCities: [
+        "Varanasi",
+        "Lucknow",
+        "Pratapgarh",
+        "Mirzapur",
+        "Rewa",
+        "Kaushambi",
+        "Jaunpur",
+        "Sultanpur",
+      ],
       servicesOffered: [
         {
           name: "ICU Ambulance Service in Prayagraj",
           description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Prayagraj's top hospitals.",
+            "State-of-the-art ICU ambulances equipped with life-saving equipment like ventilators, defibrillators, and multi-channel monitors for critical patient transfers across the Sangam city.",
         },
         {
-          name: "Ambulance Service for Outstation",
+          name: "Emergency Private Ambulance",
           description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Prayagraj to Lucknow, Varanasi, or any other city.",
+            "Rapid dispatch for residential areas, University zones, and commercial hubs across Prayagraj when immediate and reliable emergency medical care is required.",
         },
         {
-          name: "Emergency Ambulance Near Me",
+          name: "Inter-City & Outstation Patient Transport",
           description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Prayagraj.",
+            "Safe and professional long-distance ambulance services connecting Prayagraj to Lucknow, Delhi-NCR, Varanasi, and Madhya Pradesh, featuring specialized medical teams and oxygen support.",
         },
       ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Prayagraj.
       whyChooseUs: [
-        "Prayagraj's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with Local Hospitals",
+        "Pan-Prayagraj coverage with strategic dispatch points in Civil Lines and Naini for minimal waiting times",
+        "Expert navigation through Prayagraj’s busy junctions and highway networks for faster transit",
+        "Fully equipped Advanced Life Support (ALS) and Basic Life Support (BLS) medical units",
+        "Available 24/7 for emergency hospital admissions, trauma response, and home-to-hospital transfers",
+        "Transparent, affordable pricing with no hidden charges for residents across the district",
       ],
-
-      // Expanded hospital list for more local authority.
       hospitalsServed: [
         "Swaroop Rani Nehru (SRN) Hospital",
         "Kamla Nehru Memorial Hospital",
-        "Yashlok Hospital",
-        "Phoenix Hospital",
+        "Jeevan Jyoti Hospital",
+        "United Medicity",
         "Nazareth Hospital",
+        "Vatsalya Hospital",
+        "Priti Hospital",
+        "Moti Lal Nehru Medical College (MLNMC)",
       ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
       faqs: [
         {
-          question:
-            "What is the best ambulance number for an emergency in Prayagraj?",
+          question: "How can I book an emergency ambulance in Prayagraj?",
+          answer: `You can call our 24/7 Prayagraj helpline at ${phoneNumber} for immediate ambulance dispatch to any neighborhood or area within the city.`,
+        },
+        {
+          question: "Do you provide ICU ambulances with ventilators for transfers to SRN or Kamla Nehru Hospital?",
           answer:
-            "For any emergency in Prayagraj, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
+            "Yes, our advanced ICU ambulances are fully equipped with transport ventilators, cardiac monitors, and experienced paramedics, ensuring safe transfers to premier hospitals like SRN and United Medicity.",
         },
         {
-          question:
-            "Do you provide ambulance service from Prayagraj for outstation travel?",
+          question: "Are outstation ambulance services available from Prayagraj to Lucknow or Varanasi?",
           answer:
-            "Yes, we are a leading provider of outstation ambulance services from Prayagraj. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Prayagraj?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Gorakhpur",
-      slug: "ambulance-service-in-gorakhpur",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Gorakhpur | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Gorakhpur. We provide 24/7 transport to BRD Medical College, AIIMS, and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Gorakhpur",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Gorakhpur Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near me" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Gorakhpur and the surrounding Purvanchal region. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like BRD Medical College and AIIMS Gorakhpur to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Gorakhpur",
-          description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Gorakhpur's top hospitals.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Gorakhpur to Lucknow, Varanasi, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Gorakhpur.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Gorakhpur.
-      whyChooseUs: [
-        "Gorakhpur's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with BRD & AIIMS Gorakhpur",
-      ],
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "BRD Medical College",
-        "AIIMS, Gorakhpur",
-        "Savitri Hospital",
-        "Fatima Hospital",
-        "Purvanchal Metro City Hospital",
-        "Star Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Gorakhpur?",
-          answer:
-            "For any emergency in Gorakhpur, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Gorakhpur for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Gorakhpur. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Gorakhpur?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Meerut",
-      slug: "ambulance-service-in-meerut",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Meerut | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Meerut. We provide 24/7 transport to LLRM, Subharti, and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Meerut",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Meerut Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Meerut. Our local teams are familiar with all areas, from the city center to the bypass, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like LLRM and Subharti Hospital to planned outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Meerut",
-          description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Meerut's top hospitals.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Meerut to Delhi, Lucknow, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Meerut.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Meerut.
-      whyChooseUs: [
-        "Meerut's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with LLRM & Subharti",
-      ],
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "LLRM Medical College",
-        "Subharti Hospital",
-        "Anand Hospital",
-        "Jaswant Rai Speciality Hospital",
-        "Lokpriya Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Meerut?",
-          answer:
-            "For any emergency in Meerut, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Meerut for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Meerut. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Meerut?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Bareilly",
-      slug: "ambulance-service-in-bareilly",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Bareilly | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals, and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Bareilly. We provide 24/7 transport to SRMS, Rohilkhand Medical College, and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Bareilly",
-      // Subheadline directly answers the "Number" keyword search.
-      subHeadline: "Bareilly Emergency Ambulance Number: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Bareilly and the surrounding Rohilkhand region. Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies and transfers to major centers like SRMS to planned outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Bareilly",
-          description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, serving all of Bareilly's top hospitals.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Bareilly to Lucknow, Delhi, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Bareilly.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Bareilly.
-      whyChooseUs: [
-        "Bareilly's Best & Most Trusted Fleet",
-        "Fastest Response Across the City",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Direct Coordination with SRMS & Rohilkhand Medical College",
-      ],
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "SRMS Institute of Medical Sciences",
-        "Clara Swain Mission Hospital",
-        "Rohilkhand Medical College & Hospital",
-        "Kuber Hospital",
-        "Gangasheel Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ambulance number for an emergency in Bareilly?",
-          answer:
-            "For any emergency in Bareilly, the best number to call for a private ICU ambulance is our 24/7 helpline at +91-9540944424. We ensure immediate dispatch of the nearest vehicle.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Bareilly for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Bareilly. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Bareilly?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
-        },
-      ],
-    },
-    {
-      name: "Aligarh",
-      slug: "ambulance-service-in-aligarh",
-      // Optimized to target "Best," "ICU," "Number," and the city name.
-      metaTitle:
-        "Best ICU Ambulance Service Number in Aligarh | Jyoti Ambulance",
-      // Optimized to target "private," "ICU," "near me," hospitals (AMU), and "outstation."
-      metaDescription:
-        "Get the number for the best private ICU ambulance service near you in Aligarh. We provide 24/7 transport to JN Medical College (AMU) and for outstation travel. Call now.",
-      // Headline targets "Best," "ICU," and "Private" keywords.
-      pageHeadline: "Best ICU & Private Ambulance Service in Aligarh",
-      // Subheadline directly answers the "Number" keyword search and adds local context.
-      subHeadline: "Emergency Number for Aligarh & AMU: +91-9540944424",
-      // Intro enriched with local expertise and keywords like "near you" and "outstation."
-      introParagraph:
-        "Jyoti Ambulance is the best private ambulance service for Aligarh, specializing in transfers to Jawaharlal Nehru Medical College (AMU). Our local teams are familiar with all areas, ensuring we are the fastest response when you need an 'ambulance service near me.' From critical ICU emergencies to scheduled outstation transfers, we offer a complete 24/7 medical transport solution.",
-
-      // Services expanded to target specific, high-intent keywords.
-      servicesOffered: [
-        {
-          name: "ICU Ambulance Service in Aligarh",
-          description:
-            "Our advanced life support ambulances are mobile ICUs, equipped with ventilators and cardiac monitors for critical patient care, especially for transfers to JN Medical College.",
-        },
-        {
-          name: "Ambulance Service for Outstation",
-          description:
-            "We provide safe, reliable, and medically supervised ambulances for outstation patient transfers from Aligarh to Delhi, Agra, or any other city.",
-        },
-        {
-          name: "Emergency Ambulance Near Me",
-          description:
-            "With our fleet positioned across the city, we provide the fastest dispatch when you search for an 'ambulance service near me' in any part of Aligarh.",
-        },
-      ],
-
-      // Reinforces the "Best" keyword with tangible benefits specific to Aligarh.
-      whyChooseUs: [
-        "Aligarh's Best & Most Trusted Fleet",
-        "Specialists in Transfers to JN Medical College",
-        "24/7 Availability for Ultimate Peace of Mind",
-        "Advanced Life Support (ALS) & Ventilator Fleet",
-        "Fastest Response Across the City",
-      ],
-
-      // Expanded hospital list for more local authority.
-      hospitalsServed: [
-        "Jawaharlal Nehru Medical College (AMU)",
-        "Varun Hospital",
-        "Mittal Hospital",
-        "Rusa Medical Centre",
-        "Pulse Hospital",
-      ],
-
-      // FAQs expanded to directly answer specific user questions and keyword queries.
-      faqs: [
-        {
-          question:
-            "What is the best ICU ambulance number for a transfer to AMU, Aligarh?",
-          answer:
-            "For the best and fastest ICU ambulance service for transfers to JN Medical College, AMU, our 24/7 number is +91-9540944424. We have extensive experience with the hospital.",
-        },
-        {
-          question:
-            "Do you provide ambulance service from Aligarh for outstation travel?",
-          answer:
-            "Yes, we are a leading provider of outstation ambulance services from Aligarh. Our vehicles are fully equipped for long-distance travel, ensuring patient safety and continuous medical care.",
-        },
-        {
-          question:
-            "How is your service different from the free 102 ambulance in Aligarh?",
-          answer:
-            "While the 102/108 services are vital for emergencies, our private ambulance service offers guaranteed availability, advanced ICU equipment on demand, and specialized services like pre-booked outstation transfers, which are not covered by the free services.",
+            "Absolutely. We specialize in long-distance patient transport and provide fully equipped ICU ambulances for safe and comfortable journeys from Prayagraj to Lucknow, Varanasi, or even Delhi.",
         },
       ],
     },

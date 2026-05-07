@@ -139,7 +139,7 @@ const ContactSection = () => {
                 {[
                   { label: "Emergency Services", value: "24 / 7 / 365" },
                   { label: "Customer Support", value: "24 / 7 / 365" },
-                  { label: "Office Hours", value: "10:00 AM – 6:00 PM" },
+                  { label: "Office Hours", value: "24 / 7 / 365" },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex items-center justify-between gap-4">
                     <dt className="text-gray-500">{label}</dt>

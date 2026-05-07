@@ -129,11 +129,11 @@ const Header = () => {
 
           {/* MAIN HEADER WITH NAVBAR  */}
         <div className="mx-auto pr-4 sm:pr-6 lg:pr-8 bg-gray-100">
-          <div className="flex-between py-2 md:py-3">
+          <div className="flex-between py-1">
             {/* company logo  */}
             <Link
               href="/"
-              className="ml-4 text-2xl font-bold flex-center"
+              className="ml-4 lg:ml-8 text-2xl font-bold flex-center"
             >
               <Image
                 src="/company-logo.png"
@@ -141,7 +141,7 @@ const Header = () => {
                 width={320}
                 height={100}
                 fetchPriority="high"
-                className="w-12 h-12 md:w-16 md:h-16 object-cover"
+                className="h-20 w-20 md:w-24 md:h-24 object-cover"
                 priority
                 quality={100}
               />
@@ -149,7 +149,7 @@ const Header = () => {
                 <span className="text-[#1F2933]">
                   MAA
                 </span>{" "}
-                <span className="text-[#E53935]">Ambulance</span>
+                <span className="text-[#E53935]">AMBULANCE</span>
               </p>
             </Link>
 
@@ -194,7 +194,7 @@ const Header = () => {
 
                   {item.name === "Locations" && (
                     <div className="group-hover:block z-50 hidden absolute top-14c p-2 left-0 w-[240px] bg-white shadow-2xl">
-                      {cities.map((location, index) => (
+                      {cities.slice(1, 10).map((location, index) => (
                         <Link
                           href={`/${location.slug}`}
                           key={index}

@@ -2,8 +2,14 @@ import { Bihar } from "./States/Bihar";
 import { Chandigarh } from "./States/Chandigarh";
 import { Delhi } from "./States/Delhi";
 import { Gujarat } from "./States/Gujarat";
+import { HimachalPradesh } from "./States/HimachalPradesh";
 import { Jharkhand } from "./States/Jharkhand";
+import { MadhyaPradesh } from "./States/MadhyaPradesh";
+import { Odisha } from "./States/Odisha";
 import { Punjab } from "./States/Punjab";
+import { Rajasthan } from "./States/Rajasthan";
+import { Uttarakhand } from "./States/Uttarakhand";
+import { UttarPradesh } from "./States/UttarPradesh";
 
 interface Service {
   name: string;
@@ -42,10 +48,16 @@ export interface City {
 const cities: City[] = [
   Delhi,
   Bihar,
+  UttarPradesh,
   Jharkhand,
   Chandigarh,
   Punjab,
-  Gujarat
+  Gujarat,
+  Odisha,
+  Uttarakhand,
+  Rajasthan,
+  HimachalPradesh,
+  MadhyaPradesh,
 ];
 
 export default cities;

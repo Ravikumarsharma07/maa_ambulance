@@ -16,8 +16,14 @@ export interface ServiceType {
   link: string;
 }
 
+// ------ Helper function to find a service by its slug -----
+export const getServiceBySlug = (slug: string): ServiceType | undefined => {
+  return Services.find((service) => service.slug === slug);
+};
+
+
 export const Services: ServiceType[] = [
-  // --- MEDICAL AMBULANCE SERVICES ---
+  // --- 24/7 EMERGENCY AMBULANCE SERVICE ---
   {
     slug: "ambulance-service",
     name: "24/7 Ambulance Service",
@@ -45,6 +51,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["icu-ambulance-service", "cardiac-ambulance-service", "outstation-ambulance-service"],
     link: "/services/ambulance-service",
   },
+  // --- ICU AMBULANCE SERVICE ---
   {
     slug: "icu-ambulance-service",
     name: "ICU Ambulance Service",
@@ -71,6 +78,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["cardiac-ambulance-service", "air-ambulance-service", "ventilator-ambulance-service"],
     link: "/services/icu-ambulance-service",
   },
+  // --- CARDIAC AMBULANCE SERVICE ---
   {
     slug: "cardiac-ambulance-service",
     name: "Cardiac Ambulance Service",
@@ -97,6 +105,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["icu-ambulance-service", "ambulance-service"],
     link: "/services/cardiac-ambulance-service",
   },
+  // --- AIR AMBULANCE SERVICE ---
   {
     slug: "air-ambulance-service",
     name: "Air Ambulance Service",
@@ -123,6 +132,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["train-ambulance-service", "icu-ambulance-service"],
     link: "/services/air-ambulance-service",
   },
+  // --- TRAIN AMBULANCE SERVICE ---
   {
     slug: "train-ambulance-service",
     name: "Train Ambulance Service",
@@ -149,6 +159,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["air-ambulance-service", "outstation-ambulance-service"],
     link: "/services/train-ambulance-service",
   },
+  // --- OUTSTATION AMBULANCE SERVICE ---
   {
     slug: "outstation-ambulance-service",
     name: "Outstation Ambulance Service",
@@ -174,6 +185,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["train-ambulance-service", "ambulance-service"],
     link: "/services/outstation-ambulance-service",
   },
+  // --- EVENT AMBULANCE SERVICE ---
   {
     slug: "event-ambulance-service",
     name: "Event Ambulance Service",
@@ -199,6 +211,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["monthly-rental-ambulance-service", "ambulance-service"],
     link: "/services/event-ambulance-service",
   },
+  // --- MONTHLY RENTAL AMBULANCE SERVICE ---
   {
     slug: "monthly-rental-ambulance-service",
     name: "Monthly Rental Ambulance Service",
@@ -225,8 +238,10 @@ export const Services: ServiceType[] = [
     link: "/services/monthly-rental-ambulance-service",
   },
 
+
   // --- DEAD BODY & FUNERAL SERVICES ---
 
+  // --- DEAD BODY TRANSPORT AMBULANCE SERVICE ---
   {
     slug: "dead-body-transport-ambulance-service",
     name: "Dead Body Transport Ambulance Service",
@@ -253,6 +268,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["mobile-mortuary-service", "shav-vahan-ambulance-service", "air-ambulance-service"],
     link: "/services/dead-body-transport-ambulance-service",
   },
+  // --- MOBILE MORTUARY SERVICE ---
   {
     slug: "mobile-mortuary-service",
     name: "Mobile Mortuary Service",
@@ -278,6 +294,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["dead-body-freezer-box-service", "dead-body-transport-ambulance-service"],
     link: "/services/mobile-mortuary-service",
   },
+  // --- DEAD BODY FREEZER BOX SERVICE ---
   {
     slug: "dead-body-freezer-box-service",
     name: "Dead Body Freezer Box Service",
@@ -304,6 +321,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["mobile-mortuary-service", "mukti-rath-ambulance-service"],
     link: "/services/dead-body-freezer-box-service",
   },
+  // --- SHAV VAHAN AMBULANCE SERVICE ---
   {
     slug: "shav-vahan-ambulance-service",
     name: "Shav Vahan Ambulance Service",
@@ -329,6 +347,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["funeral-ambulance-service", "cremation-ambulance-service", "mukti-rath-ambulance-service"],
     link: "/services/shav-vahan-ambulance-service",
   },
+  // --- FUNERAL AMBULANCE SERVICE ---
   {
     slug: "funeral-ambulance-service",
     name: "Funeral Ambulance Service",
@@ -355,12 +374,13 @@ export const Services: ServiceType[] = [
     relatedServices: ["antim-yatra-ambulance-service", "shav-vahan-ambulance-service"],
     link: "/services/funeral-ambulance-service",
   },
+  // --- CREMATION GROUND AMBULANCE SERVICE ---
   {
-    slug: "cremation-ambulance-service",
-    name: "Cremation Ambulance Service",
+    slug: "cremation-ground-ambulance-service",
+    name: "Cremation Ground Ambulance Service",
     imageURL: "/ambulance-types/cremation-ambulance.png",
-    description: "Direct cremation ambulance services for seamless and timely transport to crematoriums and Shamshan Ghats anywhere in the city.",
-    metaTitle: "Cremation Ambulance Service | Shamshan Ghat Transport",
+    description: "Direct cremation ground and Shamshan Ghat ambulance services for seamless and timely transport to crematoriums and Shamshan Ghats anywhere in the city.",
+    metaTitle: "Cremation Ground Ambulance Service | Shamshan Ghat Transport",
     metaDescription: "Direct, timely, and respectful transport to crematoriums and Shamshan Ghats. Book Maa Ambulance's cremation ambulance service 24/7.",
     content: `
       <h2>Cremation Ground Transport Service</h2>
@@ -380,6 +400,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["funeral-ambulance-service", "mukti-rath-ambulance-service"],
     link: "/services/cremation-ambulance-service",
   },
+  // --- MUKTI RATH AMBULANCE SERVICE ---
   {
     slug: "mukti-rath-ambulance-service",
     name: "Mukti Rath Ambulance Service",
@@ -406,6 +427,7 @@ export const Services: ServiceType[] = [
     relatedServices: ["antim-yatra-ambulance-service", "shav-vahan-ambulance-service"],
     link: "/services/mukti-rath-ambulance-service",
   },
+  // --- ANTIM YATRA AMBULANCE SERVICE ---
   {
     slug: "antim-yatra-ambulance-service",
     name: "Antim Yatra Ambulance Service",
@@ -434,7 +456,3 @@ export const Services: ServiceType[] = [
   }
 ];
 
-// Helper function to find a service by its slug
-export const getServiceBySlug = (slug: string): ServiceType | undefined => {
-  return Services.find((service) => service.slug === slug);
-};

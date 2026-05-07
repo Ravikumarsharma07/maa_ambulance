@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import SubHeading from "./smallComponents/SubHeading";
 import { Number1 } from "@/constants/PhoneNumbers";
+import { citiesCovered, clientsServed, fleetSize, foundedYear, yearsOfExperience } from "@/constants/CompanyInfo";
 
 const AboutSection = () => {
   const stats = [
-    { icon: Users, number: "62,000+", text: "Happy Clients" },
+    { icon: Users, number: `${clientsServed.toLocaleString()}+`, text: "Happy Clients" },
     { icon: Clock, number: "24/7", text: "Always Available" },
-    { icon: MapPin, number: "53+", text: "Cities Covered" },
-    { icon: Award, number: "4+", text: "Years Experience" },
+    { icon: MapPin, number: `${citiesCovered}+`, text: "Cities Covered" },
+    { icon: Award, number: `${yearsOfExperience}+`, text: "Years Experience" },
   ];
 
   const highlights = [
@@ -22,7 +23,7 @@ const AboutSection = () => {
     <section
       id="about"
       aria-label="About Maa Ambulance Service Delhi"
-      className="py-16 md:py-20 bg-white overflow-hidden"
+      className="py-16 md:py-20 bg-[#F8F7F4] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SubHeading title="About Maa Ambulance Service" />
@@ -39,11 +40,11 @@ const AboutSection = () => {
               <p className="text-[16px] text-gray-700 leading-relaxed">
                 <strong>Maa Ambulance Service</strong> is a leading provider of
                 emergency and non-emergency medical transport in Delhi, founded
-                in <strong>2020 by Mr. Mahesh Yadav</strong>. Based in{" "}
+                in <strong>{foundedYear} by Mr. Mahesh Yadav</strong>. Based in{" "}
                 <strong>Rohini, New Delhi</strong>, we operate a fleet of{" "}
-                <strong>39 ambulances</strong> staffed by{" "}
-                <strong>39 trained professionals</strong>, serving over{" "}
-                <strong>53 cities</strong> across the region.
+                <strong>{fleetSize}+ ambulances</strong> staffed by{" "}
+                <strong>{fleetSize}+ trained professionals</strong>, serving over{" "}
+                <strong>{citiesCovered}+ cities</strong> across the region.
               </p>
               <p className="text-[16px] text-gray-700 leading-relaxed">
                 Whether you need an <strong>ICU Ventilator Ambulance</strong>,{" "}

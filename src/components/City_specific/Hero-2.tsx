@@ -1,6 +1,7 @@
 "use client";
 
 import { PlaceDetails } from "@/constants/Cities";
+import { citiesCovered, clientsServed, yearsOfExperience } from "@/constants/CompanyInfo";
 import { Number1 } from "@/constants/PhoneNumbers";
 import {
   Ambulance,
@@ -27,10 +28,10 @@ const quickFeatures = [
 ];
 
 const globalStats = [
-  { number: "62,000+", label: "Families Served" },
+  { number: `${clientsServed.toLocaleString()}+`, label: "Families Served" },
   { number: "15 Min",  label: "Avg. Response" },
-  { number: "100+",     label: "Cities Covered" },
-  { number: "4+",      label: "Years Experience" },
+  { number: `${citiesCovered}+`,     label: "Cities Covered" },
+  { number: `${yearsOfExperience}+`,      label: "Years Experience" },
 ];
 
 /* ── component ──────────────────────────────────────────────────── */

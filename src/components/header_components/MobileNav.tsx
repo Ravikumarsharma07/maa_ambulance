@@ -24,7 +24,7 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
       <div className="flex-between">
         <Link
               href="/"
-              className="ml-4 pt-2 pb-4 text-xl md:text-2xl font-bold flex-center"
+              className="ml-2 pt-2 pb-4 text-xl md:text-2xl font-bold flex-center"
             >
               <Image
                 src="/company-logo.png"
@@ -32,7 +32,7 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                 width={320}
                 height={100}
                 fetchPriority="high"
-                className="w-12 h-12 md:w-16 md:h-16 object-cover"
+                className="w-20 h-20 object-cover"
                 priority
                 quality={100}
               />
@@ -40,7 +40,7 @@ const MobileNav = ({ navLinks, isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                 <span className="text-[#1F2933]">
                   MAA
                 </span>{" "}
-                <span className="text-[#E53935]">Ambulance</span>
+                <span className="text-[#E53935]">AMBULANCE</span>
               </p>
             </Link>
         <button

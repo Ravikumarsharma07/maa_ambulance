@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide
 import cities from "@/constants/Cities";
 import { Services } from "@/constants/Services";
 import { Number1, Number2, Number3 } from "@/constants/PhoneNumbers";
+import { citiesCovered, foundedYear } from "@/constants/CompanyInfo";
 
 // ── Twitter/X icon (not in lucide-react stable) ──────────────────────────────
 const XIcon = () => (
@@ -99,8 +100,8 @@ const Footer = () => {
               </Link>
               <p className="text-sm text-gray-400 leading-relaxed mb-6 max-w-xs">
                 One of India's most trusted 24/7 ambulance service providers —
-                ICU, ALS, BLS, air ambulance, and mobile mortuary services
-                across 53+ cities. Founded 2020 by Mahesh Yadav, Rohini, Delhi.
+                ICU ambulance, ALS ambulance, BLS ambulance, air ambulance, and mobile mortuary services
+                across {citiesCovered}+ cities. Founded in {foundedYear} by Mahesh Yadav, Rohini, Delhi.
               </p>
 
               {/* Social icons */}
@@ -253,7 +254,7 @@ const Footer = () => {
                       </p>
                     </div>
                     <p className="text-xs text-gray-500 mt-0.5">
-                      Office: 10:00 AM – 6:00 PM
+                      Office: 24 hours, Emergency: 24 hours
                     </p>
                   </div>
                 </div>

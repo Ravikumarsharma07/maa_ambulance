@@ -1,3 +1,4 @@
+import { citiesCovered, clientsServed } from "@/constants/CompanyInfo";
 import Image from "next/image";
 
 // ── Partner data ───────────────────────────────────────────────────────────────
@@ -105,8 +106,8 @@ const PartnersSection = () => {
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 mt-9">
           {[
             { value: "16+", label: "Corporate Partners" },
-            { value: "100+", label: "Cities Covered" },
-            { value: "62,000+", label: "Patients Served" },
+            { value: `${citiesCovered}+`, label: "Cities Covered" },
+            { value: `${clientsServed.toLocaleString()}+`, label: "Patients Served" },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">
               <p
