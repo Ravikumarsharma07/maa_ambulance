@@ -52,7 +52,7 @@ const Hero = ({ cityData }: { cityData: PlaceDetails }) => {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative bg-gray-950 overflow-hidden pt-24 pb-14 mt-10 sm:mt-20 sm:pb-20"
+      className="relative bg-gray-950 overflow-hidden pt-24 pb-14 mt-14 sm:mt-20 sm:pb-20"
     >
       {/* ── background ── */}
       <div className="absolute inset-0 z-0" aria-hidden="true">

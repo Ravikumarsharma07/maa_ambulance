@@ -130,7 +130,7 @@ export default async function ServicePage({
         </a>
       </div> */}
 
-      <article className="pt-24 md:pt-36 pb-28 lg:pb-16">
+      <article className="pb-12 pt-28 md:pt-24 mt-12 sm:mt-20 lg:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ── BREADCRUMB ── */}
