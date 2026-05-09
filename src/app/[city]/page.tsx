@@ -57,8 +57,8 @@ export async function generateMetadata({
   const nearbyCities = cityData.nearByCities?.slice(0, 3) || [];
   const nerbyCityNames = nearbyCities.map((city) => city).join(", ");
   // --- Core Metadata from our Optimized Data Structure ---
-  const title =`All types of emergency ambulance service in ${cityData.name} ${nerbyCityNames} state 2010`;
-  const description = `All types of ambulance service [ ${Number1} ] Icu ventilator, Basic ambulance, Mobile Mortuary, Mukti rath & Monthly rental ambulance servce ${cityData.name} ${nerbyCityNames} `;
+  const title =`All types of emergency ambulance service in ${cityData.name}, ${nerbyCityNames} state 2010`;
+  const description = `All types of ambulance service [ ${Number1.slice(4)} ] Icu ventilator, Basic ambulance, Mobile Mortuary, Mukti rath & Monthly rental ambulance service in ${cityData.name}, ${nerbyCityNames}, India `;
   const canonicalUrl = `${SITE_URL}/${cityData.slug}`;
   const imageUrl = `${SITE_URL}/company-logo.png`;
 

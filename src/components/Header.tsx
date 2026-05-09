@@ -194,7 +194,7 @@ const Header = () => {
 
                   {item.name === "Locations" && (
                     <div className="group-hover:block z-50 hidden absolute top-14c p-2 left-0 w-[240px] bg-white shadow-2xl">
-                      {cities.slice(1, 10).map((location, index) => (
+                      {cities.slice(0, 10).map((location, index) => (
                         <Link
                           href={`/${location.slug}`}
                           key={index}

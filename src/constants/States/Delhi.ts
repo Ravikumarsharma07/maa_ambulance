@@ -14,7 +14,7 @@ export const Delhi: City = {
       slug: "ambulance-service-in-delhi",
       metaTitle: "Best ICU Ambulance Service in Delhi | 24/7 Maa Ambulance",
       metaDescription: `Reliable private ICU ambulance service in Delhi. Emergency hospital transfers and outstation support across NCR at ${phoneNumber}. Fast response, call now.`,
-      pageHeadline: "Emergency ICU & Private Ambulance Service in Delhi",
+      pageHeadline: "Emergency ICU Ambulance & Private Ambulance Service in Delhi",
       subHeadline: `24/7 Emergency Ambulance Number in Delhi: ${phoneNumber}`,
       introParagraph:
         "Maa Ambulance Service provides comprehensive private ICU ambulance support across Delhi, covering North, South, East, and West Delhi. We ensure rapid response times near major hubs like AIIMS, Connaught Place, Rohini, and Dwarka. Our experienced drivers navigate Delhi's major arteries—including the Ring Road, Outer Ring Road, and NH-48—to provide seamless local emergency dispatch, inter-hospital transfers, and long-distance outstation patient transport with full medical supervision.",

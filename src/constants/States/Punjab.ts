@@ -14,7 +14,7 @@ export const Punjab: City = {
       slug: "ambulance-service-in-punjab",
       metaTitle: "Best ICU Ambulance Service in Punjab | 24/7 Maa Ambulance",
       metaDescription: `Emergency ICU ambulance service in Punjab covering Ludhiana, Amritsar, Jalandhar & Patiala. Fast hospital transfers and outstation support at ${phoneNumber}. Call 24/7.`,
-      pageHeadline: "24/7 ICU & Private Ambulance Service in Punjab",
+      pageHeadline: "24/7 ICU Ambulance & Private Ambulance Service in Punjab",
       subHeadline: `Emergency Ambulance Number in Punjab: ${phoneNumber}`,
       introParagraph:
         "Maa Ambulance Service provides high-speed private ICU ambulance support throughout Punjab, ensuring life-saving transport in Ludhiana, Amritsar, Jalandhar, Patiala, and Bathinda. We offer rapid emergency response near major medical institutions like DMC & CMC Ludhiana, PGI Satellite Centres, and Fortis Amritsar. Our experienced drivers are experts in navigating the Grand Trunk Road (NH-1) and major state highways to provide timely local emergency pickups, inter-district transfers, and long-distance outstation transport to Chandigarh, Delhi, or Jaipur.",
@@ -88,15 +88,15 @@ export const Punjab: City = {
       slug: "ambulance-service-in-ludhiana",
       metaTitle: "Best ICU Ambulance in Ludhiana | Maa",
       metaDescription: `Best private ICU ambulance service in Ludhiana near Ferozepur Road and DMCH. Fast emergency and outstation support at ${phoneNumber}. Call now.`,
-      pageHeadline: "Best ICU & Private Ambulance Service in Ludhiana",
+      pageHeadline: "Best ICU Ambulance & Private Ambulance Service in Ludhiana",
       subHeadline: `24/7 Emergency Ambulance Number in Ludhiana: ${phoneNumber}`,
       introParagraph:
         "Maa Ambulance Service provides fast private ICU ambulance service in Ludhiana for emergencies near Ferozepur Road, Pakhowal Road, Gill Road, Model Town, and Bharat Nagar Chowk. Our team knows the traffic pressure around Samrala Chowk, Jagraon Bridge, Hero Bakery Chowk, and DMCH-CMC corridors, helping us dispatch the nearest ambulance for emergency pickup, hospital transfer, and outstation patient movement without delay.",
       nearByCities: [
-        "Khanna",
-        "Phagwara",
-        "Moga",
-        "Barnala",
+        "Jalandhar",
+        "Punjab",
+        "Chandigarh",
+        "Haryana",
         "Sangrur",
         "Patiala",
         "Mohali",
@@ -159,7 +159,7 @@ export const Punjab: City = {
       slug: "ambulance-service-in-amritsar",
       metaTitle: "Best ICU Ambulance in Amritsar | Maa",
       metaDescription: `Best private ICU ambulance service in Amritsar near GT Road and Ranjit Avenue. Fast emergency booking at ${phoneNumber}. Call now.`,
-      pageHeadline: "Best ICU & Private Ambulance Service in Amritsar",
+      pageHeadline: "Best ICU Ambulance & Private Ambulance Service in Amritsar",
       subHeadline: `24/7 Emergency Ambulance Number in Amritsar: ${phoneNumber}`,
       introParagraph:
         "Maa Ambulance Service offers rapid private ICU ambulance service in Amritsar for urgent cases near GT Road, Ranjit Avenue, Medical Enclave, Hall Gate, and Majitha Road. Our drivers know the traffic movement around Crystal Chowk, Putlighar, Golden Temple corridors, and airport links, allowing faster dispatch for home emergencies, hospital referrals, and outstation ambulance transport.",
