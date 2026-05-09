@@ -27,14 +27,16 @@ const SERVICE_LIST = [
 ];
 
 const REGION_LINKS = [
-  { label: "Delhi NCR", href: "/ambulance-service-in-delhi-ncr" },
+  { label: "Delhi", href: "/ambulance-service-in-delhi" },
   { label: "Uttar Pradesh", href: "/ambulance-service-in-uttar-pradesh" },
   { label: "Bihar", href: "/ambulance-service-in-bihar" },
-  { label: "Haryana", href: "/ambulance-service-in-haryana" },
+  { label: "Punjab", href: "/ambulance-service-in-punjab" },
+  { label: "Jharkhand", href: "/ambulance-service-in-jharkhand" },
+  { label: "Chandigarh", href: "/ambulance-service-in-chandigarh" },
 ];
 
 export const AboutService = ({ cityData }: { cityData: PlaceDetails }) => {
-  const nearbyCities = cityData.nearByCities?.slice(0, 5) || [];
+  const nearbyCities = cityData.nearByCities || [];
 
   return (
     <section
@@ -209,9 +211,8 @@ export const AboutService = ({ cityData }: { cityData: PlaceDetails }) => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {nearbyCities.map((nearCity) => (
-                  <Link
+                  <div
                     key={nearCity}
-                    href={`/ambulance-service-in-${nearCity.toLowerCase().replace(/\s+/g, "-")}`}
                     className="inline-flex items-center gap-1 text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 border border-red-100 px-3 py-1.5 rounded-full transition-colors"
                     title={`Ambulance service in ${nearCity}`}
                     aria-label={`Ambulance service in ${nearCity}`}
@@ -219,7 +220,7 @@ export const AboutService = ({ cityData }: { cityData: PlaceDetails }) => {
                     <MapPin className="w-3 h-3" aria-hidden="true" />
                     {nearCity}
                     <ChevronRight className="w-3 h-3" aria-hidden="true" />
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
@@ -235,6 +236,7 @@ export const AboutService = ({ cityData }: { cityData: PlaceDetails }) => {
                 <Link
                   key={label}
                   href={href}
+                  title={`Ambulance service in ${label}`}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-gray-600 hover:text-red-700 bg-gray-50 hover:bg-red-50 border border-gray-100 hover:border-red-100 px-3 py-1.5 rounded-full transition-colors"
                   aria-label={`Ambulance service in ${label}`}
                 >
