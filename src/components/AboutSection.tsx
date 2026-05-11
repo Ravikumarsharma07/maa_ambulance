@@ -26,7 +26,7 @@ const AboutSection = () => {
       className="py-16 md:py-20 bg-[#F8F7F4] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <SubHeading title="About Maa Ambulance Service" />
+        <SubHeading title="About Maa Ambulance Service" />
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text Content */}
           <div>
@@ -39,7 +39,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               <p className="text-[16px] text-gray-700 leading-relaxed">
                 <strong>Maa Ambulance Service</strong> is a leading provider of
-                emergency and non-emergency medical transport in Delhi, founded
+                emergency and non-emergency medical transport in Pan India, founded
                 in <strong>{foundedYear} by Mr. Mahesh Yadav</strong>. Based in{" "}
                 <strong>Rohini, New Delhi</strong>, we operate a fleet of{" "}
                 <strong>{fleetSize}+ ambulances</strong> staffed by{" "}

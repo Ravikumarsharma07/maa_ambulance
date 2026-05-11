@@ -19,6 +19,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Number1 } from "@/constants/PhoneNumbers";
 import SubHeading from "../smallComponents/SubHeading";
+import { citiesCovered, clientsServed, fleetSize, hospitalPartners } from "@/constants/CompanyInfo";
 
 const reasons = [
   {
@@ -51,17 +52,17 @@ const reasons = [
   },
   {
     icon: MapPin,
-    title: "53+ Cities, Pan-India Network",
+    title: `${citiesCovered}+ Cities, Pan-India Network`,
     description:
-      "From local transfers in Delhi to long-distance outstation ambulances across 53+ cities — we have the infrastructure to move patients anywhere in India.",
-    highlight: "Nationwide Coverage",
+      `From local transfers in Delhi to long-distance outstation ambulances across ${citiesCovered}+ cities — we have the infrastructure to move patients anywhere in India.",
+    highlight: "Nationwide Coverage`,
   },
   {
     icon: HeartHandshake,
     title: "Compassionate & Dignified Service",
     description:
-      "Whether it's a critical patient transfer or a dead body transport — we handle every case with utmost respect, empathy, and professionalism.",
-    highlight: "Trusted by 62,000+ Families",
+      `Whether it's a critical patient transfer or a dead body transport — we handle every case with utmost respect, empathy, and professionalism.",
+    highlight: "Trusted by ${clientsServed.toLocaleString()}+ Families`,
   },
 ];
 
@@ -185,8 +186,8 @@ const WhyChooseUsSection = () => {
             {/* Stats strip inside card */}
             <div className="mt-6 grid grid-cols-3 gap-3">
               {[
-                { number: "39+", label: "Ambulance Fleet" },
-                { number: "31+", label: "Hospital Partners" },
+                { number: `${fleetSize}+`, label: "Ambulance Fleet" },
+                { number: `${hospitalPartners}`, label: "Hospital Partners" },
                 { number: "98%", label: "Safety Rate" },
               ].map((stat, i) => (
                 <div

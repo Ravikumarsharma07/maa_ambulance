@@ -18,12 +18,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Number1 } from "@/constants/PhoneNumbers";
 import SubHeading from "../smallComponents/SubHeading";
+import { citiesCovered, clientsServed, fleetSize, yearsOfExperience } from "@/constants/CompanyInfo";
 
 const stats = [
-  { icon: Users, number: "62,000+", text: "Families Served" },
+  { icon: Users, number: `${clientsServed.toLocaleString()}+`, text: "Families Served" },
   { icon: Clock, number: "15 Min", text: "Avg. Response Time" },
-  { icon: MapPin, number: "53+", text: "Cities Covered" },
-  { icon: Award, number: "4+", text: "Years Experience" },
+  { icon: MapPin, number: `${citiesCovered}+`, text: "Cities Covered" },
+  { icon: Award, number: `${yearsOfExperience}+`, text: "Years Experience" },
 ];
 
 const quickFeatures = [
@@ -262,7 +263,7 @@ const AboutHeroSection = () => {
               </div>
 
               <p className="text-[11px] text-gray-500 text-center mt-4">
-                Serving 53+ Cities · All Major Hospitals
+                Serving {citiesCovered}+ Cities · All Major Hospitals
               </p>
             </div>
 
@@ -291,10 +292,10 @@ const AboutHeroSection = () => {
                   <strong className="text-gray-800">Mr. Mahesh Yadav</strong>,
                   we operate a fleet of{" "}
                   <strong className="text-gray-800">
-                    39 fully-equipped ambulances
+                    {fleetSize}+ fully-equipped ambulances
                   </strong>{" "}
                   staffed by trained paramedics and EMTs, serving{" "}
-                  <strong className="text-gray-800">53+ cities</strong> across
+                  <strong className="text-gray-800">{citiesCovered}+ cities</strong> across
                   India.
                 </p>
                 <p>
