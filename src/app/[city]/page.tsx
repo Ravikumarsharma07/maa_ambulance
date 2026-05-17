@@ -202,7 +202,6 @@ export default async function CityPage({
       <ServicesSection />
       <AreasWeServe cityData={cityData} />
       <HowToBookAmbulance cityData={cityData} />
-      <AboutSection />
       <HospitalsWeServe
         hospitals={cityData.hospitalsServed}
         city={cityData.name}
@@ -210,8 +209,6 @@ export default async function CityPage({
       <PartnersSection />
       <OutOfStation city={cityData.name} />
       <FAQs faqs={cityData.faqs} city={cityData.name} />
-      <ServiceAreas />
-      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </main>
