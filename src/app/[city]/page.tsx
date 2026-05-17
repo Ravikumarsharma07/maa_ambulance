@@ -65,10 +65,10 @@ export async function generateMetadata({
   const state = findState(cities, parsedCityName) || "";
   const displayState = state == cityData.name ? ", India" : `, ${state}`;
   // --- Optimized SEO Tags (Hyper-Local for maximum CTR) ---
-  const title = `Best Ambulance Service in ${cityData.name}${displayState} | MAS 2010`;
+  const title = `Ambulance Service in ${cityData.name}${displayState} – ICU, 24/7 Emergency & Private | Maa Ambulance`;
   // Using .slice(4) assumes your number string starts with "+91-" or similar. Adjust if needed.
   const displayPhone = Number1.length > 10 ? Number1.slice(4) : Number1; 
-  const description = `MAS provides 24/7 ICU Ambulance, Mortuary, Mukti Rath & Monthly Rental in ${cityData.name}${displayState}. Trusted since 2010. Call ${displayPhone} for fast response.`;
+  const description = `Need an ambulance in ${cityData.name}? Maa Ambulance Service provides 24/7 ICU, BLS & private ambulance. Trusted since 2010. Call ${displayPhone} – dispatched in 15 min.`;
   
   const canonicalUrl = `${SITE_URL}/${citySlug}`;
   const imageUrl = `${SITE_URL}/company-logo.png`;

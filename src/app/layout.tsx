@@ -45,10 +45,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  title: {
-    default: `${SITE_NAME} | 24/7 Emergency Ambulance Services in Pan India`,
-    template: `%s | ${SITE_NAME}`,
-  },
+  title: `${SITE_NAME} | 24/7 Emergency Ambulance Services in Pan India`,
 
   description:
     "Book 24/7 emergency ambulance services in Delhi NCR. ICU ambulance, ventilator ambulance, oxygen ambulance, and patient transport with trained paramedics.",
